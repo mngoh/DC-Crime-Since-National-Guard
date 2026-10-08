@@ -124,9 +124,49 @@ def rr_cell(t):
     return f"{t['rr']:.2f}<span class='ci'>{t['ci95'][0]:.2f} to {t['ci95'][1]:.2f}</span>"
 
 
+def reading_pair(k):
+    """Each site list gets its own reading; one is shown when they agree."""
+    a, b = reading(GP["outcomes"][k]["pooled"]), reading(GU["outcomes"][k]["pooled"])
+    return a if a == b else f"Planned sites: {a[0].lower() + a[1:]}. September list: {b[0].lower() + b[1:]}."
+
+
 tests_rows = "".join(
     f"<tr><td>{lab}</td><td class='n'>{rr_cell(GP['outcomes'][k]['pooled']['treat'])}</td><td class='n'>{rr_cell(GU['outcomes'][k]['pooled']['treat'])}</td>"
-    f"<td class='n'>{round(100 * RIU[k]['share_placebos_at_or_below_real'])}%</td><td>{reading(GU['outcomes'][k]['pooled'])}</td></tr>" for k, lab in GK)
+    f"<td class='n'>{round(100 * RIU[k]['share_placebos_at_or_below_real'])}%</td><td>{reading_pair(k)}</td></tr>" for k, lab in GK)
+
+# findings that depend on which site list is used
+RULES_OUT = "rules out a reduction of 15% or more"
+ro = lambda G, k: G["outcomes"][k]["pooled"]["verdict"] == RULES_OUT
+ro_both = [lab.lower() for k, lab in GK if ro(GP, k) and ro(GU, k)]
+ro_sept = [lab.lower() for k, lab in GK if ro(GU, k) and not ro(GP, k)]
+ro_plan = [lab.lower() for k, lab in GK if ro(GP, k) and not ro(GU, k)]
+join = lambda xs: xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+ro_parts = ([f"for {join(ro_both)}, the range rules out a reduction of 15% or more with either list of sites"] if ro_both else []) + \
+           ([f"for {join(ro_sept)}, only with the September list"] if ro_sept else []) + \
+           ([f"for {join(ro_plan)}, only with the planned sites"] if ro_plan else [])
+rules_out_sentence = ("; ".join(ro_parts)[0].upper() + "; ".join(ro_parts)[1:] + ".") if ro_parts else ""
+sig = lambda t: t.get("p_holm") is not None and t["p_holm"] <= 0.05
+VP, VU = GP["outcomes"]["violent_ex_adw"]["pooled"]["treat"], GU["outcomes"]["violent_ex_adw"]["pooled"]["treat"]
+violent_sentence = (f"Homicide, robbery and sex abuse near posts ran {pc(100 * (VP['rr'] - 1))} against comparable areas with the planned sites"
+                    + (", which holds after correcting for testing six measures," if sig(VP) else ", which is not significant once six measures are tested together,")
+                    + f" and {pc(100 * (VU['rr'] - 1))} with the September list"
+                    + (", which also holds." if sig(VU) else ", which does not hold after that correction."))
+
+# robustness checks from the plan, planned sites
+ROB = [("radius_250", "250 m"), ("radius_1000", "1,000 m"), ("sensitivity_starts", "Other start dates"),
+       ("drop_fireworks", "No holiday periods"), ("drop_mall", "No Mall"), ("busy_controls", "Busier controls")]
+rob_rows = "".join(
+    f"<tr><td>{lab}</td><td class='n'>{rr_cell(GP['outcomes'][k]['pooled']['treat'])}</td>"
+    + "".join(f"<td class='n'>{rr_cell(GP['outcomes'][k]['robustness'][rk])}</td>" for rk, _ in ROB) + "</tr>" for k, lab in GK)
+rob_head = "".join(f"<th class='n'>{h}</th>" for _, h in ROB)
+all_rob = [GP["outcomes"][k]["robustness"][rk] for k, _ in GK for rk, _ in ROB]
+no_reduction = all(t["ci95"][1] >= 1 for t in all_rob + [GP["outcomes"][k]["pooled"]["treat"] for k, _ in GK])
+violent_up = all(GP["outcomes"]["violent_ex_adw"]["robustness"][rk]["ci95"][0] > 1 for rk, _ in ROB)
+NB = GP["outcomes"]["gunshots"]["robustness"].get("negbin_wave1", {})
+nb_text = (f"A negative binomial model, run for gunshots in the first wave, gives {NB['rr']:.2f} ({NB['ci95'][0]:.2f} to {NB['ci95'][1]:.2f})."
+           if "rr" in NB else "The negative binomial model did not converge and is not shown.")
+rob_summary = ((("No version shows fewer crimes near posts by a margin outside its 95% range. ") if no_reduction else "At least one version shows a reduction near posts outside its 95% range; see the table. ")
+               + ("The rise in homicide, robbery and sex abuse appears in every version. " if violent_up else ""))
 MV = MT["outcomes"]["victim"]
 mev = [MV["event_study"]["by_quarter"][k] for k in ["0", "1", "2", "3", "4"]]
 DDo = DD["outcomes"]
@@ -370,15 +410,21 @@ BODY = f"""<title>DC crime since the National Guard</title>
     <tbody>{tests_rows}</tbody>
   </table></div>
   <div class="findings">
-    <div class="finding"><h4>No reduction near posts</h4><p>None of the six measures shows fewer crimes near posts than in comparable areas. For property crime and other theft, the range rules out a reduction of 15% or more. For gunshots and gun crime, the range is too wide to rule out a modest reduction, and it also allows an increase.</p></div>
+    <div class="finding"><h4>No reduction near posts</h4><p>None of the six measures shows fewer crimes near posts than in comparable areas. {rules_out_sentence} For gunshots and gun crime, the range is too wide to rule out a modest reduction, and it also allows an increase.</p></div>
     <div class="finding"><h4>Random Metro stations did better</h4><p>I drew 12 stations at random from the {len(GU['placebo_pool'])} DC stations away from any known Guard site, 1,000 times, and ran the same test on each set. For gunshots, {round(100 * RIU['gunshots']['share_placebos_at_or_below_real'])}% of the random sets did better than the real Guard stations; for homicide, robbery and sex abuse, {round(100 * RIU['violent_ex_adw']['share_placebos_at_or_below_real'])}%. The Guard probably chose stations with growing problems, which would explain part of this.</p></div>
-    <div class="finding"><h4>Violent crime near posts rose, relative to elsewhere</h4><p>Homicide, robbery and sex abuse near posts ran {pc(100 * (GP['outcomes']['violent_ex_adw']['pooled']['treat']['rr'] - 1))} against comparable areas with the planned sites and {pc(100 * (GU['outcomes']['violent_ex_adw']['pooled']['treat']['rr'] - 1))} with the September list, which is not significant once six measures are tested together. About half of the gap was opening before the troops came: measured against only the 24 weeks before, it is {pc(100 * (GX['violent_ex_adw']['recent_baseline']['rr'] - 1))} ({GX['violent_ex_adw']['recent_baseline']['ci95'][0]:.2f} to {GX['violent_ex_adw']['recent_baseline']['ci95'][1]:.2f}).</p></div>
+    <div class="finding"><h4>Violent crime near posts rose, relative to elsewhere</h4><p>{violent_sentence} About half of the gap was opening before the troops came: measured against only the 24 weeks before, it is {pc(100 * (GX['violent_ex_adw']['recent_baseline']['rr'] - 1))} ({GX['violent_ex_adw']['recent_baseline']['ci95'][0]:.2f} to {GX['violent_ex_adw']['recent_baseline']['ci95'][1]:.2f}).</p></div>
     <div class="finding"><h4>Inside Metro: cannot tell</h4><p>Metro Transit Police blotters (January 2022 to August 2026, crimes with victims, placed at stations by address) show the stations that later got troops had been getting worse than other stations for two years, peaking in the three months before August 2025. Afterward they fell back {round(100 * (1 - max(mev)))} to {round(100 * (1 - min(mev)))}% from that peak, but changed like other stations against the year before ({pc(MV['counts_year_before_to_guard_year']['guard'][2])} and {pc(MV['counts_year_before_to_guard_year']['clean_pool'][2])}). A Guard effect and an ordinary fall from a peak look the same here.</p></div>
     <div class="finding"><h4>The surge as a whole</h4><p>Against a synthetic DC built from other large agencies, September 2025 to June 2026: property crime {pc(SY['property']['effect_pct'])} (p = {SY['property']['p_all']:.2f}), murder {pc(SY['murder']['effect_pct'])} (p = {SY['murder']['p_all']:.2f}), robbery {pc(SY['robbery']['effect_pct'])} (p = {SY['robbery']['p_all']:.2f}). With the tests near posts, the property drop came citywide, not where troops stood.</p></div>
     <div class="finding"><h4>The drawdown</h4><p>Troops fell from 5,148 in July 2026 to 3,124 by September 7 and 2,864 by October 7. Against normal, citywide crime did not move ({pc(DDo['total']['citywide']['before_vs_norm_pct'])} in the eight weeks before the first state left, {pc(DDo['total']['citywide']['after_vs_norm_pct'])} after). Near posts, violent crime rose against an unusually quiet June, back to its February to May level. Gunshots for this period come out in November.</p></div>
     <div class="finding"><h4>A few waves look different</h4><p>Gunshots near the two Anacostia posts fell {pc(100 * (1 - GU['outcomes']['gunshots']['by_wave']['3']['treat']['rr']), signed=False)} more than in comparable areas, and reported gun crime along the patrolled corridors fell about {pc(100 * (1 - GU['outcomes']['gun_violent']['by_wave']['2']['treat']['rr']), signed=False)} more, although gunshots there rose. Among 36 wave-level estimates, one or two significant results in each direction is what chance alone produces; the combined tests the plan relied on show no reduction.</p></div>
     <div class="finding"><h4>What others found</h4><p>The Niskanen Center (May 2026) found a property crime drop of about 24% and no clear effect on violent crime. A Senate Homeland Security Committee minority staff report (2026) found "no directly attributable impact on crime."</p></div>
   </div>
+  <h3 style="font-size:13px;font-weight:600;margin:0 0 4px">Robustness checks from the plan</h3>
+  <p class="note">Planned sites. Each column changes one choice from the plan: the radius around a post, the start dates for waves 2 and 3, leaving out periods with July 4 or December 31, leaving out the National Mall, and using only control squares as busy as the posts. {rob_summary}{nb_text} Leaving out the Mall changes almost nothing because MPD records very little crime there: the Park Police patrol it, and its squares have no gunshot detections, so they are not in the gunshot measure at all.</p>
+  <div class="table-wrap" style="margin-bottom:40px"><table>
+    <thead><tr><th>Measure</th><th class="n">Main</th>{rob_head}</tr></thead>
+    <tbody>{rob_rows}</tbody>
+  </table></div>
 
   <div class="section-title">Caveats</div>
   <div class="findings">

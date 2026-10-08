@@ -18,7 +18,9 @@ Caveats: federal agents arrived the same day; MPD's crime data is under investig
 
 The [test plan](docs/test-plan.md) was committed before these ran. Every test is reported on the page.
 
-- Near troop posts against comparable areas (about 800 half-kilometer squares, three waves): no reduction on any of six measures. Property crime and other theft rule out a reduction of 15% or more. Gunshots: 0.94 (0.76 to 1.17).
+- Near troop posts against comparable areas (about 800 half-kilometer squares, three waves): no reduction on any of six measures. Property crime rules out a reduction of 15% or more with either list of sites; other theft only with the Guard's September list. Gunshots: 0.94 (0.76 to 1.17).
+- Homicide, robbery and sex abuse near posts: +43% against comparable areas with the planned sites, which holds after correcting for six measures; +30% with the September list, which does not. About half of the gap was opening before the troops came.
+- Robustness checks from the plan (radius, start dates, holiday periods, the Mall, busier controls, negative binomial): no version shows a reduction near posts.
 - Placebo posts: for gunshots, 93% of 1,000 random sets of Metro stations did better than the real Guard stations.
 - Synthetic DC from other large agencies (the whole federal surge): property crime -22% (p = 0.04), murder -27% (p = 0.10), robbery +4% (p = 0.70).
 - Metro stations (Metro Transit Police blotters): inconclusive. The Guard stations had been worsening for two years before August 2025.
