@@ -1,0 +1,212 @@
+{
+ "guard_stations": [
+  "Foggy Bottom-GWU",
+  "Smithsonian",
+  "Eastern Market",
+  "Stadium Armory",
+  "Waterfront",
+  "McPherson Sq",
+  "L'Enfant Plaza",
+  "Gallery Pl-Chinatown",
+  "Metro Center",
+  "NoMa - Gallaudet U",
+  "Union Station",
+  "Navy Yard - Ballpark"
+ ],
+ "comparison_all_others": [
+  "Takoma",
+  "Friendship Heights",
+  "Tenleytown-AU",
+  "Van Ness-UDC",
+  "Cleveland Park",
+  "Woodley Park-Zoo Adams Morgan",
+  "Rhode Island Ave",
+  "Dupont Circle",
+  "Deanwood",
+  "Mt Vernon Sq - 7th St Convention Center",
+  "Farragut North",
+  "Farragut West",
+  "Minnesota Ave",
+  "Judiciary Sq",
+  "Archives-Navy Mem'l",
+  "Capitol South",
+  "Potomac Ave",
+  "Congress Heights",
+  "Brookland-CUA",
+  "Federal Triangle",
+  "Shaw-Howard Univ",
+  "Georgia Ave Petworth",
+  "U St/African-Amer Civil War Memorial/Cardozo",
+  "Columbia Heights",
+  "Federal Center SW",
+  "Benning Road",
+  "Fort Totten"
+ ],
+ "comparison_clean_pool": [
+  "Archives-Navy Mem'l",
+  "Benning Road",
+  "Brookland-CUA",
+  "Cleveland Park",
+  "Columbia Heights",
+  "Congress Heights",
+  "Deanwood",
+  "Farragut North",
+  "Farragut West",
+  "Federal Center SW",
+  "Federal Triangle",
+  "Fort Totten",
+  "Friendship Heights",
+  "Georgia Ave Petworth",
+  "Judiciary Sq",
+  "Minnesota Ave",
+  "Mt Vernon Sq - 7th St Convention Center",
+  "Potomac Ave",
+  "Rhode Island Ave",
+  "Shaw-Howard Univ",
+  "Takoma",
+  "Tenleytown-AU",
+  "Van Ness-UDC",
+  "Woodley Park-Zoo Adams Morgan"
+ ],
+ "outcomes": {
+  "victim": {
+   "vs_all_other_dc_stations": {
+    "rr": 1.334,
+    "ci95": [
+     0.95,
+     1.874
+    ],
+    "p": 0.0965
+   },
+   "vs_stations_away_from_known_sites": {
+    "rr": 1.396,
+    "ci95": [
+     0.996,
+     1.956
+    ],
+    "p": 0.0524
+   },
+   "counts_year_before_to_guard_year": {
+    "guard": [
+     312,
+     335,
+     7.4
+    ],
+    "all_others": [
+     361,
+     390,
+     8.0
+    ],
+    "clean_pool": [
+     327,
+     350,
+     7.0
+    ]
+   },
+   "placebo": {
+    "n": 1000,
+    "placebo_size": 12,
+    "share_at_or_below_real": 0.993,
+    "quantiles": {
+     "0.025": 0.749,
+     "0.5": 1.002,
+     "0.975": 1.313
+    }
+   },
+   "event_study": {
+    "by_quarter": {
+     "-8": 0.28,
+     "-7": 0.46,
+     "-6": 0.26,
+     "-5": 0.38,
+     "-4": 0.47,
+     "-3": 0.47,
+     "-2": 0.85,
+     "0": 0.57,
+     "1": 0.72,
+     "2": 0.82,
+     "3": 0.7,
+     "4": 0.54
+    },
+    "lead_test_p": 0.0
+   }
+  },
+  "violent": {
+   "vs_all_other_dc_stations": {
+    "rr": 1.366,
+    "ci95": [
+     0.839,
+     2.224
+    ],
+    "p": 0.2104
+   },
+   "vs_stations_away_from_known_sites": {
+    "rr": 1.424,
+    "ci95": [
+     0.873,
+     2.321
+    ],
+    "p": 0.1568
+   },
+   "counts_year_before_to_guard_year": {
+    "guard": [
+     91,
+     85,
+     -6.6
+    ],
+    "all_others": [
+     125,
+     105,
+     -16.0
+    ],
+    "clean_pool": [
+     113,
+     94,
+     -16.8
+    ]
+   },
+   "placebo": {
+    "n": 1000,
+    "placebo_size": 12,
+    "share_at_or_below_real": 0.9,
+    "quantiles": {
+     "0.025": 0.602,
+     "0.5": 1.002,
+     "0.975": 1.675
+    }
+   },
+   "event_study": {
+    "by_quarter": {
+     "-8": 0.28,
+     "-7": 0.82,
+     "-6": 0.47,
+     "-5": 0.45,
+     "-4": 0.66,
+     "-3": 0.62,
+     "-2": 1.17,
+     "0": 0.71,
+     "1": 0.95,
+     "2": 1.25,
+     "3": 0.95,
+     "4": 0.45
+    },
+    "lead_test_p": 0.1525
+   }
+  }
+ },
+ "victim_by_year": {
+  "guard": {
+   "2023": 74,
+   "2024": 208,
+   "2025": 335,
+   "2026": 218
+  },
+  "other": {
+   "2023": 200,
+   "2024": 428,
+   "2025": 431,
+   "2026": 266
+  }
+ },
+ "window_start": "2023-08-01"
+}

@@ -14,6 +14,14 @@ W = json.loads((ROOT / "out/wards.json").read_text())
 P = json.loads((ROOT / "out/phases.json").read_text())
 S = json.loads((ROOT / "out/shotspotter_checks.json").read_text())
 MON = pd.read_csv(ROOT / "out/monthly.csv", index_col=0, parse_dates=True)
+GP = json.loads((ROOT / "out/grid.json").read_text())          # planned sites
+GU = json.loads((ROOT / "out/grid_updated.json").read_text())       # with the Guard's Sept 12, 2025 list
+RIU = json.loads((ROOT / "out/grid_ri_updated.json").read_text())
+GX = json.loads((ROOT / "out/grid_extra.json").read_text())
+SY = json.loads((ROOT / "out/synth.json").read_text())
+SYS = pd.read_csv(ROOT / "out/synth_series.csv")
+MT = json.loads((ROOT / "out/metro.json").read_text())
+DD = json.loads((ROOT / "out/drawdown.json").read_text())
 DY = R["deployment_years"]
 
 
@@ -92,7 +100,37 @@ tauto = P["phase1"]["theft_auto"]["downtown_vs_rest_first_year"]
 
 hom, gun, tot, vio, prop = DY["homicide"], DY["gun_violent"], DY["total"], DY["violent"], DY["property"]
 its = R["its"]
-data = {"monthly": monthly, "weekly": {"labels": wlabels, "y2025": w25, "y2024": w24, "deploy": weeks.index(0)},
+GK = [("gunshots", "Gunshots detected"), ("violent_ex_adw", "Homicide, robbery, sex abuse"), ("gun_violent", "Reported gun crime"),
+      ("property", "Property crime"), ("theft_other", "Other theft"), ("theft_auto", "Theft from cars")]
+forest = {"labels": [l for _, l in GK],
+          "p_rr": [GP["outcomes"][k]["pooled"]["treat"]["rr"] for k, _ in GK], "p_ci": [GP["outcomes"][k]["pooled"]["treat"]["ci95"] for k, _ in GK],
+          "u_rr": [GU["outcomes"][k]["pooled"]["treat"]["rr"] for k, _ in GK], "u_ci": [GU["outcomes"][k]["pooled"]["treat"]["ci95"] for k, _ in GK]}
+sp = SYS[(SYS.outcome == "property") & (SYS.month >= "2023-01")]
+synth_chart = {"labels": [pd.Timestamp(m).strftime("%b %y") for m in sp.month], "dc": [round(100 * v) for v in sp.dc],
+               "synth": [round(100 * v) for v in sp.synthetic], "deploy": list(sp.month).index("2025-08") + 10 / 31}
+READ = {"reduction": "Reduction", "increase": "Increase near posts", "rules out a reduction of 15% or more": "Rules out a 15% reduction",
+        "inconclusive": "Inconclusive"}
+
+
+def reading(pooled):
+    r = READ[pooled["verdict"]]
+    ph = pooled["treat"].get("p_holm")
+    if pooled["verdict"] in ("increase", "reduction") and ph is not None and ph > 0.05:
+        r += ", not significant across six measures"
+    return r
+
+
+def rr_cell(t):
+    return f"{t['rr']:.2f}<span class='ci'>{t['ci95'][0]:.2f} to {t['ci95'][1]:.2f}</span>"
+
+
+tests_rows = "".join(
+    f"<tr><td>{lab}</td><td class='n'>{rr_cell(GP['outcomes'][k]['pooled']['treat'])}</td><td class='n'>{rr_cell(GU['outcomes'][k]['pooled']['treat'])}</td>"
+    f"<td class='n'>{round(100 * RIU[k]['share_placebos_at_or_below_real'])}%</td><td>{reading(GU['outcomes'][k]['pooled'])}</td></tr>" for k, lab in GK)
+MV = MT["outcomes"]["victim"]
+mev = [MV["event_study"]["by_quarter"][k] for k in ["0", "1", "2", "3", "4"]]
+DDo = DD["outcomes"]
+data = {"forest": forest, "synth": synth_chart, "monthly": monthly, "weekly": {"labels": wlabels, "y2025": w25, "y2024": w24, "deploy": weeks.index(0)},
         "national": national, "phase": phase, "wards": ward_chart}
 
 # the full table, first Guard year against the 10-year average
@@ -210,6 +248,7 @@ BODY = f"""<title>DC crime since the National Guard</title>
     <p><strong>It fell.</strong> In the first Guard year, August 11, 2025 to August 10, 2026, reported crime was {pc(tot['vs_avg10_pct'])} against the average for the same dates over the previous 10 years. The year before, it was already {pc(tot['year_before_vs_avg10_pct'])}.</p>
     <p><strong>Homicides and gunfire fell too, and they do not depend on anyone calling the police.</strong> Homicides fell from {hom['year_before']} to {hom['deploy_year']} ({pc(hom['vs_year_before_pct'])}). Gunshots picked up by sensors fell {pc(GS['yoy'])} from the year before (August 11 to June 30). From September to June, DC's homicide drop was the {ORD.get(BC['murder']['dc_rank_post_drop'], str(BC['murder']['dc_rank_post_drop']) + 'th')} largest of {BC['murder']['n_agencies']} large police departments.</p>
     <p><strong>It did not fall more where troops were posted.</strong> In the first months, gunshots fell {pc(g1['troops']['change_pct'])} in the two wards holding nearly all the Guard posts and {pc(g1['no_troops']['change_pct'])} in the wards without them. When the Guard began patrolling Anacostia in 2026, gunshots there fell {pc(g2['troops']['change_pct'])} against {pc(g2['no_troops']['change_pct'])} in neighboring Ward 7, which had no documented patrols.</p>
+    <p><strong>Tests written down before they ran agree.</strong> Across about 800 half-kilometer squares, crime near troop posts fell no more than in comparable areas on any of six measures, and the areas around the Metro stations where troops stood did worse than most random sets of other stations. Against other large cities, DC's property crime fell about {abs(round(SY['property']['effect_pct']))}% more after August 2025, but citywide, not near the posts.</p>
     <p>Federal agents arrived the same day, and violent crime was already falling, so this data cannot say what drove the decline. It can say the decline does not follow the troops.</p>
   </div>
 
@@ -278,7 +317,7 @@ BODY = f"""<title>DC crime since the National Guard</title>
   <div class="section-end"></div>
 
   <div class="section-title">Did it fall more where the troops were?</div>
-  <p class="note">The Guard's posts moved, so the test runs in two phases. Phase 1, August 11 to November 26, 2025: posts were downtown, on the Mall, at 10 Metro stations, Union Station and Navy Yard, almost all in Wards 2 and 6, compared with Wards 3, 4, 5, 7 and 8 (Ward 1 is left out because Guard patrols reached 14th Street by November). Phase 2, January to June 2026: Guard patrols in Anacostia, MPD's 7th District, compared with the neighboring 6th District (Ward 7), where no patrols are documented. Each is the change from the same dates a year earlier.</p>
+  <p class="note">The Guard's posts moved, so the test runs in two phases. Phase 1, August 11 to November 26, 2025: posts and patrols were downtown, on the Mall, at Metro stations, Union Station and Navy Yard, and along H Street, 14th Street, Dupont Circle, Georgetown and Capitol Hill, almost all in Wards 2 and 6, compared with Wards 3, 4, 5, 7 and 8 (Ward 1 is left out because patrols reached 14th Street by mid-September). Phase 2, January to June 2026: Guard patrols in Anacostia, MPD's 7th District, compared with the neighboring 6th District (Ward 7), where no patrols are documented. Each is the change from the same dates a year earlier.</p>
   <div class="charts">
     <div class="chart-box">
       <h3>Phase 1: downtown posts, fall 2025</h3>
@@ -308,7 +347,38 @@ BODY = f"""<title>DC crime since the National Guard</title>
     <thead><tr><th>Ward</th><th>Guard posts</th><th class="n">Homicides</th><th class="n">Gunshots detected</th></tr></thead>
     <tbody>{ward_rows}</tbody>
   </table></div>
-  <p class="note" style="margin:-28px 0 40px">August 11 to June 30, year before to Guard year. Posts as reported by WJLA, Guard releases and a November 2025 federal court opinion; there is no official map.</p>
+  <p class="note" style="margin:-28px 0 40px">August 11 to June 30, year before to Guard year. Posts as reported by WJLA, Guard releases, a Guard daily update filed in federal court (September 12, 2025) and a November 2025 court opinion; there is no official map.</p>
+
+  <div class="section-title">Tests written down in advance</div>
+  <p class="note">On October 8, 2026, before running them, I published a <a href="https://github.com/mngoh/DC-Crime-Since-National-Guard/blob/main/docs/test-plan.md">test plan</a> fixing the areas, dates, measures and what would count as an effect: a reduction of 15% or more near posts. Every test it lists is reported here. Afterward, a Guard daily update filed in court (September 12, 2025) showed more patrol sites than the plan had, so the tests were rerun with them. Both versions are shown.</p>
+  <div class="charts">
+    <div class="chart-box">
+      <h3>Near troop posts, against comparable areas</h3>
+      <div class="chart-sub">Rate ratio with its 95% range: about 800 half-kilometer squares, three waves of posts, each compared with squares more than a kilometer from any post over the same weeks. Below 1 means fewer crimes near posts than expected. The dashed line marks a 15% reduction, the smallest effect the plan said would matter.</div>
+      <div class="legend"><span><i class="sw box" style="border-color:#ef4444;background:rgba(239,68,68,.15)"></i>Planned sites</span><span><i class="sw box" style="border-color:#2563eb;background:rgba(37,99,235,.15)"></i>With the Guard's September list</span></div>
+      <div class="chart-wrap tall"><canvas id="cForest" role="img" aria-label="Rate ratios with 95 percent ranges for six measures near troop posts; none falls entirely below 1."></canvas></div>
+    </div>
+    <div class="chart-box">
+      <h3>Property crime, DC against a synthetic DC</h3>
+      <div class="chart-sub">Monthly property crime as a percent of each city's 2017 to 2024 average. Synthetic DC is a weighted mix of {SY['property']['donors']} large police agencies, chosen to match DC from 2017 to July 2025. From September 2025 to June 2026, DC ran {abs(round(SY['property']['effect_pct']))}% below it; only {SY['property']['rank_all'] - 1} of the {SY['property']['donors']} agencies, each tested the same way, showed as large a break (p = {SY['property']['p_all']:.2f}). This measures everything that arrived on August 11 together.</div>
+      <div class="legend"><span><i class="sw" style="border-color:#ef4444"></i>DC</span><span><i class="sw" style="border-color:#6b7280;border-top-style:dashed"></i>Synthetic DC</span></div>
+      <div class="chart-wrap tall"><canvas id="cSynth" role="img" aria-label="DC property crime against synthetic DC, January 2023 to June 2026, with DC falling below it after August 2025."></canvas></div>
+    </div>
+  </div>
+  <div class="table-wrap" style="margin-bottom:16px"><table>
+    <thead><tr><th>Measure</th><th class="n">Near posts, planned sites</th><th class="n">With the September list</th><th class="n">Random station sets that did better</th><th>Reading</th></tr></thead>
+    <tbody>{tests_rows}</tbody>
+  </table></div>
+  <div class="findings">
+    <div class="finding"><h4>No reduction near posts</h4><p>None of the six measures shows fewer crimes near posts than in comparable areas. For property crime and other theft, the range rules out a reduction of 15% or more. For gunshots and gun crime, the range is too wide to rule out a modest reduction, and it also allows an increase.</p></div>
+    <div class="finding"><h4>Random Metro stations did better</h4><p>I drew 12 stations at random from the {len(GU['placebo_pool'])} DC stations away from any known Guard site, 1,000 times, and ran the same test on each set. For gunshots, {round(100 * RIU['gunshots']['share_placebos_at_or_below_real'])}% of the random sets did better than the real Guard stations; for homicide, robbery and sex abuse, {round(100 * RIU['violent_ex_adw']['share_placebos_at_or_below_real'])}%. The Guard probably chose stations with growing problems, which would explain part of this.</p></div>
+    <div class="finding"><h4>Violent crime near posts rose, relative to elsewhere</h4><p>Homicide, robbery and sex abuse near posts ran {pc(100 * (GP['outcomes']['violent_ex_adw']['pooled']['treat']['rr'] - 1))} against comparable areas with the planned sites and {pc(100 * (GU['outcomes']['violent_ex_adw']['pooled']['treat']['rr'] - 1))} with the September list, which is not significant once six measures are tested together. About half of the gap was opening before the troops came: measured against only the 24 weeks before, it is {pc(100 * (GX['violent_ex_adw']['recent_baseline']['rr'] - 1))} ({GX['violent_ex_adw']['recent_baseline']['ci95'][0]:.2f} to {GX['violent_ex_adw']['recent_baseline']['ci95'][1]:.2f}).</p></div>
+    <div class="finding"><h4>Inside Metro: cannot tell</h4><p>Metro Transit Police blotters (January 2022 to August 2026, crimes with victims, placed at stations by address) show the stations that later got troops had been getting worse than other stations for two years, peaking in the three months before August 2025. Afterward they fell back {round(100 * (1 - max(mev)))} to {round(100 * (1 - min(mev)))}% from that peak, but changed like other stations against the year before ({pc(MV['counts_year_before_to_guard_year']['guard'][2])} and {pc(MV['counts_year_before_to_guard_year']['clean_pool'][2])}). A Guard effect and an ordinary fall from a peak look the same here.</p></div>
+    <div class="finding"><h4>The surge as a whole</h4><p>Against a synthetic DC built from other large agencies, September 2025 to June 2026: property crime {pc(SY['property']['effect_pct'])} (p = {SY['property']['p_all']:.2f}), murder {pc(SY['murder']['effect_pct'])} (p = {SY['murder']['p_all']:.2f}), robbery {pc(SY['robbery']['effect_pct'])} (p = {SY['robbery']['p_all']:.2f}). With the tests near posts, the property drop came citywide, not where troops stood.</p></div>
+    <div class="finding"><h4>The drawdown</h4><p>Troops fell from 5,148 in July 2026 to 3,124 by September 7 and 2,864 by October 7. Against normal, citywide crime did not move ({pc(DDo['total']['citywide']['before_vs_norm_pct'])} in the eight weeks before the first state left, {pc(DDo['total']['citywide']['after_vs_norm_pct'])} after). Near posts, violent crime rose against an unusually quiet June, back to its February to May level. Gunshots for this period come out in November.</p></div>
+    <div class="finding"><h4>A few waves look different</h4><p>Gunshots near the two Anacostia posts fell {pc(100 * (1 - GU['outcomes']['gunshots']['by_wave']['3']['treat']['rr']), signed=False)} more than in comparable areas, and reported gun crime along the patrolled corridors fell about {pc(100 * (1 - GU['outcomes']['gun_violent']['by_wave']['2']['treat']['rr']), signed=False)} more, although gunshots there rose. Among 36 wave-level estimates, one or two significant results in each direction is what chance alone produces; the combined tests the plan relied on show no reduction.</p></div>
+    <div class="finding"><h4>What others found</h4><p>The Niskanen Center (May 2026) found a property crime drop of about 24% and no clear effect on violent crime. A Senate Homeland Security Committee minority staff report (2026) found "no directly attributable impact on crime."</p></div>
+  </div>
 
   <div class="section-title">Caveats</div>
   <div class="findings">
@@ -317,7 +387,7 @@ BODY = f"""<title>DC crime since the National Guard</title>
     <div class="finding red"><h4>MPD's crime data is under investigation</h4><p>A House Oversight report (December 2025), an MPD internal affairs report (May 2026) and the DC Inspector General (July 2026) found misclassified and downgraded reports. Assault with a dangerous weapon rose {pc(DY['adw']['vs_year_before_pct'])} as knife and other-weapon cases roughly doubled while gun cases fell, which looks like a change in how assaults are recorded. That is why this page leans on homicides and gunshots.</p></div>
     <div class="finding red"><h4>Fewer reports is not less crime</h4><p>People avoiding police during immigration enforcement, or federal agencies taking reports that never reach MPD's data, would both lower counts. Neither can be measured here. Crimes on the National Mall are mostly handled by the Park Police and are not in this data.</p></div>
     <div class="finding red"><h4>Small numbers</h4><p>The two wards with troops had {WH['2']['year_before'] + WH['6']['year_before']} homicides the year before, too few to detect much. Gunshots, with thousands of detections, carry the comparison.</p></div>
-    <div class="finding red"><h4>Where the troops were is reconstructed</h4><p>There is no official map of Guard posts. Locations come from news reports, Guard releases and a federal court opinion. The Guard also did occasional patrols and cleanup elsewhere, so "without troops" means light presence, not none.</p></div>
+    <div class="finding red"><h4>Where the troops were is reconstructed</h4><p>There is no official map of Guard posts. Locations come from news reports, Guard releases, a Guard daily update filed in federal court and a court opinion. The update counts 18 Metro stations but names none; 12 are known from news reports, so some comparison stations probably had troops. Records requests for the post list are drafted. The Guard also did occasional patrols and cleanup elsewhere, so "without troops" means light presence, not none.</p></div>
   </div>
 
   <div class="section-title">Method and sources</div>
@@ -384,6 +454,31 @@ const phaseChart = (id, t, c) => new Chart(document.getElementById(id), {{ type:
     scales: {{ x: {{ grid: {{ display: false }}, ticks: {{ autoSkip: false, maxRotation: 0 }} }}, y: pctAxis(-80, 20) }} }} }});
 phaseChart('cPhase1', D.phase.p1_t, D.phase.p1_c);
 phaseChart('cPhase2', D.phase.p2_t, D.phase.p2_c);
+
+const dots = {{ id: 'dots', afterDatasetsDraw(ch) {{
+  const {{ ctx, chartArea: a, scales: {{ x }} }} = ch;
+  ctx.save();
+  [[1, []], [0.85, [4, 4]]].forEach(([v, dash]) => {{ const px = x.getPixelForValue(v); ctx.strokeStyle = C.muted; ctx.setLineDash(dash); ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(px, a.top); ctx.lineTo(px, a.bottom); ctx.stroke(); }});
+  ctx.setLineDash([]);
+  ch.data.datasets.forEach((d, i) => ch.getDatasetMeta(i).data.forEach((el, j) => {{
+    ctx.beginPath(); ctx.arc(x.getPixelForValue(d.rr[j]), el.y, 4, 0, 2 * Math.PI); ctx.fillStyle = d.borderColor; ctx.fill();
+    ctx.lineWidth = 2; ctx.strokeStyle = C.surface; ctx.stroke(); }}));
+  ctx.restore(); }} }};
+new Chart(document.getElementById('cForest'), {{ type: 'bar',
+  data: {{ labels: D.forest.labels, datasets: [
+    {{ label: 'Planned sites', data: D.forest.p_ci, rr: D.forest.p_rr, borderColor: C.red, backgroundColor: C.red + '40', borderWidth: 0, barThickness: 4 }},
+    {{ label: "With the Guard's September list", data: D.forest.u_ci, rr: D.forest.u_rr, borderColor: C.blue, backgroundColor: C.blue + '55', borderWidth: 0, barThickness: 4 }}] }},
+  options: {{ ...base, indexAxis: 'y',
+    plugins: {{ tooltip: {{ callbacks: {{ label: c => c.dataset.label + ': ' + c.dataset.rr[c.dataIndex].toFixed(2) + ' (' + c.raw[0].toFixed(2) + ' to ' + c.raw[1].toFixed(2) + ')' }} }} }},
+    scales: {{ x: {{ min: 0.3, max: 2.0, grid: {{ color: '#1c1c1c' }}, ticks: {{ callback: v => Number(v).toFixed(1) }} }}, y: {{ grid: {{ display: false }} }} }} }},
+  plugins: [dots] }});
+
+new Chart(document.getElementById('cSynth'), {{ type: 'line',
+  data: {{ labels: D.synth.labels, datasets: [line('DC', D.synth.dc, C.red), line('Synthetic DC', D.synth.synth, C.grey, [5, 4])] }},
+  options: {{ ...base, interaction: {{ mode: 'index', intersect: false }},
+    plugins: {{ tooltip: {{ callbacks: {{ label: c => c.dataset.label + ': ' + c.parsed.y + '% of 2017-2024 average' }} }} }},
+    scales: {{ x: {{ grid: {{ display: false }}, ticks: {{ autoSkip: false, maxRotation: 0, callback: (v, i) => i % 6 === 0 ? D.synth.labels[i] : '' }} }}, y: {{ min: 40, max: 130, grid: {{ color: '#1c1c1c' }}, ticks: {{ callback: v => v + '%' }} }} }} }},
+  plugins: [marker(D.synth.deploy, 'Aug 11, 2025')] }});
 
 new Chart(document.getElementById('cWards'), {{ type: 'bar',
   data: {{ labels: D.wards.labels, datasets: [{{ label: 'Gunshots', data: D.wards.vals, borderColor: D.wards.troops.map(t => t ? C.red : C.blue), backgroundColor: D.wards.troops.map(t => t ? C.red + '26' : C.blue + '26'), borderWidth: 1.5, borderRadius: 3, maxBarThickness: 22 }}] }},

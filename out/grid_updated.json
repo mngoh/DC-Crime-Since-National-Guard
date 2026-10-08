@@ -1,0 +1,910 @@
+{
+ "plan": "docs/test-plan.md",
+ "updated_sites": true,
+ "sesoi_rr": 0.85,
+ "cells": 793,
+ "placebo_pool": [
+  "Archives-Navy Mem'l",
+  "Benning Road",
+  "Brookland-CUA",
+  "Cleveland Park",
+  "Columbia Heights",
+  "Congress Heights",
+  "Deanwood",
+  "Farragut North",
+  "Farragut West",
+  "Federal Center SW",
+  "Federal Triangle",
+  "Fort Totten",
+  "Friendship Heights",
+  "Georgia Ave Petworth",
+  "Judiciary Sq",
+  "Minnesota Ave",
+  "Mt Vernon Sq - 7th St Convention Center",
+  "Potomac Ave",
+  "Rhode Island Ave",
+  "Shaw-Howard Univ",
+  "Takoma",
+  "Tenleytown-AU",
+  "Van Ness-UDC",
+  "Woodley Park-Zoo Adams Morgan"
+ ],
+ "outcomes": {
+  "gunshots": {
+   "label": "Gunshots detected",
+   "pooled": {
+    "treat": {
+     "rr": 0.944,
+     "ci95": [
+      0.762,
+      1.17
+     ],
+     "p": 0.6008
+    },
+    "ring": {
+     "rr": 1.149,
+     "ci95": [
+      0.951,
+      1.389
+     ],
+     "p": 0.1509
+    },
+    "verdict": "inconclusive",
+    "n_obs": 24552,
+    "treated_cells": 32
+   },
+   "by_wave": {
+    "1": {
+     "treat": {
+      "rr": 1.093,
+      "ci95": [
+       0.816,
+       1.465
+      ],
+      "p": 0.5506
+     },
+     "ring": {
+      "rr": 1.33,
+      "ci95": [
+       1.036,
+       1.709
+      ],
+      "p": 0.0253
+     },
+     "verdict": "inconclusive",
+     "n_obs": 8968,
+     "treated_cells": 14
+    },
+    "2": {
+     "treat": {
+      "rr": 1.387,
+      "ci95": [
+       0.826,
+       2.33
+      ],
+      "p": 0.2162
+     },
+     "ring": {
+      "rr": 1.248,
+      "ci95": [
+       0.971,
+       1.603
+      ],
+      "p": 0.084
+     },
+     "verdict": "inconclusive",
+     "n_obs": 8588,
+     "treated_cells": 12
+    },
+    "3": {
+     "treat": {
+      "rr": 0.746,
+      "ci95": [
+       0.599,
+       0.929
+      ],
+      "p": 0.0088
+     },
+     "ring": {
+      "rr": 0.885,
+      "ci95": [
+       0.666,
+       1.176
+      ],
+      "p": 0.3995
+     },
+     "verdict": "reduction",
+     "n_obs": 6996,
+     "treated_cells": 6
+    }
+   },
+   "lead_test": {
+    "leads": 12,
+    "chi2": 11.76,
+    "p": 0.4653
+   },
+   "robustness": {
+    "radius_250": {
+     "rr": 0.938,
+     "ci95": [
+      0.643,
+      1.368
+     ],
+     "p": 0.7378
+    },
+    "radius_1000": {
+     "rr": 1.025,
+     "ci95": [
+      0.863,
+      1.217
+     ],
+     "p": 0.7817
+    },
+    "sensitivity_starts": {
+     "rr": 0.914,
+     "ci95": [
+      0.744,
+      1.122
+     ],
+     "p": 0.3878
+    },
+    "drop_fireworks": {
+     "rr": 0.963,
+     "ci95": [
+      0.745,
+      1.245
+     ],
+     "p": 0.7727
+    },
+    "drop_mall": {
+     "rr": 0.944,
+     "ci95": [
+      0.762,
+      1.17
+     ],
+     "p": 0.6008
+    },
+    "busy_controls": {
+     "rr": 0.974,
+     "ci95": [
+      0.766,
+      1.238
+     ],
+     "p": 0.8272
+    },
+    "negbin_wave1": {
+     "rr": 1.091,
+     "ci95": [
+      0.776,
+      1.532
+     ]
+    }
+   }
+  },
+  "violent_ex_adw": {
+   "label": "Homicide, robbery and sex abuse",
+   "pooled": {
+    "treat": {
+     "rr": 1.299,
+     "ci95": [
+      1.052,
+      1.604
+     ],
+     "p": 0.0152,
+     "p_holm": 0.076
+    },
+    "ring": {
+     "rr": 1.052,
+     "ci95": [
+      0.858,
+      1.29
+     ],
+     "p": 0.6278
+    },
+    "verdict": "increase",
+    "n_obs": 45097,
+    "treated_cells": 73
+   },
+   "by_wave": {
+    "1": {
+     "treat": {
+      "rr": 1.566,
+      "ci95": [
+       1.224,
+       2.004
+      ],
+      "p": 0.0004
+     },
+     "ring": {
+      "rr": 0.962,
+      "ci95": [
+       0.651,
+       1.421
+      ],
+      "p": 0.8464
+     },
+     "verdict": "increase",
+     "n_obs": 16810,
+     "treated_cells": 41
+    },
+    "2": {
+     "treat": {
+      "rr": 0.98,
+      "ci95": [
+       0.684,
+       1.406
+      ],
+      "p": 0.9144
+     },
+     "ring": {
+      "rr": 1.102,
+      "ci95": [
+       0.894,
+       1.359
+      ],
+      "p": 0.3612
+     },
+     "verdict": "inconclusive",
+     "n_obs": 15867,
+     "treated_cells": 26
+    },
+    "3": {
+     "treat": {
+      "rr": 1.3,
+      "ci95": [
+       0.848,
+       1.993
+      ],
+      "p": 0.2295
+     },
+     "ring": {
+      "rr": 1.07,
+      "ci95": [
+       0.668,
+       1.714
+      ],
+      "p": 0.7785
+     },
+     "verdict": "inconclusive",
+     "n_obs": 12420,
+     "treated_cells": 6
+    }
+   },
+   "lead_test": {
+    "leads": 12,
+    "chi2": 27.46,
+    "p": 0.0066
+   },
+   "robustness": {
+    "radius_250": {
+     "rr": 1.31,
+     "ci95": [
+      1.008,
+      1.704
+     ],
+     "p": 0.0437
+    },
+    "radius_1000": {
+     "rr": 1.159,
+     "ci95": [
+      0.981,
+      1.37
+     ],
+     "p": 0.0837
+    },
+    "sensitivity_starts": {
+     "rr": 1.303,
+     "ci95": [
+      1.055,
+      1.608
+     ],
+     "p": 0.0138
+    },
+    "drop_fireworks": {
+     "rr": 1.265,
+     "ci95": [
+      1.009,
+      1.585
+     ],
+     "p": 0.0412
+    },
+    "drop_mall": {
+     "rr": 1.299,
+     "ci95": [
+      1.052,
+      1.604
+     ],
+     "p": 0.0152
+    },
+    "busy_controls": {
+     "rr": 1.41,
+     "ci95": [
+      1.135,
+      1.752
+     ],
+     "p": 0.0019
+    }
+   }
+  },
+  "gun_violent": {
+   "label": "Reported gun crime",
+   "pooled": {
+    "treat": {
+     "rr": 0.849,
+     "ci95": [
+      0.659,
+      1.095
+     ],
+     "p": 0.2067,
+     "p_holm": 0.8268
+    },
+    "ring": {
+     "rr": 0.908,
+     "ci95": [
+      0.703,
+      1.173
+     ],
+     "p": 0.4604
+    },
+    "verdict": "inconclusive",
+    "n_obs": 43060,
+    "treated_cells": 73
+   },
+   "by_wave": {
+    "1": {
+     "treat": {
+      "rr": 1.053,
+      "ci95": [
+       0.795,
+       1.393
+      ],
+      "p": 0.7192
+     },
+     "ring": {
+      "rr": 0.814,
+      "ci95": [
+       0.569,
+       1.164
+      ],
+      "p": 0.2589
+     },
+     "verdict": "inconclusive",
+     "n_obs": 16154,
+     "treated_cells": 41
+    },
+    "2": {
+     "treat": {
+      "rr": 0.515,
+      "ci95": [
+       0.334,
+       0.793
+      ],
+      "p": 0.0026
+     },
+     "ring": {
+      "rr": 0.986,
+      "ci95": [
+       0.688,
+       1.412
+      ],
+      "p": 0.9388
+     },
+     "verdict": "reduction",
+     "n_obs": 15170,
+     "treated_cells": 26
+    },
+    "3": {
+     "treat": {
+      "rr": 1.123,
+      "ci95": [
+       0.58,
+       2.174
+      ],
+      "p": 0.7316
+     },
+     "ring": {
+      "rr": 0.852,
+      "ci95": [
+       0.428,
+       1.695
+      ],
+      "p": 0.6476
+     },
+     "verdict": "inconclusive",
+     "n_obs": 11736,
+     "treated_cells": 6
+    }
+   },
+   "lead_test": {
+    "leads": 12,
+    "chi2": 23.21,
+    "p": 0.026
+   },
+   "robustness": {
+    "radius_250": {
+     "rr": 1.087,
+     "ci95": [
+      0.775,
+      1.525
+     ],
+     "p": 0.6299
+    },
+    "radius_1000": {
+     "rr": 0.861,
+     "ci95": [
+      0.701,
+      1.057
+     ],
+     "p": 0.1536
+    },
+    "sensitivity_starts": {
+     "rr": 0.853,
+     "ci95": [
+      0.662,
+      1.099
+     ],
+     "p": 0.2197
+    },
+    "drop_fireworks": {
+     "rr": 0.791,
+     "ci95": [
+      0.609,
+      1.028
+     ],
+     "p": 0.0793
+    },
+    "drop_mall": {
+     "rr": 0.849,
+     "ci95": [
+      0.659,
+      1.095
+     ],
+     "p": 0.2067
+    },
+    "busy_controls": {
+     "rr": 0.926,
+     "ci95": [
+      0.714,
+      1.202
+     ],
+     "p": 0.5659
+    }
+   }
+  },
+  "property": {
+   "label": "Property crime",
+   "pooled": {
+    "treat": {
+     "rr": 1.024,
+     "ci95": [
+      0.923,
+      1.138
+     ],
+     "p": 0.651,
+     "p_holm": 1.0
+    },
+    "ring": {
+     "rr": 0.921,
+     "ci95": [
+      0.832,
+      1.02
+     ],
+     "p": 0.1157
+    },
+    "verdict": "rules out a reduction of 15% or more",
+    "n_obs": 60668,
+    "treated_cells": 73
+   },
+   "by_wave": {
+    "1": {
+     "treat": {
+      "rr": 1.016,
+      "ci95": [
+       0.899,
+       1.148
+      ],
+      "p": 0.8016
+     },
+     "ring": {
+      "rr": 0.903,
+      "ci95": [
+       0.783,
+       1.042
+      ],
+      "p": 0.163
+     },
+     "verdict": "rules out a reduction of 15% or more",
+     "n_obs": 22386,
+     "treated_cells": 41
+    },
+    "2": {
+     "treat": {
+      "rr": 1.024,
+      "ci95": [
+       0.875,
+       1.198
+      ],
+      "p": 0.7698
+     },
+     "ring": {
+      "rr": 0.922,
+      "ci95": [
+       0.807,
+       1.052
+      ],
+      "p": 0.2276
+     },
+     "verdict": "rules out a reduction of 15% or more",
+     "n_obs": 21074,
+     "treated_cells": 26
+    },
+    "3": {
+     "treat": {
+      "rr": 1.166,
+      "ci95": [
+       0.85,
+       1.6
+      ],
+      "p": 0.3412
+     },
+     "ring": {
+      "rr": 1.09,
+      "ci95": [
+       0.956,
+       1.244
+      ],
+      "p": 0.1991
+     },
+     "verdict": "rules out a reduction of 15% or more",
+     "n_obs": 17208,
+     "treated_cells": 6
+    }
+   },
+   "lead_test": {
+    "leads": 12,
+    "chi2": 51.25,
+    "p": 0.0
+   },
+   "robustness": {
+    "radius_250": {
+     "rr": 1.09,
+     "ci95": [
+      0.909,
+      1.307
+     ],
+     "p": 0.3546
+    },
+    "radius_1000": {
+     "rr": 1.022,
+     "ci95": [
+      0.932,
+      1.121
+     ],
+     "p": 0.6468
+    },
+    "sensitivity_starts": {
+     "rr": 1.024,
+     "ci95": [
+      0.922,
+      1.136
+     ],
+     "p": 0.6612
+    },
+    "drop_fireworks": {
+     "rr": 1.024,
+     "ci95": [
+      0.92,
+      1.139
+     ],
+     "p": 0.6635
+    },
+    "drop_mall": {
+     "rr": 1.024,
+     "ci95": [
+      0.922,
+      1.137
+     ],
+     "p": 0.6564
+    },
+    "busy_controls": {
+     "rr": 1.043,
+     "ci95": [
+      0.927,
+      1.174
+     ],
+     "p": 0.4839
+    }
+   }
+  },
+  "theft_other": {
+   "label": "Other theft",
+   "pooled": {
+    "treat": {
+     "rr": 0.984,
+     "ci95": [
+      0.85,
+      1.141
+     ],
+     "p": 0.8336,
+     "p_holm": 1.0
+    },
+    "ring": {
+     "rr": 0.887,
+     "ci95": [
+      0.763,
+      1.031
+     ],
+     "p": 0.119
+    },
+    "verdict": "rules out a reduction of 15% or more",
+    "n_obs": 54973,
+    "treated_cells": 73
+   },
+   "by_wave": {
+    "1": {
+     "treat": {
+      "rr": 1.054,
+      "ci95": [
+       0.904,
+       1.228
+      ],
+      "p": 0.5016
+     },
+     "ring": {
+      "rr": 0.919,
+      "ci95": [
+       0.751,
+       1.124
+      ],
+      "p": 0.4116
+     },
+     "verdict": "rules out a reduction of 15% or more",
+     "n_obs": 20377,
+     "treated_cells": 41
+    },
+    "2": {
+     "treat": {
+      "rr": 0.901,
+      "ci95": [
+       0.727,
+       1.116
+      ],
+      "p": 0.3387
+     },
+     "ring": {
+      "rr": 0.848,
+      "ci95": [
+       0.703,
+       1.024
+      ],
+      "p": 0.0865
+     },
+     "verdict": "inconclusive",
+     "n_obs": 19188,
+     "treated_cells": 26
+    },
+    "3": {
+     "treat": {
+      "rr": 1.361,
+      "ci95": [
+       0.716,
+       2.586
+      ],
+      "p": 0.347
+     },
+     "ring": {
+      "rr": 0.985,
+      "ci95": [
+       0.769,
+       1.263
+      ],
+      "p": 0.9071
+     },
+     "verdict": "inconclusive",
+     "n_obs": 15408,
+     "treated_cells": 6
+    }
+   },
+   "lead_test": {
+    "leads": 12,
+    "chi2": 25.69,
+    "p": 0.0119
+   },
+   "robustness": {
+    "radius_250": {
+     "rr": 1.033,
+     "ci95": [
+      0.798,
+      1.338
+     ],
+     "p": 0.8059
+    },
+    "radius_1000": {
+     "rr": 1.009,
+     "ci95": [
+      0.863,
+      1.179
+     ],
+     "p": 0.9123
+    },
+    "sensitivity_starts": {
+     "rr": 0.984,
+     "ci95": [
+      0.849,
+      1.14
+     ],
+     "p": 0.8268
+    },
+    "drop_fireworks": {
+     "rr": 0.985,
+     "ci95": [
+      0.85,
+      1.142
+     ],
+     "p": 0.8425
+    },
+    "drop_mall": {
+     "rr": 0.984,
+     "ci95": [
+      0.849,
+      1.14
+     ],
+     "p": 0.8257
+    },
+    "busy_controls": {
+     "rr": 0.992,
+     "ci95": [
+      0.845,
+      1.165
+     ],
+     "p": 0.9242
+    }
+   }
+  },
+  "theft_auto": {
+   "label": "Theft from cars",
+   "pooled": {
+    "treat": {
+     "rr": 0.964,
+     "ci95": [
+      0.801,
+      1.161
+     ],
+     "p": 0.7004,
+     "p_holm": 1.0
+    },
+    "ring": {
+     "rr": 0.961,
+     "ci95": [
+      0.808,
+      1.143
+     ],
+     "p": 0.6548
+    },
+    "verdict": "inconclusive",
+    "n_obs": 58180,
+    "treated_cells": 73
+   },
+   "by_wave": {
+    "1": {
+     "treat": {
+      "rr": 0.818,
+      "ci95": [
+       0.611,
+       1.094
+      ],
+      "p": 0.1752
+     },
+     "ring": {
+      "rr": 0.919,
+      "ci95": [
+       0.684,
+       1.234
+      ],
+      "p": 0.5738
+     },
+     "verdict": "inconclusive",
+     "n_obs": 21443,
+     "treated_cells": 41
+    },
+    "2": {
+     "treat": {
+      "rr": 1.106,
+      "ci95": [
+       0.872,
+       1.404
+      ],
+      "p": 0.4062
+     },
+     "ring": {
+      "rr": 0.99,
+      "ci95": [
+       0.822,
+       1.193
+      ],
+      "p": 0.9193
+     },
+     "verdict": "rules out a reduction of 15% or more",
+     "n_obs": 20213,
+     "treated_cells": 26
+    },
+    "3": {
+     "treat": {
+      "rr": 1.188,
+      "ci95": [
+       0.699,
+       2.019
+      ],
+      "p": 0.524
+     },
+     "ring": {
+      "rr": 1.143,
+      "ci95": [
+       0.802,
+       1.629
+      ],
+      "p": 0.4593
+     },
+     "verdict": "inconclusive",
+     "n_obs": 16524,
+     "treated_cells": 6
+    }
+   },
+   "lead_test": {
+    "leads": 12,
+    "chi2": 30.52,
+    "p": 0.0023
+   },
+   "robustness": {
+    "radius_250": {
+     "rr": 1.133,
+     "ci95": [
+      0.885,
+      1.45
+     ],
+     "p": 0.3212
+    },
+    "radius_1000": {
+     "rr": 0.962,
+     "ci95": [
+      0.839,
+      1.103
+     ],
+     "p": 0.5771
+    },
+    "sensitivity_starts": {
+     "rr": 0.964,
+     "ci95": [
+      0.801,
+      1.16
+     ],
+     "p": 0.699
+    },
+    "drop_fireworks": {
+     "rr": 0.959,
+     "ci95": [
+      0.794,
+      1.158
+     ],
+     "p": 0.6623
+    },
+    "drop_mall": {
+     "rr": 0.966,
+     "ci95": [
+      0.802,
+      1.163
+     ],
+     "p": 0.7121
+    },
+    "busy_controls": {
+     "rr": 1.108,
+     "ci95": [
+      0.906,
+      1.355
+     ],
+     "p": 0.3175
+    }
+   }
+  }
+ }
+}

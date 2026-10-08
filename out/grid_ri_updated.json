@@ -1,0 +1,80 @@
+{
+ "gunshots": {
+  "real_rr": 1.093,
+  "n_placebos": 1000,
+  "candidates": 24,
+  "share_placebos_at_or_below_real": 0.932,
+  "placebo_quantiles": {
+   "0.025": 0.748,
+   "0.25": 0.841,
+   "0.5": 0.899,
+   "0.75": 0.98,
+   "0.975": 1.17
+  }
+ },
+ "violent_ex_adw": {
+  "real_rr": 1.566,
+  "n_placebos": 1000,
+  "candidates": 24,
+  "share_placebos_at_or_below_real": 1.0,
+  "placebo_quantiles": {
+   "0.025": 0.788,
+   "0.25": 0.917,
+   "0.5": 0.986,
+   "0.75": 1.073,
+   "0.975": 1.209
+  }
+ },
+ "gun_violent": {
+  "real_rr": 1.053,
+  "n_placebos": 1000,
+  "candidates": 24,
+  "share_placebos_at_or_below_real": 0.903,
+  "placebo_quantiles": {
+   "0.025": 0.764,
+   "0.25": 0.87,
+   "0.5": 0.926,
+   "0.75": 0.984,
+   "0.975": 1.122
+  }
+ },
+ "property": {
+  "real_rr": 1.017,
+  "n_placebos": 1000,
+  "candidates": 24,
+  "share_placebos_at_or_below_real": 0.919,
+  "placebo_quantiles": {
+   "0.025": 0.775,
+   "0.25": 0.86,
+   "0.5": 0.911,
+   "0.75": 0.961,
+   "0.975": 1.07
+  }
+ },
+ "theft_other": {
+  "real_rr": 1.054,
+  "n_placebos": 1000,
+  "candidates": 24,
+  "share_placebos_at_or_below_real": 0.965,
+  "placebo_quantiles": {
+   "0.025": 0.709,
+   "0.25": 0.802,
+   "0.5": 0.863,
+   "0.75": 0.93,
+   "0.975": 1.063
+  }
+ },
+ "theft_auto": {
+  "real_rr": 0.819,
+  "n_placebos": 1000,
+  "candidates": 24,
+  "share_placebos_at_or_below_real": 0.276,
+  "placebo_quantiles": {
+   "0.025": 0.728,
+   "0.25": 0.813,
+   "0.5": 0.869,
+   "0.75": 0.933,
+   "0.975": 1.083
+  }
+ }
+}

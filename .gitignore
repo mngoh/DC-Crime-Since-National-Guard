@@ -4,3 +4,11 @@ data/raw/*.csv
 data/external/rtci_*.csv
 __pycache__/
 .DS_Store
+.venv/
+# Metro Transit Police blotters (wmata.com) and parsed copies; rebuilt by scripts/metro_parse.py
+data/raw/mtpd/
+data/interim/
+# court and Senate PDFs; linked from the page and docs
+data/external/court/*.pdf
+data/external/court/*.txt
+out/*.log

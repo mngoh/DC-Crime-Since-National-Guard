@@ -1,0 +1,74 @@
+{
+ "murder": {
+  "donors": 96,
+  "effect_pct": -27.0,
+  "pre_rmspe": 0.243,
+  "post_pre_ratio": 1.41,
+  "rank_all": 10,
+  "p_all": 0.103,
+  "rank_good_fit": 9,
+  "n_good_fit": 84,
+  "p_good_fit": 0.106,
+  "placebo_effects_pct_quantiles": {
+   "0.025": -100.0,
+   "0.5": -4.9,
+   "0.975": 126.5
+  },
+  "top_weights": {
+   "TNMPD0000": 0.199,
+   "WIMPD0000": 0.168,
+   "CA0371100": 0.077,
+   "NC0320100": 0.072,
+   "MD0172100": 0.071,
+   "WASPD0000": 0.068
+  }
+ },
+ "robbery": {
+  "donors": 92,
+  "effect_pct": 4.2,
+  "pre_rmspe": 0.2,
+  "post_pre_ratio": 0.73,
+  "rank_all": 65,
+  "p_all": 0.699,
+  "rank_good_fit": 64,
+  "n_good_fit": 91,
+  "p_good_fit": 0.696,
+  "placebo_effects_pct_quantiles": {
+   "0.025": -40.5,
+   "0.5": -3.5,
+   "0.975": 35.0
+  },
+  "top_weights": {
+   "MD0172100": 0.505,
+   "NB0550100": 0.192,
+   "ILCPD0000": 0.094,
+   "TNMPD0000": 0.064,
+   "TX0571500": 0.031,
+   "VA0430100": 0.03
+  }
+ },
+ "property": {
+  "donors": 92,
+  "effect_pct": -21.9,
+  "pre_rmspe": 0.072,
+  "post_pre_ratio": 2.63,
+  "rank_all": 4,
+  "p_all": 0.043,
+  "rank_good_fit": 4,
+  "n_good_fit": 92,
+  "p_good_fit": 0.043,
+  "placebo_effects_pct_quantiles": {
+   "0.025": -22.9,
+   "0.5": 0.7,
+   "0.975": 14.6
+  },
+  "top_weights": {
+   "MDBPD0000": 0.249,
+   "OK0550600": 0.186,
+   "NC0600100": 0.151,
+   "LA0260000": 0.064,
+   "MI8234900": 0.062,
+   "VA1030000": 0.052
+  }
+ }
+}
