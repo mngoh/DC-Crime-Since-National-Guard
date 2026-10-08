@@ -1,0 +1,1513 @@
+{
+ "phase1": {
+  "window": "Aug 11 - Nov 26; 2025 vs 2024, placebo 2024 vs 2023",
+  "gunshots": {
+   "wards_2_6_vs_3_4_5_7_8": {
+    "troops": {
+     "post": 32,
+     "pre": 74,
+     "pre2": 79,
+     "change_pct": -56.8,
+     "placebo_change_pct": -6.3
+    },
+    "no_troops": {
+     "post": 649,
+     "pre": 1601,
+     "pre2": 1996,
+     "change_pct": -59.5,
+     "placebo_change_pct": -19.8
+    },
+    "ratio": {
+     "point": 1.067,
+     "ci95": [
+      0.609,
+      1.671
+     ]
+    },
+    "placebo": {
+     "point": 1.168,
+     "ci95": [
+      0.785,
+      1.658
+     ]
+    }
+   },
+   "wards_2_6_vs_all_others": {
+    "troops": {
+     "post": 32,
+     "pre": 74,
+     "pre2": 79,
+     "change_pct": -56.8,
+     "placebo_change_pct": -6.3
+    },
+    "no_troops": {
+     "post": 662,
+     "pre": 1666,
+     "pre2": 2071,
+     "change_pct": -60.3,
+     "placebo_change_pct": -19.6
+    },
+    "ratio": {
+     "point": 1.088,
+     "ci95": [
+      0.623,
+      1.703
+     ]
+    },
+    "placebo": {
+     "point": 1.164,
+     "ci95": [
+      0.784,
+      1.655
+     ]
+    }
+   },
+   "near_post_vs_rest": {
+    "troops": {
+     "post": 14,
+     "pre": 31,
+     "pre2": 21,
+     "change_pct": -54.8,
+     "placebo_change_pct": 47.6
+    },
+    "no_troops": {
+     "post": 680,
+     "pre": 1709,
+     "pre2": 2129,
+     "change_pct": -60.2,
+     "placebo_change_pct": -19.7
+    },
+    "ratio": {
+     "point": 1.135,
+     "ci95": [
+      0.42,
+      2.168
+     ]
+    },
+    "placebo": {
+     "point": 1.839,
+     "ci95": [
+      1.044,
+      3.245
+     ]
+    }
+   },
+   "downtown_vs_rest": {
+    "troops": {
+     "post": 0,
+     "pre": 0,
+     "pre2": 0,
+     "change_pct": null,
+     "placebo_change_pct": null
+    },
+    "no_troops": {
+     "post": 694,
+     "pre": 1740,
+     "pre2": 2150,
+     "change_pct": -60.1,
+     "placebo_change_pct": -19.1
+    },
+    "ratio": null,
+    "placebo": null
+   },
+   "downtown_vs_rest_first_year": {
+    "troops": {
+     "post": 0,
+     "pre": 0,
+     "pre2": 0,
+     "change_pct": null,
+     "placebo_change_pct": null
+    },
+    "no_troops": {
+     "post": 2428,
+     "pre": 4870,
+     "pre2": 6259,
+     "change_pct": -50.1,
+     "placebo_change_pct": -22.2
+    },
+    "ratio": null,
+    "placebo": null
+   }
+  },
+  "homicide": {
+   "wards_2_6_vs_3_4_5_7_8": {
+    "troops": {
+     "post": 1,
+     "pre": 5,
+     "pre2": 13,
+     "change_pct": -80.0,
+     "placebo_change_pct": -61.5
+    },
+    "no_troops": {
+     "post": 19,
+     "pre": 50,
+     "pre2": 60,
+     "change_pct": -62.0,
+     "placebo_change_pct": -16.7
+    },
+    "ratio": {
+     "point": 0.526,
+     "ci95": [
+      0.318,
+      2.944
+     ]
+    },
+    "placebo": {
+     "point": 0.462,
+     "ci95": [
+      0.148,
+      1.021
+     ]
+    }
+   },
+   "wards_2_6_vs_all_others": {
+    "troops": {
+     "post": 1,
+     "pre": 5,
+     "pre2": 13,
+     "change_pct": -80.0,
+     "placebo_change_pct": -61.5
+    },
+    "no_troops": {
+     "post": 22,
+     "pre": 54,
+     "pre2": 71,
+     "change_pct": -59.3,
+     "placebo_change_pct": -23.9
+    },
+    "ratio": {
+     "point": 0.491,
+     "ci95": [
+      0.282,
+      2.904
+     ]
+    },
+    "placebo": {
+     "point": 0.506,
+     "ci95": [
+      0.153,
+      1.161
+     ]
+    }
+   },
+   "near_post_vs_rest": {
+    "troops": {
+     "post": 2,
+     "pre": 2,
+     "pre2": 7,
+     "change_pct": 0.0,
+     "placebo_change_pct": -71.4
+    },
+    "no_troops": {
+     "post": 21,
+     "pre": 57,
+     "pre2": 77,
+     "change_pct": -63.2,
+     "placebo_change_pct": -26.0
+    },
+    "ratio": {
+     "point": 2.714,
+     "ci95": [
+      0.626,
+      12.652
+     ]
+    },
+    "placebo": {
+     "point": 0.386,
+     "ci95": [
+      0.101,
+      2.621
+     ]
+    }
+   },
+   "downtown_vs_rest": {
+    "troops": {
+     "post": 0,
+     "pre": 1,
+     "pre2": 1,
+     "change_pct": -100.0,
+     "placebo_change_pct": 0.0
+    },
+    "no_troops": {
+     "post": 23,
+     "pre": 58,
+     "pre2": 83,
+     "change_pct": -60.3,
+     "placebo_change_pct": -30.1
+    },
+    "ratio": null,
+    "placebo": {
+     "point": 1.431,
+     "ci95": [
+      0.581,
+      4.647
+     ]
+    }
+   },
+   "downtown_vs_rest_first_year": {
+    "troops": {
+     "post": 2,
+     "pre": 5,
+     "pre2": 3,
+     "change_pct": -60.0,
+     "placebo_change_pct": 66.7
+    },
+    "no_troops": {
+     "post": 92,
+     "pre": 162,
+     "pre2": 210,
+     "change_pct": -43.2,
+     "placebo_change_pct": -22.9
+    },
+    "ratio": {
+     "point": 0.704,
+     "ci95": [
+      0.211,
+      3.458
+     ]
+    },
+    "placebo": {
+     "point": 2.16,
+     "ci95": [
+      0.503,
+      9.012
+     ]
+    }
+   }
+  },
+  "gun_violent": {
+   "wards_2_6_vs_3_4_5_7_8": {
+    "troops": {
+     "post": 32,
+     "pre": 94,
+     "pre2": 185,
+     "change_pct": -66.0,
+     "placebo_change_pct": -49.2
+    },
+    "no_troops": {
+     "post": 188,
+     "pre": 462,
+     "pre2": 705,
+     "change_pct": -59.3,
+     "placebo_change_pct": -34.5
+    },
+    "ratio": {
+     "point": 0.837,
+     "ci95": [
+      0.598,
+      1.144
+     ]
+    },
+    "placebo": {
+     "point": 0.775,
+     "ci95": [
+      0.612,
+      1.024
+     ]
+    }
+   },
+   "wards_2_6_vs_all_others": {
+    "troops": {
+     "post": 32,
+     "pre": 94,
+     "pre2": 185,
+     "change_pct": -66.0,
+     "placebo_change_pct": -49.2
+    },
+    "no_troops": {
+     "post": 213,
+     "pre": 535,
+     "pre2": 844,
+     "change_pct": -60.2,
+     "placebo_change_pct": -36.6
+    },
+    "ratio": {
+     "point": 0.855,
+     "ci95": [
+      0.607,
+      1.168
+     ]
+    },
+    "placebo": {
+     "point": 0.802,
+     "ci95": [
+      0.628,
+      1.075
+     ]
+    }
+   },
+   "near_post_vs_rest": {
+    "troops": {
+     "post": 21,
+     "pre": 57,
+     "pre2": 130,
+     "change_pct": -63.2,
+     "placebo_change_pct": -56.2
+    },
+    "no_troops": {
+     "post": 224,
+     "pre": 572,
+     "pre2": 899,
+     "change_pct": -60.8,
+     "placebo_change_pct": -36.4
+    },
+    "ratio": {
+     "point": 0.941,
+     "ci95": [
+      0.575,
+      1.444
+     ]
+    },
+    "placebo": {
+     "point": 0.689,
+     "ci95": [
+      0.506,
+      0.945
+     ]
+    }
+   },
+   "downtown_vs_rest": {
+    "troops": {
+     "post": 4,
+     "pre": 15,
+     "pre2": 54,
+     "change_pct": -73.3,
+     "placebo_change_pct": -72.2
+    },
+    "no_troops": {
+     "post": 241,
+     "pre": 614,
+     "pre2": 975,
+     "change_pct": -60.7,
+     "placebo_change_pct": -37.0
+    },
+    "ratio": {
+     "point": 0.679,
+     "ci95": [
+      0.183,
+      1.288
+     ]
+    },
+    "placebo": {
+     "point": 0.441,
+     "ci95": [
+      0.294,
+      0.723
+     ]
+    }
+   },
+   "downtown_vs_rest_first_year": {
+    "troops": {
+     "post": 21,
+     "pre": 47,
+     "pre2": 97,
+     "change_pct": -55.3,
+     "placebo_change_pct": -51.5
+    },
+    "no_troops": {
+     "post": 920,
+     "pre": 1624,
+     "pre2": 2451,
+     "change_pct": -43.3,
+     "placebo_change_pct": -33.7
+    },
+    "ratio": {
+     "point": 0.789,
+     "ci95": [
+      0.475,
+      1.285
+     ]
+    },
+    "placebo": {
+     "point": 0.731,
+     "ci95": [
+      0.485,
+      1.088
+     ]
+    }
+   }
+  },
+  "violent": {
+   "wards_2_6_vs_3_4_5_7_8": {
+    "troops": {
+     "post": 119,
+     "pre": 174,
+     "pre2": 308,
+     "change_pct": -31.6,
+     "placebo_change_pct": -43.5
+    },
+    "no_troops": {
+     "post": 494,
+     "pre": 691,
+     "pre2": 1098,
+     "change_pct": -28.5,
+     "placebo_change_pct": -37.1
+    },
+    "ratio": {
+     "point": 0.957,
+     "ci95": [
+      0.731,
+      1.223
+     ]
+    },
+    "placebo": {
+     "point": 0.898,
+     "ci95": [
+      0.715,
+      1.169
+     ]
+    }
+   },
+   "wards_2_6_vs_all_others": {
+    "troops": {
+     "post": 119,
+     "pre": 174,
+     "pre2": 308,
+     "change_pct": -31.6,
+     "placebo_change_pct": -43.5
+    },
+    "no_troops": {
+     "post": 590,
+     "pre": 872,
+     "pre2": 1337,
+     "change_pct": -32.3,
+     "placebo_change_pct": -34.8
+    },
+    "ratio": {
+     "point": 1.011,
+     "ci95": [
+      0.778,
+      1.278
+     ]
+    },
+    "placebo": {
+     "point": 0.866,
+     "ci95": [
+      0.695,
+      1.126
+     ]
+    }
+   },
+   "near_post_vs_rest": {
+    "troops": {
+     "post": 95,
+     "pre": 125,
+     "pre2": 223,
+     "change_pct": -24.0,
+     "placebo_change_pct": -43.9
+    },
+    "no_troops": {
+     "post": 614,
+     "pre": 921,
+     "pre2": 1422,
+     "change_pct": -33.3,
+     "placebo_change_pct": -35.2
+    },
+    "ratio": {
+     "point": 1.14,
+     "ci95": [
+      0.898,
+      1.463
+     ]
+    },
+    "placebo": {
+     "point": 0.865,
+     "ci95": [
+      0.662,
+      1.121
+     ]
+    }
+   },
+   "downtown_vs_rest": {
+    "troops": {
+     "post": 17,
+     "pre": 35,
+     "pre2": 85,
+     "change_pct": -51.4,
+     "placebo_change_pct": -58.8
+    },
+    "no_troops": {
+     "post": 692,
+     "pre": 1011,
+     "pre2": 1560,
+     "change_pct": -31.6,
+     "placebo_change_pct": -35.2
+    },
+    "ratio": {
+     "point": 0.71,
+     "ci95": [
+      0.505,
+      0.953
+     ]
+    },
+    "placebo": {
+     "point": 0.635,
+     "ci95": [
+      0.448,
+      0.937
+     ]
+    }
+   },
+   "downtown_vs_rest_first_year": {
+    "troops": {
+     "post": 124,
+     "pre": 119,
+     "pre2": 182,
+     "change_pct": 4.2,
+     "placebo_change_pct": -34.6
+    },
+    "no_troops": {
+     "post": 2432,
+     "pre": 2815,
+     "pre2": 4009,
+     "change_pct": -13.6,
+     "placebo_change_pct": -29.8
+    },
+    "ratio": {
+     "point": 1.206,
+     "ci95": [
+      0.897,
+      1.616
+     ]
+    },
+    "placebo": {
+     "point": 0.931,
+     "ci95": [
+      0.697,
+      1.25
+     ]
+    }
+   }
+  },
+  "property": {
+   "wards_2_6_vs_3_4_5_7_8": {
+    "troops": {
+     "post": 2089,
+     "pre": 2838,
+     "pre2": 2886,
+     "change_pct": -26.4,
+     "placebo_change_pct": -1.7
+    },
+    "no_troops": {
+     "post": 3016,
+     "pre": 4482,
+     "pre2": 4511,
+     "change_pct": -32.7,
+     "placebo_change_pct": -0.6
+    },
+    "ratio": {
+     "point": 1.094,
+     "ci95": [
+      0.978,
+      1.229
+     ]
+    },
+    "placebo": {
+     "point": 0.99,
+     "ci95": [
+      0.893,
+      1.091
+     ]
+    }
+   },
+   "wards_2_6_vs_all_others": {
+    "troops": {
+     "post": 2089,
+     "pre": 2838,
+     "pre2": 2886,
+     "change_pct": -26.4,
+     "placebo_change_pct": -1.7
+    },
+    "no_troops": {
+     "post": 3837,
+     "pre": 5793,
+     "pre2": 5841,
+     "change_pct": -33.8,
+     "placebo_change_pct": -0.8
+    },
+    "ratio": {
+     "point": 1.111,
+     "ci95": [
+      0.998,
+      1.24
+     ]
+    },
+    "placebo": {
+     "point": 0.992,
+     "ci95": [
+      0.906,
+      1.086
+     ]
+    }
+   },
+   "near_post_vs_rest": {
+    "troops": {
+     "post": 1444,
+     "pre": 2022,
+     "pre2": 2078,
+     "change_pct": -28.6,
+     "placebo_change_pct": -2.7
+    },
+    "no_troops": {
+     "post": 4482,
+     "pre": 6609,
+     "pre2": 6649,
+     "change_pct": -32.2,
+     "placebo_change_pct": -0.6
+    },
+    "ratio": {
+     "point": 1.053,
+     "ci95": [
+      0.946,
+      1.175
+     ]
+    },
+    "placebo": {
+     "point": 0.979,
+     "ci95": [
+      0.878,
+      1.089
+     ]
+    }
+   },
+   "downtown_vs_rest": {
+    "troops": {
+     "post": 544,
+     "pre": 868,
+     "pre2": 815,
+     "change_pct": -37.3,
+     "placebo_change_pct": 6.5
+    },
+    "no_troops": {
+     "post": 5382,
+     "pre": 7763,
+     "pre2": 7912,
+     "change_pct": -30.7,
+     "placebo_change_pct": -1.9
+    },
+    "ratio": {
+     "point": 0.904,
+     "ci95": [
+      0.79,
+      1.05
+     ]
+    },
+    "placebo": {
+     "point": 1.085,
+     "ci95": [
+      0.958,
+      1.213
+     ]
+    }
+   },
+   "downtown_vs_rest_first_year": {
+    "troops": {
+     "post": 1600,
+     "pre": 2466,
+     "pre2": 2308,
+     "change_pct": -35.1,
+     "placebo_change_pct": 6.8
+    },
+    "no_troops": {
+     "post": 16871,
+     "pre": 22722,
+     "pre2": 23803,
+     "change_pct": -25.8,
+     "placebo_change_pct": -4.5
+    },
+    "ratio": {
+     "point": 0.874,
+     "ci95": [
+      0.792,
+      0.962
+     ]
+    },
+    "placebo": {
+     "point": 1.119,
+     "ci95": [
+      1.018,
+      1.227
+     ]
+    }
+   }
+  },
+  "theft_other": {
+   "wards_2_6_vs_3_4_5_7_8": {
+    "troops": {
+     "post": 1449,
+     "pre": 1667,
+     "pre2": 1658,
+     "change_pct": -13.1,
+     "placebo_change_pct": 0.5
+    },
+    "no_troops": {
+     "post": 1647,
+     "pre": 1907,
+     "pre2": 1957,
+     "change_pct": -13.6,
+     "placebo_change_pct": -2.6
+    },
+    "ratio": {
+     "point": 1.006,
+     "ci95": [
+      0.878,
+      1.151
+     ]
+    },
+    "placebo": {
+     "point": 1.032,
+     "ci95": [
+      0.898,
+      1.195
+     ]
+    }
+   },
+   "wards_2_6_vs_all_others": {
+    "troops": {
+     "post": 1449,
+     "pre": 1667,
+     "pre2": 1658,
+     "change_pct": -13.1,
+     "placebo_change_pct": 0.5
+    },
+    "no_troops": {
+     "post": 2201,
+     "pre": 2694,
+     "pre2": 2661,
+     "change_pct": -18.3,
+     "placebo_change_pct": 1.2
+    },
+    "ratio": {
+     "point": 1.064,
+     "ci95": [
+      0.926,
+      1.207
+     ]
+    },
+    "placebo": {
+     "point": 0.993,
+     "ci95": [
+      0.875,
+      1.149
+     ]
+    }
+   },
+   "near_post_vs_rest": {
+    "troops": {
+     "post": 1065,
+     "pre": 1138,
+     "pre2": 1123,
+     "change_pct": -6.4,
+     "placebo_change_pct": 1.3
+    },
+    "no_troops": {
+     "post": 2585,
+     "pre": 3223,
+     "pre2": 3196,
+     "change_pct": -19.8,
+     "placebo_change_pct": 0.8
+    },
+    "ratio": {
+     "point": 1.167,
+     "ci95": [
+      1.006,
+      1.344
+     ]
+    },
+    "placebo": {
+     "point": 1.005,
+     "ci95": [
+      0.862,
+      1.185
+     ]
+    }
+   },
+   "downtown_vs_rest": {
+    "troops": {
+     "post": 457,
+     "pre": 639,
+     "pre2": 513,
+     "change_pct": -28.5,
+     "placebo_change_pct": 24.6
+    },
+    "no_troops": {
+     "post": 3193,
+     "pre": 3722,
+     "pre2": 3806,
+     "change_pct": -14.2,
+     "placebo_change_pct": -2.2
+    },
+    "ratio": {
+     "point": 0.834,
+     "ci95": [
+      0.733,
+      0.949
+     ]
+    },
+    "placebo": {
+     "point": 1.274,
+     "ci95": [
+      1.123,
+      1.434
+     ]
+    }
+   },
+   "downtown_vs_rest_first_year": {
+    "troops": {
+     "post": 1312,
+     "pre": 1839,
+     "pre2": 1557,
+     "change_pct": -28.7,
+     "placebo_change_pct": 18.1
+    },
+    "no_troops": {
+     "post": 10009,
+     "pre": 10764,
+     "pre2": 11499,
+     "change_pct": -7.0,
+     "placebo_change_pct": -6.4
+    },
+    "ratio": {
+     "point": 0.767,
+     "ci95": [
+      0.695,
+      0.842
+     ]
+    },
+    "placebo": {
+     "point": 1.262,
+     "ci95": [
+      1.147,
+      1.385
+     ]
+    }
+   }
+  },
+  "theft_auto": {
+   "wards_2_6_vs_3_4_5_7_8": {
+    "troops": {
+     "post": 389,
+     "pre": 611,
+     "pre2": 700,
+     "change_pct": -36.3,
+     "placebo_change_pct": -12.7
+    },
+    "no_troops": {
+     "post": 728,
+     "pre": 1263,
+     "pre2": 1150,
+     "change_pct": -42.4,
+     "placebo_change_pct": 9.8
+    },
+    "ratio": {
+     "point": 1.105,
+     "ci95": [
+      0.902,
+      1.346
+     ]
+    },
+    "placebo": {
+     "point": 0.795,
+     "ci95": [
+      0.664,
+      0.974
+     ]
+    }
+   },
+   "wards_2_6_vs_all_others": {
+    "troops": {
+     "post": 389,
+     "pre": 611,
+     "pre2": 700,
+     "change_pct": -36.3,
+     "placebo_change_pct": -12.7
+    },
+    "no_troops": {
+     "post": 903,
+     "pre": 1570,
+     "pre2": 1535,
+     "change_pct": -42.5,
+     "placebo_change_pct": 2.3
+    },
+    "ratio": {
+     "point": 1.107,
+     "ci95": [
+      0.917,
+      1.323
+     ]
+    },
+    "placebo": {
+     "point": 0.853,
+     "ci95": [
+      0.727,
+      1.017
+     ]
+    }
+   },
+   "near_post_vs_rest": {
+    "troops": {
+     "post": 207,
+     "pre": 438,
+     "pre2": 553,
+     "change_pct": -52.7,
+     "placebo_change_pct": -20.8
+    },
+    "no_troops": {
+     "post": 1085,
+     "pre": 1743,
+     "pre2": 1682,
+     "change_pct": -37.8,
+     "placebo_change_pct": 3.6
+    },
+    "ratio": {
+     "point": 0.759,
+     "ci95": [
+      0.583,
+      0.992
+     ]
+    },
+    "placebo": {
+     "point": 0.764,
+     "ci95": [
+      0.63,
+      0.924
+     ]
+    }
+   },
+   "downtown_vs_rest": {
+    "troops": {
+     "post": 69,
+     "pre": 163,
+     "pre2": 209,
+     "change_pct": -57.7,
+     "placebo_change_pct": -22.0
+    },
+    "no_troops": {
+     "post": 1223,
+     "pre": 2018,
+     "pre2": 2026,
+     "change_pct": -39.4,
+     "placebo_change_pct": -0.4
+    },
+    "ratio": {
+     "point": 0.698,
+     "ci95": [
+      0.48,
+      1.014
+     ]
+    },
+    "placebo": {
+     "point": 0.783,
+     "ci95": [
+      0.547,
+      1.12
+     ]
+    }
+   },
+   "downtown_vs_rest_first_year": {
+    "troops": {
+     "post": 203,
+     "pre": 458,
+     "pre2": 540,
+     "change_pct": -55.7,
+     "placebo_change_pct": -15.2
+    },
+    "no_troops": {
+     "post": 3820,
+     "pre": 6081,
+     "pre2": 6294,
+     "change_pct": -37.2,
+     "placebo_change_pct": -3.4
+    },
+    "ratio": {
+     "point": 0.706,
+     "ci95": [
+      0.559,
+      0.892
+     ]
+    },
+    "placebo": {
+     "point": 0.878,
+     "ci95": [
+      0.682,
+      1.136
+     ]
+    }
+   }
+  }
+ },
+ "phase2": {
+  "window": "Jan 1 - Jun 30; 2026 vs 2025, placebo 2025 vs 2024",
+  "gunshots": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 615,
+     "pre": 952,
+     "pre2": 1261,
+     "change_pct": -35.4,
+     "placebo_change_pct": -24.5
+    },
+    "no_troops": {
+     "post": 551,
+     "pre": 916,
+     "pre2": 1108,
+     "change_pct": -39.8,
+     "placebo_change_pct": -17.3
+    },
+    "ratio": {
+     "point": 1.074,
+     "ci95": [
+      0.845,
+      1.338
+     ]
+    },
+    "placebo": {
+     "point": 0.913,
+     "ci95": [
+      0.765,
+      1.124
+     ]
+    }
+   }
+  },
+  "homicide": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 17,
+     "pre": 29,
+     "pre2": 21,
+     "change_pct": -41.4,
+     "placebo_change_pct": 38.1
+    },
+    "no_troops": {
+     "post": 7,
+     "pre": 15,
+     "pre2": 21,
+     "change_pct": -53.3,
+     "placebo_change_pct": -28.6
+    },
+    "ratio": {
+     "point": 1.256,
+     "ci95": [
+      0.484,
+      2.842
+     ]
+    },
+    "placebo": {
+     "point": 1.933,
+     "ci95": [
+      0.935,
+      3.867
+     ]
+    }
+   }
+  },
+  "gun_violent": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 115,
+     "pre": 169,
+     "pre2": 216,
+     "change_pct": -32.0,
+     "placebo_change_pct": -21.8
+    },
+    "no_troops": {
+     "post": 108,
+     "pre": 148,
+     "pre2": 219,
+     "change_pct": -27.0,
+     "placebo_change_pct": -32.4
+    },
+    "ratio": {
+     "point": 0.933,
+     "ci95": [
+      0.691,
+      1.247
+     ]
+    },
+    "placebo": {
+     "point": 1.158,
+     "ci95": [
+      0.882,
+      1.492
+     ]
+    }
+   }
+  },
+  "violent": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 256,
+     "pre": 247,
+     "pre2": 308,
+     "change_pct": 3.6,
+     "placebo_change_pct": -19.8
+    },
+    "no_troops": {
+     "post": 244,
+     "pre": 220,
+     "pre2": 319,
+     "change_pct": 10.9,
+     "placebo_change_pct": -31.0
+    },
+    "ratio": {
+     "point": 0.934,
+     "ci95": [
+      0.723,
+      1.227
+     ]
+    },
+    "placebo": {
+     "point": 1.163,
+     "ci95": [
+      0.902,
+      1.504
+     ]
+    }
+   }
+  },
+  "property": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 607,
+     "pre": 750,
+     "pre2": 738,
+     "change_pct": -19.1,
+     "placebo_change_pct": 1.6
+    },
+    "no_troops": {
+     "post": 810,
+     "pre": 1235,
+     "pre2": 1434,
+     "change_pct": -34.4,
+     "placebo_change_pct": -13.9
+    },
+    "ratio": {
+     "point": 1.234,
+     "ci95": [
+      1.066,
+      1.419
+     ]
+    },
+    "placebo": {
+     "point": 1.18,
+     "ci95": [
+      1.05,
+      1.327
+     ]
+    }
+   }
+  },
+  "theft_other": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 296,
+     "pre": 298,
+     "pre2": 298,
+     "change_pct": -0.7,
+     "placebo_change_pct": 0.0
+    },
+    "no_troops": {
+     "post": 427,
+     "pre": 455,
+     "pre2": 541,
+     "change_pct": -6.2,
+     "placebo_change_pct": -15.9
+    },
+    "ratio": {
+     "point": 1.058,
+     "ci95": [
+      0.843,
+      1.318
+     ]
+    },
+    "placebo": {
+     "point": 1.189,
+     "ci95": [
+      0.971,
+      1.479
+     ]
+    }
+   }
+  },
+  "theft_auto": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 111,
+     "pre": 108,
+     "pre2": 129,
+     "change_pct": 2.8,
+     "placebo_change_pct": -16.3
+    },
+    "no_troops": {
+     "post": 146,
+     "pre": 291,
+     "pre2": 378,
+     "change_pct": -49.8,
+     "placebo_change_pct": -23.0
+    },
+    "ratio": {
+     "point": 2.049,
+     "ci95": [
+      1.578,
+      2.565
+     ]
+    },
+    "placebo": {
+     "point": 1.088,
+     "ci95": [
+      0.862,
+      1.404
+     ]
+    }
+   }
+  }
+ },
+ "phase2_fall_check": {
+  "window": "Aug 11 - Nov 26; 2025 vs 2024, placebo 2024 vs 2023; 7D vs 6D",
+  "gunshots": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 289,
+     "pre": 707,
+     "pre2": 1018,
+     "change_pct": -59.1,
+     "placebo_change_pct": -30.6
+    },
+    "no_troops": {
+     "post": 279,
+     "pre": 705,
+     "pre2": 759,
+     "change_pct": -60.4,
+     "placebo_change_pct": -7.1
+    },
+    "ratio": {
+     "point": 1.033,
+     "ci95": [
+      0.796,
+      1.336
+     ]
+    },
+    "placebo": {
+     "point": 0.748,
+     "ci95": [
+      0.612,
+      0.896
+     ]
+    }
+   }
+  },
+  "homicide": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 5,
+     "pre": 17,
+     "pre2": 22,
+     "change_pct": -70.6,
+     "placebo_change_pct": -22.7
+    },
+    "no_troops": {
+     "post": 5,
+     "pre": 19,
+     "pre2": 19,
+     "change_pct": -73.7,
+     "placebo_change_pct": 0.0
+    },
+    "ratio": {
+     "point": 1.118,
+     "ci95": [
+      0.225,
+      5.536
+     ]
+    },
+    "placebo": {
+     "point": 0.773,
+     "ci95": [
+      0.296,
+      2.137
+     ]
+    }
+   }
+  },
+  "gun_violent": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 57,
+     "pre": 125,
+     "pre2": 194,
+     "change_pct": -54.4,
+     "placebo_change_pct": -35.6
+    },
+    "no_troops": {
+     "post": 56,
+     "pre": 172,
+     "pre2": 215,
+     "change_pct": -67.4,
+     "placebo_change_pct": -20.0
+    },
+    "ratio": {
+     "point": 1.401,
+     "ci95": [
+      0.795,
+      2.485
+     ]
+    },
+    "placebo": {
+     "point": 0.805,
+     "ci95": [
+      0.567,
+      1.179
+     ]
+    }
+   }
+  },
+  "violent": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 142,
+     "pre": 185,
+     "pre2": 289,
+     "change_pct": -23.2,
+     "placebo_change_pct": -36.0
+    },
+    "no_troops": {
+     "post": 128,
+     "pre": 225,
+     "pre2": 322,
+     "change_pct": -43.1,
+     "placebo_change_pct": -30.1
+    },
+    "ratio": {
+     "point": 1.349,
+     "ci95": [
+      1.042,
+      1.756
+     ]
+    },
+    "placebo": {
+     "point": 0.916,
+     "ci95": [
+      0.704,
+      1.2
+     ]
+    }
+   }
+  },
+  "property": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 371,
+     "pre": 509,
+     "pre2": 527,
+     "change_pct": -27.1,
+     "placebo_change_pct": -3.4
+    },
+    "no_troops": {
+     "post": 510,
+     "pre": 858,
+     "pre2": 843,
+     "change_pct": -40.6,
+     "placebo_change_pct": 1.8
+    },
+    "ratio": {
+     "point": 1.226,
+     "ci95": [
+      0.991,
+      1.509
+     ]
+    },
+    "placebo": {
+     "point": 0.949,
+     "ci95": [
+      0.821,
+      1.112
+     ]
+    }
+   }
+  },
+  "theft_other": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 195,
+     "pre": 193,
+     "pre2": 216,
+     "change_pct": 1.0,
+     "placebo_change_pct": -10.6
+    },
+    "no_troops": {
+     "post": 254,
+     "pre": 305,
+     "pre2": 315,
+     "change_pct": -16.7,
+     "placebo_change_pct": -3.2
+    },
+    "ratio": {
+     "point": 1.213,
+     "ci95": [
+      0.886,
+      1.682
+     ]
+    },
+    "placebo": {
+     "point": 0.923,
+     "ci95": [
+      0.677,
+      1.203
+     ]
+    }
+   }
+  },
+  "theft_auto": {
+   "7D_vs_6D": {
+    "troops": {
+     "post": 62,
+     "pre": 95,
+     "pre2": 114,
+     "change_pct": -34.7,
+     "placebo_change_pct": -16.7
+    },
+    "no_troops": {
+     "post": 106,
+     "pre": 185,
+     "pre2": 202,
+     "change_pct": -42.7,
+     "placebo_change_pct": -8.4
+    },
+    "ratio": {
+     "point": 1.139,
+     "ci95": [
+      0.724,
+      1.684
+     ]
+    },
+    "placebo": {
+     "point": 0.91,
+     "ci95": [
+      0.619,
+      1.299
+     ]
+    }
+   }
+  }
+ },
+ "sites": [
+  "Foggy Bottom-GWU",
+  "Smithsonian",
+  "Eastern Market",
+  "Stadium Armory",
+  "Waterfront",
+  "McPherson Sq",
+  "L'Enfant Plaza",
+  "Gallery Pl-Chinatown",
+  "Metro Center",
+  "NoMa - Gallaudet U",
+  "Union Station",
+  "Navy Yard - Ballpark",
+  "Washington Monument",
+  "Lincoln Memorial",
+  "Dupont Circle",
+  "14th and U St NW",
+  "H St NE at 8th",
+  "Georgetown, M St at Wisconsin"
+ ]
+}

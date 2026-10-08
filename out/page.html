@@ -1,0 +1,260 @@
+<title>DC crime since the National Guard</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { color-scheme: dark; --bg: #0a0a0a; --surface: #121212; --border: #262626; --text: #f2f2f2; --muted: #8b8b8b;
+          --blue: #2563eb; --blue-light: #93c5fd; --red: #ef4444; --grey: #6b7280; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; }
+  a { color: var(--blue-light); text-decoration: none; } a:hover { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 2px; }
+  header { border-bottom: 1px solid var(--border); padding: 28px 40px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  header nav { display: flex; gap: 20px; font-size: 13px; }
+  header h1 { font-size: 22px; font-weight: 600; letter-spacing: -0.3px; text-wrap: balance; }
+  header p { color: var(--muted); margin-top: 4px; font-size: 13px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 40px; }
+  .lede { font-size: 21px; font-weight: 600; line-height: 1.4; letter-spacing: -0.2px; max-width: 860px; margin-bottom: 24px; text-wrap: balance; }
+  .answer { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--red); border-radius: 0 8px 8px 0; padding: 20px 24px; margin-bottom: 40px; max-width: 860px; }
+  .answer .q { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+  .answer .question { font-size: 15px; line-height: 1.7; margin-bottom: 8px; }
+  .answer p { font-size: 14px; line-height: 1.7; color: var(--muted); }
+  .answer p + p { margin-top: 8px; }
+  .answer strong { color: var(--text); font-weight: 600; }
+  .section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .note { font-size: 12px; color: var(--muted); margin: -6px 0 16px; max-width: 860px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; }
+  .card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); margin-bottom: 8px; }
+  .card .value { font-size: 26px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+  .card .sub { font-size: 11px; color: var(--muted); margin-top: 6px; }
+  .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .charts.one { grid-template-columns: 1fr; }
+  .section-end { margin-bottom: 40px; }
+  .chart-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 22px 24px; min-width: 0; }
+  .chart-box h3 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .chart-sub { font-size: 11px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+  .chart-wrap { position: relative; height: 270px; }
+  .chart-wrap.tall { height: 340px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 11px; color: var(--muted); margin-bottom: 10px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 14px; height: 0; border-top: 2px solid; display: inline-block; }
+  .sw.box { height: 10px; border: 1.5px solid; border-radius: 2px; }
+  .findings { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 40px; }
+  .finding { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--blue); border-radius: 0 8px 8px 0; padding: 16px 20px; min-width: 0; }
+  .finding.red { border-left-color: var(--red); }
+  .finding h4 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .finding p { font-size: 12px; color: var(--muted); line-height: 1.55; }
+  .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; }
+  table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+  th, td { padding: 9px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  tr:last-child td { border-bottom: 0; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.n { white-space: nowrap; }
+  td:first-child { white-space: nowrap; }
+  table.wards td:nth-child(2) { min-width: 260px; }
+  td.strong { color: var(--text); font-weight: 600; }
+  td .ci { display: block; font-size: 10.5px; color: var(--muted); font-weight: 400; }
+  tr.troop td:first-child { box-shadow: inset 3px 0 0 var(--red); }
+  .method { font-size: 12px; color: var(--muted); max-width: 860px; }
+  .method p + p { margin-top: 8px; }
+  .method ul { margin: 8px 0 0 18px; }
+  .method li + li { margin-top: 4px; }
+  footer { border-top: 1px solid var(--border); padding: 20px 40px; color: var(--muted); font-size: 12px; }
+  @media (max-width: 768px) {
+    header, footer { padding: 20px 16px; } .container { padding: 20px 16px; }
+    .charts, .findings { grid-template-columns: 1fr; }
+    .chart-box { padding: 18px 16px; } .lede { font-size: 18px; }
+  }
+</style>
+<header>
+  <div><h1>DC crime since the National Guard</h1>
+  <p>August 11, 2025 to September 30, 2026 · Metropolitan Police incidents and gunshot detections · Martin Ngoh</p></div>
+  <nav><a href="https://github.com/mngoh/DC-Crime-Since-National-Guard">Code</a><a href="https://martinngoh.com">martinngoh.com</a></nav>
+</header>
+<div class="container">
+  <p class="lede">Violence in DC fell by close to half after the National Guard arrived on August 11, 2025. It fell just as much where no troops were posted, so nothing in the data shows the troops themselves adding to the decline.</p>
+  <div class="answer">
+    <div class="q">The question</div>
+    <div class="question">Did crime in DC fall after the National Guard deployed, and did it fall more where the troops were?</div>
+    <p><strong>It fell.</strong> In the first Guard year, August 11, 2025 to August 10, 2026, reported crime was −34% against the average for the same dates over the previous 10 years. The year before, it was already −11%.</p>
+    <p><strong>Homicides and gunfire fell too, and they do not depend on anyone calling the police.</strong> Homicides fell from 167 to 94 (−44%). Gunshots picked up by sensors fell −44% from the year before (August 11 to June 30). From September to June, DC's homicide drop was the second largest of 36 large police departments.</p>
+    <p><strong>It did not fall more where troops were posted.</strong> In the first months, gunshots fell −57% in the two wards holding nearly all the Guard posts and −60% in the wards without them. When the Guard began patrolling Anacostia in 2026, gunshots there fell −35% against −40% in neighboring Ward 7, which had no documented patrols.</p>
+    <p>Federal agents arrived the same day, and violent crime was already falling, so this data cannot say what drove the decline. It can say the decline does not follow the troops.</p>
+  </div>
+
+  <div class="section-title">Against the 10-year average</div>
+  <p class="note">The first Guard year (August 11, 2025 to August 10, 2026) against the average of the same dates in the 10 years before. The second line is the year before the deployment, against the same average.</p>
+  <div class="cards">
+    <div class="card"><div class="label">All reported crime</div><div class="value">−34%</div><div class="sub">year before: −11%</div></div>
+    <div class="card"><div class="label">Violent crime</div><div class="value">−41%</div><div class="sub">year before: −32%</div></div>
+    <div class="card"><div class="label">Violent crime with a gun</div><div class="value">−54%</div><div class="sub">year before: −19%</div></div>
+    <div class="card"><div class="label">Homicide</div><div class="value">−46%</div><div class="sub">94 homicides; year before: −5%</div></div>
+    <div class="card"><div class="label">Property crime</div><div class="value">−32%</div><div class="sub">year before: −8%</div></div>
+  </div>
+  <div class="charts one">
+    <div class="chart-box">
+      <h3>Month by month against the 10-year average</h3>
+      <div class="chart-sub">Percent above or below the average for the same calendar dates, August 11, 2015 to August 10, 2025. Violent crime and gun violence were already well below normal before the deployment. Property crime dropped within weeks of it, was lowest in fall 2025 (−37% in October to December) and eased to −23% by July to September 2026, while troop numbers rose to a peak of 5,148 in July 2026.</div>
+      <div class="legend"><span><i class="sw" style="border-color:#ef4444"></i>Violent crime</span><span><i class="sw" style="border-color:#93c5fd;border-top-style:dashed"></i>Violent crime with a gun</span><span><i class="sw" style="border-color:#2563eb"></i>Property crime</span></div>
+      <div class="chart-wrap tall"><canvas id="cMonthly" role="img" aria-label="Monthly reported crime against the 10-year average, January 2023 to September 2026, with the deployment marked in August 2025."></canvas></div>
+    </div>
+  </div>
+  <div class="table-wrap section-end"><table>
+    <thead><tr><th>Offense</th><th class="n">First Guard year</th><th class="n">10-year average</th><th class="n">Guard year vs average</th><th class="n">Year before vs average</th><th class="n">Change from year before</th></tr></thead>
+    <tbody><tr><td>All reported crime</td><td class='n'>21,027</td><td class='n'>31,606</td><td class='n strong'>−34%</td><td class='n'>−11%</td><td class='n'>−25%</td></tr><tr><td>Violent crime</td><td class='n'>2,556</td><td class='n'>4,330</td><td class='n strong'>−41%</td><td class='n'>−32%</td><td class='n'>−13%</td></tr><tr><td>Violent crime with a gun</td><td class='n'>941</td><td class='n'>2,058</td><td class='n strong'>−54%</td><td class='n'>−19%</td><td class='n'>−44%</td></tr><tr><td>Homicide</td><td class='n'>94</td><td class='n'>176</td><td class='n strong'>−46%</td><td class='n'>−5%</td><td class='n'>−44%</td></tr><tr><td>Robbery</td><td class='n'>1,189</td><td class='n'>2,339</td><td class='n strong'>−49%</td><td class='n'>−24%</td><td class='n'>−33%</td></tr><tr><td>Assault with a dangerous weapon</td><td class='n'>1,165</td><td class='n'>1,597</td><td class='n strong'>−27%</td><td class='n'>−43%</td><td class='n'>+29%</td></tr><tr><td>Sex abuse</td><td class='n'>108</td><td class='n'>218</td><td class='n strong'>−51%</td><td class='n'>−59%</td><td class='n'>+20%</td></tr><tr><td>Property crime</td><td class='n'>18,471</td><td class='n'>27,275</td><td class='n strong'>−32%</td><td class='n'>−8%</td><td class='n'>−27%</td></tr><tr><td>Car theft</td><td class='n'>2,398</td><td class='n'>3,613</td><td class='n strong'>−34%</td><td class='n'>+42%</td><td class='n'>−53%</td></tr><tr><td>Theft from cars</td><td class='n'>4,023</td><td class='n'>9,218</td><td class='n strong'>−56%</td><td class='n'>−29%</td><td class='n'>−38%</td></tr><tr><td>Other theft</td><td class='n'>11,321</td><td class='n'>13,070</td><td class='n strong'>−13%</td><td class='n'>−4%</td><td class='n'>−10%</td></tr><tr><td>Burglary</td><td class='n'>728</td><td class='n'>1,368</td><td class='n strong'>−47%</td><td class='n'>−34%</td><td class='n'>−19%</td></tr></tbody>
+  </table></div>
+
+  <div class="section-title">What was already happening</div>
+  <p class="note">A 10-year average removes the seasons, not the trend. These two checks ask how much of the drop was new.</p>
+  <div class="charts">
+    <div class="chart-box">
+      <h3>Change at the deployment</h3>
+      <div class="chart-sub">Monthly counts against the 10-year norm, modeled as a step at August 11, 2025. The first column compares with the 12 months before. The second assumes the decline under way since January 2024 would have continued. Bold: the 95% range excludes zero.</div>
+      <div class="table-wrap" style="margin:0"><table><thead><tr><th>Offense</th><th class="n">Against level before</th><th class="n">If the trend continued</th></tr></thead><tbody><tr><td>All reported crime</td><td class='n strong'>−24%<span class='ci'>−30% to −17%</span></td><td class='n strong'>−25%<span class='ci'>−35% to −13%</span></td></tr><tr><td>Property crime</td><td class='n strong'>−25%<span class='ci'>−31% to −19%</span></td><td class='n strong'>−27%<span class='ci'>−36% to −16%</span></td></tr><tr><td>Violent crime</td><td class='n'>−12%<span class='ci'>−26% to +5%</span></td><td class='n'>−5%<span class='ci'>−30% to +29%</span></td></tr><tr><td>Violent crime with a gun</td><td class='n strong'>−43%<span class='ci'>−54% to −29%</span></td><td class='n'>−28%<span class='ci'>−48% to +1%</span></td></tr><tr><td>Homicide</td><td class='n strong'>−48%<span class='ci'>−60% to −32%</span></td><td class='n strong'>−49%<span class='ci'>−61% to −32%</span></td></tr></tbody></table></div>
+    </div>
+    <div class="chart-box">
+      <h3>DC against the nation, September to June</h3>
+      <div class="chart-sub">Change from the same months a year earlier, DC against 590 police agencies in the Real-Time Crime Index (DC removed). Before: 2024-25 vs 2023-24. After: 2025-26 vs 2024-25. DC was already cutting robbery faster than the nation; the murder and property gaps opened after the deployment.</div>
+      <div class="legend"><span><i class="sw box" style="border-color:#ef4444;background:rgba(239,68,68,.15)"></i>DC</span><span><i class="sw box" style="border-color:#2563eb;background:rgba(37,99,235,.15)"></i>Nation</span><span>Faded: year before</span></div>
+      <div class="chart-wrap"><canvas id="cNational" role="img" aria-label="Bar chart comparing DC and national changes in murder, robbery, property crime, theft and car theft, before and after the deployment."></canvas></div>
+    </div>
+  </div>
+  <div class="findings">
+    <div class="finding"><h4>Homicide: a drop well beyond the nation</h4><p>DC murders fell −51% from September to June against −15% nationally. The year before, DC fell −22% and the nation −17%. Against the 12 months before, the step is −48% (−60% to −32%).</p></div>
+    <div class="finding"><h4>Violent crime overall: mostly an earlier trend</h4><p>Against the 12 months before, violent crime shows a step of −12% (−26% to +5%), which cannot be told apart from no change. Robbery fell −34%, but it had fallen −30% the year before.</p></div>
+  </div>
+
+  <div class="section-title">Crime that does not need a report</div>
+  <p class="note">MPD's crime data is under investigation for downgraded reports, and fewer calls to police can look like less crime. Homicides and gunshots picked up by sensors avoid most of that. Sensors cover Wards 1, 2 and 4 through 8; Ward 3 has none.</p>
+  <div class="charts">
+    <div class="chart-box">
+      <h3>Gunshots detected each week</h3>
+      <div class="chart-sub">MPD ShotSpotter detections classed as single or multiple gunshots, the weeks around August 11, 2025, against the same weeks a year earlier. Detections fell from 79 to 30 in the week the deployment began; reported gun crimes, which involve no sensors, fell from 28 to 8 the same week. The spike in early July is Independence Day fireworks.</div>
+      <div class="legend"><span><i class="sw" style="border-color:#ef4444"></i>2025</span><span><i class="sw" style="border-color:#6b7280"></i>Same weeks of 2024</span></div>
+      <div class="chart-wrap"><canvas id="cWeekly" role="img" aria-label="Weekly gunshot detections from late June to early November 2025, against the same weeks of 2024, with a sharp drop in the week of August 11."></canvas></div>
+    </div>
+    <div class="chart-box">
+      <h3>Is the gunshot drop real?</h3>
+      <div class="chart-sub">Checks for a sensor or system change rather than less gunfire.</div>
+      <div class="findings" style="grid-template-columns:1fr;margin:0">
+        <div class="finding"><h4>No outages</h4><p>Since 2024, only 3 single days had no detections. There were no longer gaps.</p></div>
+        <div class="finding"><h4>No area went dark</h4><p>Of 61 one-kilometer squares with 20 or more detections the year before, 0 went silent. The typical square fell −46%.</p></div>
+        <div class="finding"><h4>Not relabeled</h4><p>The "probable gunfire" category left out here fell too, so detections did not move between labels.</p></div>
+        <div class="finding"><h4>Independent counts agree</h4><p>Shootings counted by the Gun Violence Archive were down about two thirds from a year earlier (The Trace, October 2025).</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="section-end"></div>
+
+  <div class="section-title">Did it fall more where the troops were?</div>
+  <p class="note">The Guard's posts moved, so the test runs in two phases. Phase 1, August 11 to November 26, 2025: posts were downtown, on the Mall, at 10 Metro stations, Union Station and Navy Yard, almost all in Wards 2 and 6, compared with Wards 3, 4, 5, 7 and 8 (Ward 1 is left out because Guard patrols reached 14th Street by November). Phase 2, January to June 2026: Guard patrols in Anacostia, MPD's 7th District, compared with the neighboring 6th District (Ward 7), where no patrols are documented. Each is the change from the same dates a year earlier.</p>
+  <div class="charts">
+    <div class="chart-box">
+      <h3>Phase 1: downtown posts, fall 2025</h3>
+      <div class="chart-sub">Wards 2 and 6 against Wards 3, 4, 5, 7 and 8. Gunshots: 74 to 32 with troops, 1,601 to 649 without. Ratio of changes 1.07 (95% range 0.61 to 1.67); 1 means the same drop.</div>
+      <div class="legend"><span><i class="sw box" style="border-color:#ef4444;background:rgba(239,68,68,.15)"></i>With troops</span><span><i class="sw box" style="border-color:#2563eb;background:rgba(37,99,235,.15)"></i>Without troops</span></div>
+      <div class="chart-wrap"><canvas id="cPhase1" role="img" aria-label="Bar chart of changes in fall 2025 for gunshots, reported gun crime, violent crime and property crime, wards with Guard posts against wards without."></canvas></div>
+    </div>
+    <div class="chart-box">
+      <h3>Phase 2: Anacostia patrols, 2026</h3>
+      <div class="chart-sub">7th District (Anacostia, Guard patrols) against 6th District (Ward 7, none documented), January to June. Gunshots: ratio of changes 1.07 (95% range 0.84 to 1.34). In fall 2025, before patrols there are on record, the two districts moved together: gunshots −59% and −60%.</div>
+      <div class="legend"><span><i class="sw box" style="border-color:#ef4444;background:rgba(239,68,68,.15)"></i>With troops</span><span><i class="sw box" style="border-color:#2563eb;background:rgba(37,99,235,.15)"></i>Without troops</span></div>
+      <div class="chart-wrap"><canvas id="cPhase2" role="img" aria-label="Bar chart of changes in January to June 2026 for gunshots, reported gun crime, violent crime and property crime, Anacostia against Ward 7."></canvas></div>
+    </div>
+  </div>
+  <div class="charts">
+    <div class="chart-box">
+      <h3>Gunshots by ward</h3>
+      <div class="chart-sub">Change from the year before, August 11 to June 30. Red: the two wards holding nearly all the Guard posts in 2025. Ward 3 has no sensors.</div>
+      <div class="chart-wrap"><canvas id="cWards" role="img" aria-label="Bar chart of the change in gunshot detections by ward; every ward fell between about 30 and 48 percent."></canvas></div>
+    </div>
+    <div class="findings" style="grid-template-columns:1fr;margin:0;align-content:start">
+    <div class="finding"><h4>No measure fell clearly more with troops</h4><p>For gunshots, homicide, reported gun crime and violent crime, in both phases, by ward and within 500 meters of a post, no comparison shows the troop areas falling more by a margin outside its 95% range. Property crime fell less with troops in both phases. The ranges come from resampling two- and four-week blocks, so ordinary swings in crime are not mistaken for an effect.</p></div>
+    <div class="finding"><h4>Downtown theft: not clear</h4><p>Other theft in the downtown business district fell −29% in the first Guard year against −7% elsewhere, but the year before it had risen about 26% faster than elsewhere, so the drop mostly undoes that rise. Theft from cars downtown fell −56% against −37%, and part of that gap was already there before August.</p></div>
+    </div>
+  </div>
+  <div class="table-wrap" style="margin-bottom:36px"><table class="wards">
+    <thead><tr><th>Ward</th><th>Guard posts</th><th class="n">Homicides</th><th class="n">Gunshots detected</th></tr></thead>
+    <tbody><tr><td>Ward 1</td><td>none</td><td class='n'>13 to 7</td><td class='n'>140 to 77 (−45%)</td></tr><tr class=troop><td>Ward 2</td><td>7: downtown Metro stations, the Mall</td><td class='n'>5 to 5</td><td class='n'>32 to 17 (−47%)</td></tr><tr><td>Ward 3</td><td>none</td><td class='n'>2 to 4</td><td class='n'>no sensors</td></tr><tr><td>Ward 4</td><td>none</td><td class='n'>7 to 1</td><td class='n'>151 to 105 (−30%)</td></tr><tr><td>Ward 5</td><td>none</td><td class='n'>15 to 8</td><td class='n'>308 to 205 (−33%)</td></tr><tr class=troop><td>Ward 6</td><td>5: Union Station, Eastern Market, Waterfront, NoMa, L'Enfant Plaza</td><td class='n'>12 to 4</td><td class='n'>140 to 89 (−36%)</td></tr><tr><td>Ward 7</td><td>1, on its western edge (Stadium-Armory)</td><td class='n'>38 to 20</td><td class='n'>1,731 to 906 (−48%)</td></tr><tr><td>Ward 8</td><td>1, on its western edge (Navy Yard); Anacostia patrols from January 2026 or earlier</td><td class='n'>58 to 24</td><td class='n'>1,880 to 1,029 (−45%)</td></tr></tbody>
+  </table></div>
+  <p class="note" style="margin:-28px 0 40px">August 11 to June 30, year before to Guard year. Posts as reported by WJLA, Guard releases and a November 2025 federal court opinion; there is no official map.</p>
+
+  <div class="section-title">Caveats</div>
+  <div class="findings">
+    <div class="finding red"><h4>This shows what, not why</h4><p>The data shows violence fell and that the fall does not follow the troops. It cannot name the cause. Possibilities include the federal agents, MPD's own work, a trend already under way, or some mix.</p></div>
+    <div class="finding red"><h4>The Guard was not alone</h4><p>On August 11, 2025 the federal government also took control of MPD (to September 10), sent in federal agents and stepped up immigration enforcement. The White House said about half of arrests by federal authorities were in Wards 7 and 8, where there were almost no troops. Federal agents kept working alongside MPD after September 10.</p></div>
+    <div class="finding red"><h4>MPD's crime data is under investigation</h4><p>A House Oversight report (December 2025), an MPD internal affairs report (May 2026) and the DC Inspector General (July 2026) found misclassified and downgraded reports. Assault with a dangerous weapon rose +29% as knife and other-weapon cases roughly doubled while gun cases fell, which looks like a change in how assaults are recorded. That is why this page leans on homicides and gunshots.</p></div>
+    <div class="finding red"><h4>Fewer reports is not less crime</h4><p>People avoiding police during immigration enforcement, or federal agencies taking reports that never reach MPD's data, would both lower counts. Neither can be measured here. Crimes on the National Mall are mostly handled by the Park Police and are not in this data.</p></div>
+    <div class="finding red"><h4>Small numbers</h4><p>The two wards with troops had 17 homicides the year before, too few to detect much. Gunshots, with thousands of detections, carry the comparison.</p></div>
+    <div class="finding red"><h4>Where the troops were is reconstructed</h4><p>There is no official map of Guard posts. Locations come from news reports, Guard releases and a federal court opinion. The Guard also did occasional patrols and cleanup elsewhere, so "without troops" means light presence, not none.</p></div>
+  </div>
+
+  <div class="section-title">Method and sources</div>
+  <div class="method">
+    <p>Reported crime: MPD's public incident data (homicide, sex abuse, assault with a dangerous weapon, robbery, burglary, car theft, theft from auto, other theft, arson), January 2015 to September 30, 2026, by report date. Data for October 2026 is left out as incomplete. The 10-year average for any window is the mean count on the same calendar dates from August 11, 2015 to August 10, 2025, so it contains no days after the deployment. Wards are the 2022 boundaries, assigned by each incident's location.</p>
+    <p>Gunshots: MPD's ShotSpotter data through June 30, 2026, single and multiple gunshots only. Comparisons that use gunshots run August 11 to June 30 in every year. National comparison: the Real-Time Crime Index (AH Datalytics), monthly through June 2026, a fixed sample of 590 agencies with DC removed. The step model is a Poisson regression of monthly counts with the 10-year norm as offset and Newey-West errors. Troop comparisons are ratios of changes with block-bootstrap ranges and a placebo year.</p>
+    <ul>
+      <li>Data: <a href="https://opendata.dc.gov/">DC Open Data</a> (crime incidents, ShotSpotter gunshots, wards, Metro stations); <a href="https://github.com/AH-Datalytics/rtci">Real-Time Crime Index</a></li>
+      <li>Guard posts: <a href="https://wjla.com/news/local/national-guard-dc-metrorail-federal-guardsmen-troops-wmata-blue-line-red-green-orange-silver-yellow-crime-enforcement-police-trump-white-house-military-civilians-washington">WJLA, August 2025</a>; <a href="https://oag.dc.gov/sites/default/files/2025-11/National_Guard_Ruling.pdf">federal court opinion, November 2025</a>; <a href="https://www.dvidshub.net/news/557249">DVIDS, January 2026</a>; <a href="https://www.army.mil/article/294347">Army.mil, August 2026</a>; <a href="https://www.washingtoninformer.com/national-guard-dc-deployment/">Washington Informer, troop numbers</a></li>
+      <li>Federal arrests: <a href="https://51st.news/national-guard-dc-faq/">51st, August 2025</a>. Shootings: <a href="https://www.thetrace.org/2025/10/dc-shooting-data-trump-national-guard/">The Trace, October 2025</a></li>
+      <li>Crime data reviews: <a href="https://oversight.house.gov/release/oversight-committee-releases-bombshell-report-revealing-d-c-s-police-chief-deliberately-manipulated-crime-data">House Oversight</a>; <a href="https://www.nbcwashington.com/news/local/internal-affairs-report-dc-police-crime-stats/4104122/">MPD internal affairs (NBC Washington)</a>; <a href="https://oig.dc.gov/sites/default/files/Reports/DCOIG_Report_26-E-03-FA0.pdf">DC Inspector General</a></li>
+      <li>Related study: <a href="https://www.niskanencenter.org/washington-dc-crime-decline-and-its-lessons-for-american-policing/">Niskanen Center, May 2026</a></li>
+    </ul>
+  </div>
+</div>
+<footer>DC crime since the National Guard · Martin Ngoh</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const D = {"monthly": {"labels": ["Jan 24", "Feb 24", "Mar 24", "Apr 24", "May 24", "Jun 24", "Jul 24", "Aug 24", "Sep 24", "Oct 24", "Nov 24", "Dec 24", "Jan 25", "Feb 25", "Mar 25", "Apr 25", "May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26", "Jul 26", "Aug 26", "Sep 26"], "property": [-6, -3, -9, -6, -6, -11, -6, -10, -7, 2, 2, -6, -18, -9, -8, -1, -11, -13, -14, -18, -31, -40, -36, -36, -41, -38, -30, -29, -25, -31, -24, -24, -22], "violent": [-9, -12, -17, -19, -13, -6, -28, -26, -20, -28, -31, -27, -34, -34, -32, -36, -26, -41, -46, -52, -51, -49, -47, -55, -59, -39, -16, -31, -20, -32, -34, -41, -29], "gun": [12, 8, 2, -3, 10, 22, -12, -1, 5, -6, -25, -8, -18, -18, -20, -33, -7, -41, -45, -57, -67, -54, -67, -62, -68, -50, -25, -42, -43, -55, -42, -49, -46], "deploy_index": 19.322580645161292}, "weekly": {"labels": ["Jun 30", "Jul 7", "Jul 14", "Jul 21", "Jul 28", "Aug 4", "Aug 11", "Aug 18", "Aug 25", "Sep 1", "Sep 8", "Sep 15", "Sep 22", "Sep 29", "Oct 6", "Oct 13", "Oct 20", "Oct 27"], "y2025": [175, 50, 50, 87, 78, 79, 30, 39, 29, 44, 33, 40, 44, 46, 57, 48, 36, 66], "y2024": [165, 97, 116, 106, 105, 103, 92, 145, 95, 130, 123, 99, 89, 111, 129, 127, 142, 134], "deploy": 6}, "national": {"labels": ["Murder", "Robbery", "Property", "Theft", "Car theft"], "dc_pre": [-21.5, -30.3, -2.5, -3.1, 0.0], "us_pre": [-16.7, -14.2, -10.2, -6.0, -24.6], "dc_post": [-51.1, -34.4, -29.0, -22.3, -55.2], "us_post": [-15.4, -17.4, -11.6, -8.6, -20.8]}, "phase": {"labels": [["Gunshots", "detected"], ["Reported", "gun crime"], ["Violent", "crime"], ["Property", "crime"]], "p1_t": [-56.8, -66.0, -31.6, -26.4], "p1_c": [-59.5, -59.3, -28.5, -32.7], "p2_t": [-35.4, -32.0, 3.6, -19.1], "p2_c": [-39.8, -27.0, 10.9, -34.4]}, "wards": {"labels": ["Ward 1", "Ward 2", "Ward 4", "Ward 5", "Ward 6", "Ward 7", "Ward 8"], "vals": [-45.0, -46.9, -30.5, -33.4, -36.4, -47.7, -45.3], "troops": [false, true, false, false, true, false, false]}};
+const C = { blue: '#2563eb', blueLight: '#93c5fd', red: '#ef4444', muted: '#8b8b8b', grey: '#6b7280', border: '#262626', surface: '#121212', text: '#f2f2f2' };
+Chart.defaults.color = C.muted; Chart.defaults.borderColor = C.border;
+Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'; Chart.defaults.font.size = 11;
+Object.assign(Chart.defaults.plugins.tooltip, { backgroundColor: C.surface, borderColor: C.border, borderWidth: 1, titleColor: C.text, bodyColor: C.muted });
+Chart.defaults.plugins.legend.display = false;
+const fmt = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(Math.round(v)) + '%';
+const base = { responsive: true, maintainAspectRatio: false };
+const marker = (idx, label) => ({ id: 'marker', afterDatasetsDraw(ch) {
+  const { ctx, chartArea: a, scales: { x, y } } = ch;
+  const i0 = Math.floor(idx), f = idx - i0;
+  const px = x.getPixelForValue(i0) + (x.getPixelForValue(i0 + 1) - x.getPixelForValue(i0)) * f;
+  ctx.save(); ctx.strokeStyle = C.muted; ctx.setLineDash([3, 3]); ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(px, a.top); ctx.lineTo(px, a.bottom); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle = C.muted; ctx.font = '11px -apple-system, Segoe UI, sans-serif';
+  const w = ctx.measureText(label).width; const left = px + 6 + w > a.right;
+  ctx.textAlign = left ? 'right' : 'left'; ctx.fillText(label, left ? px - 6 : px + 6, a.top + 11);
+  if (y.min < 0 && y.max > 0) { const y0 = y.getPixelForValue(0); ctx.strokeStyle = '#3a3a3a'; ctx.beginPath(); ctx.moveTo(a.left, y0); ctx.lineTo(a.right, y0); ctx.stroke(); }
+  ctx.restore(); } });
+const line = (label, data, color, dash) => ({ label, data, borderColor: color, backgroundColor: color, borderWidth: 2, borderDash: dash || [], pointRadius: 0, pointHoverRadius: 4, tension: 0.25 });
+const bar = (label, data, color, faded) => ({ label, data, borderColor: color, backgroundColor: faded ? 'rgba(0,0,0,0)' : color + '26', borderWidth: 1.5, borderDash: faded ? [3, 2] : [], borderRadius: 3, maxBarThickness: 22 });
+const pctAxis = (min, max) => ({ min, max, grid: { color: '#1c1c1c' }, ticks: { callback: fmt } });
+
+new Chart(document.getElementById('cMonthly'), { type: 'line',
+  data: { labels: D.monthly.labels, datasets: [line('Violent crime', D.monthly.violent, C.red), line('Violent crime with a gun', D.monthly.gun, C.blueLight, [5, 4]), line('Property crime', D.monthly.property, C.blue)] },
+  options: { ...base, interaction: { mode: 'index', intersect: false },
+    plugins: { tooltip: { callbacks: { label: c => c.dataset.label + ': ' + fmt(c.parsed.y) } } },
+    scales: { x: { grid: { display: false }, ticks: { autoSkip: false, maxRotation: 0, callback: (v, i) => i % 4 === 0 ? D.monthly.labels[i] : '' } }, y: pctAxis(-80, 40) } },
+  plugins: [marker(D.monthly.deploy_index, 'Guard deployed, Aug 11, 2025')] });
+
+new Chart(document.getElementById('cNational'), { type: 'bar',
+  data: { labels: D.national.labels, datasets: [bar('DC, year before', D.national.dc_pre, C.red, true), bar('DC, Guard year', D.national.dc_post, C.red), bar('Nation, year before', D.national.us_pre, C.blue, true), bar('Nation, Guard year', D.national.us_post, C.blue)] },
+  options: { ...base, plugins: { tooltip: { callbacks: { label: c => c.dataset.label + ': ' + fmt(c.parsed.y) } } },
+    scales: { x: { grid: { display: false } }, y: pctAxis(-60, 10) } } });
+
+new Chart(document.getElementById('cWeekly'), { type: 'line',
+  data: { labels: D.weekly.labels, datasets: [line('2025', D.weekly.y2025, C.red), line('Same weeks of 2024', D.weekly.y2024, C.grey)] },
+  options: { ...base, interaction: { mode: 'index', intersect: false },
+    plugins: { tooltip: { callbacks: { title: i => 'Week of ' + i[0].label + (i[0].dataIndex === D.weekly.deploy ? ' (deployment)' : ''), label: c => c.dataset.label + ': ' + c.parsed.y + ' detections' } } },
+    scales: { x: { grid: { display: false }, ticks: { autoSkip: false, maxRotation: 0, callback: (v, i) => i % 3 === 0 ? D.weekly.labels[i] : '' } }, y: { min: 0, grid: { color: '#1c1c1c' } } } },
+  plugins: [marker(D.weekly.deploy, 'Aug 11')] });
+
+const phaseChart = (id, t, c) => new Chart(document.getElementById(id), { type: 'bar',
+  data: { labels: D.phase.labels, datasets: [bar('With troops', t, C.red), bar('Without troops', c, C.blue)] },
+  options: { ...base, plugins: { tooltip: { callbacks: { label: c => c.dataset.label + ': ' + fmt(c.parsed.y) } } },
+    scales: { x: { grid: { display: false }, ticks: { autoSkip: false, maxRotation: 0 } }, y: pctAxis(-80, 20) } } });
+phaseChart('cPhase1', D.phase.p1_t, D.phase.p1_c);
+phaseChart('cPhase2', D.phase.p2_t, D.phase.p2_c);
+
+new Chart(document.getElementById('cWards'), { type: 'bar',
+  data: { labels: D.wards.labels, datasets: [{ label: 'Gunshots', data: D.wards.vals, borderColor: D.wards.troops.map(t => t ? C.red : C.blue), backgroundColor: D.wards.troops.map(t => t ? C.red + '26' : C.blue + '26'), borderWidth: 1.5, borderRadius: 3, maxBarThickness: 22 }] },
+  options: { ...base, plugins: { tooltip: { callbacks: { label: c => (D.wards.troops[c.dataIndex] ? 'Guard posts: ' : 'No posts: ') + fmt(c.parsed.y) } } },
+    scales: { x: { grid: { display: false } }, y: pctAxis(-60, 0) } } });
+</script>

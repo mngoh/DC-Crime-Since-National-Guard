@@ -1,0 +1,6 @@
+# re-fetched by scripts/fetch_incidents.py and scripts/fetch_shotspotter.py
+data/raw/*.csv
+# Real-Time Crime Index, download from github.com/AH-Datalytics/rtci (data/Crime_Index_Reported_Crime_Trends_Jan17_Jun26.csv)
+data/external/rtci_*.csv
+__pycache__/
+.DS_Store

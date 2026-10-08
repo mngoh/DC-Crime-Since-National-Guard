@@ -1,0 +1,145 @@
+{
+ "data_end": "2026-06-30 23:31:00",
+ "zero_days_since_2024": [
+  "2025-08-27",
+  "2025-12-11",
+  "2026-01-20"
+ ],
+ "busy_squares": {
+  "n": 61,
+  "went_silent": 0,
+  "post_over_pre_quantiles": {
+   "0.1": 0.35,
+   "0.25": 0.44,
+   "0.5": 0.54,
+   "0.75": 0.68,
+   "0.9": 0.83
+  }
+ },
+ "monthly_by_type": {
+  "2025-05": {
+   "Gunshot or Firecracker": 0,
+   "Multiple Gunshots": 259,
+   "Probable Gunfire": 67,
+   "Single Gunshot": 167
+  },
+  "2025-06": {
+   "Gunshot or Firecracker": 0,
+   "Multiple Gunshots": 251,
+   "Probable Gunfire": 64,
+   "Single Gunshot": 110
+  },
+  "2025-07": {
+   "Gunshot or Firecracker": 0,
+   "Multiple Gunshots": 247,
+   "Probable Gunfire": 109,
+   "Single Gunshot": 136
+  },
+  "2025-08": {
+   "Gunshot or Firecracker": 0,
+   "Multiple Gunshots": 144,
+   "Probable Gunfire": 44,
+   "Single Gunshot": 70
+  },
+  "2025-09": {
+   "Gunshot or Firecracker": 0,
+   "Multiple Gunshots": 113,
+   "Probable Gunfire": 20,
+   "Single Gunshot": 57
+  },
+  "2025-10": {
+   "Gunshot or Firecracker": 0,
+   "Multiple Gunshots": 125,
+   "Probable Gunfire": 10,
+   "Single Gunshot": 95
+  },
+  "2025-11": {
+   "Gunshot or Firecracker": 0,
+   "Multiple Gunshots": 125,
+   "Probable Gunfire": 12,
+   "Single Gunshot": 127
+  },
+  "2025-12": {
+   "Gunshot or Firecracker": 0,
+   "Multiple Gunshots": 104,
+   "Probable Gunfire": 7,
+   "Single Gunshot": 93
+  }
+ },
+ "by_area_4wk_before_after": {
+  "1D": [
+   7,
+   3
+  ],
+  "3D": [
+   6,
+   4
+  ],
+  "4D": [
+   7,
+   4
+  ],
+  "5D": [
+   31,
+   6
+  ],
+  "6D": [
+   138,
+   66
+  ],
+  "7D": [
+   105,
+   59
+  ]
+ },
+ "weekly_gunshots_vs_reported_gun_crimes": {
+  "2025-07-14": {
+   "gunshots": 50,
+   "reported_gun_crimes": 17
+  },
+  "2025-07-21": {
+   "gunshots": 87,
+   "reported_gun_crimes": 25
+  },
+  "2025-07-28": {
+   "gunshots": 78,
+   "reported_gun_crimes": 26
+  },
+  "2025-08-04": {
+   "gunshots": 79,
+   "reported_gun_crimes": 28
+  },
+  "2025-08-11": {
+   "gunshots": 30,
+   "reported_gun_crimes": 8
+  },
+  "2025-08-18": {
+   "gunshots": 39,
+   "reported_gun_crimes": 17
+  },
+  "2025-08-25": {
+   "gunshots": 29,
+   "reported_gun_crimes": 14
+  },
+  "2025-09-01": {
+   "gunshots": 44,
+   "reported_gun_crimes": 17
+  },
+  "2025-09-08": {
+   "gunshots": 33,
+   "reported_gun_crimes": 16
+  },
+  "2025-09-15": {
+   "gunshots": 40,
+   "reported_gun_crimes": 15
+  },
+  "2025-09-22": {
+   "gunshots": 44,
+   "reported_gun_crimes": 10
+  },
+  "2025-09-29": {
+   "gunshots": 46,
+   "reported_gun_crimes": 23
+  }
+ }
+}

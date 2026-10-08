@@ -1,0 +1,3378 @@
+{
+ "deployment_date": "2025-08-11",
+ "data_end": "2026-09-30",
+ "baseline": "10 deployment years, Aug 11, 2015 to Aug 10, 2025",
+ "labels": {
+  "total": "All reported crime",
+  "violent": "Violent crime",
+  "property": "Property crime",
+  "gun_violent": "Violent crime with a gun",
+  "violent_ex_adw": "Homicide, robbery and sex abuse",
+  "homicide": "Homicide",
+  "sex_abuse": "Sex abuse",
+  "adw": "Assault with a dangerous weapon",
+  "robbery": "Robbery",
+  "burglary": "Burglary",
+  "mvt": "Motor vehicle theft",
+  "theft_auto": "Theft from auto",
+  "theft_other": "Other theft",
+  "arson": "Arson"
+ },
+ "geo": {
+  "rows": 362530,
+  "no_ward": 0,
+  "bad_coords": 0,
+  "downtown_share": 0.0927
+ },
+ "deployment_years": {
+  "total": {
+   "by_year": {
+    "2015": 37384,
+    "2016": 35368,
+    "2017": 32106,
+    "2018": 34359,
+    "2019": 30661,
+    "2020": 27587,
+    "2021": 28230,
+    "2022": 31936,
+    "2023": 30302,
+    "2024": 28122,
+    "2025": 21027
+   },
+   "avg10": 31605.5,
+   "min10": 27587,
+   "max10": 37384,
+   "min10_year": 2020,
+   "deploy_year": 21027,
+   "vs_avg10_pct": -33.5,
+   "year_before": 28122,
+   "year_before_vs_avg10_pct": -11.0,
+   "vs_year_before_pct": -25.2,
+   "rank_low_of_11": 1
+  },
+  "violent": {
+   "by_year": {
+    "2015": 6168,
+    "2016": 4790,
+    "2017": 4226,
+    "2018": 4090,
+    "2019": 3994,
+    "2020": 3993,
+    "2021": 4213,
+    "2022": 4702,
+    "2023": 4191,
+    "2024": 2934,
+    "2025": 2556
+   },
+   "avg10": 4330.1,
+   "min10": 2934,
+   "max10": 6168,
+   "min10_year": 2024,
+   "deploy_year": 2556,
+   "vs_avg10_pct": -41.0,
+   "year_before": 2934,
+   "year_before_vs_avg10_pct": -32.2,
+   "vs_year_before_pct": -12.9,
+   "rank_low_of_11": 1
+  },
+  "property": {
+   "by_year": {
+    "2015": 31216,
+    "2016": 30578,
+    "2017": 27880,
+    "2018": 30269,
+    "2019": 26667,
+    "2020": 23594,
+    "2021": 24017,
+    "2022": 27234,
+    "2023": 26111,
+    "2024": 25188,
+    "2025": 18471
+   },
+   "avg10": 27275.4,
+   "min10": 23594,
+   "max10": 31216,
+   "min10_year": 2020,
+   "deploy_year": 18471,
+   "vs_avg10_pct": -32.3,
+   "year_before": 25188,
+   "year_before_vs_avg10_pct": -7.7,
+   "vs_year_before_pct": -26.7,
+   "rank_low_of_11": 1
+  },
+  "gun_violent": {
+   "by_year": {
+    "2015": 2252,
+    "2016": 1679,
+    "2017": 1627,
+    "2018": 1580,
+    "2019": 1690,
+    "2020": 2185,
+    "2021": 2403,
+    "2022": 2940,
+    "2023": 2548,
+    "2024": 1671,
+    "2025": 941
+   },
+   "avg10": 2057.5,
+   "min10": 1580,
+   "max10": 2940,
+   "min10_year": 2018,
+   "deploy_year": 941,
+   "vs_avg10_pct": -54.3,
+   "year_before": 1671,
+   "year_before_vs_avg10_pct": -18.8,
+   "vs_year_before_pct": -43.7,
+   "rank_low_of_11": 1
+  },
+  "violent_ex_adw": {
+   "by_year": {
+    "2015": 3724,
+    "2016": 2855,
+    "2017": 2521,
+    "2018": 2457,
+    "2019": 2381,
+    "2020": 2418,
+    "2021": 2648,
+    "2022": 3293,
+    "2023": 3010,
+    "2024": 2028,
+    "2025": 1391
+   },
+   "avg10": 2733.5,
+   "min10": 2028,
+   "max10": 3724,
+   "min10_year": 2024,
+   "deploy_year": 1391,
+   "vs_avg10_pct": -49.1,
+   "year_before": 2028,
+   "year_before_vs_avg10_pct": -25.8,
+   "vs_year_before_pct": -31.4,
+   "rank_low_of_11": 1
+  },
+  "homicide": {
+   "by_year": {
+    "2015": 150,
+    "2016": 115,
+    "2017": 135,
+    "2018": 158,
+    "2019": 175,
+    "2020": 196,
+    "2021": 226,
+    "2022": 223,
+    "2023": 213,
+    "2024": 167,
+    "2025": 94
+   },
+   "avg10": 175.8,
+   "min10": 115,
+   "max10": 226,
+   "min10_year": 2016,
+   "deploy_year": 94,
+   "vs_avg10_pct": -46.5,
+   "year_before": 167,
+   "year_before_vs_avg10_pct": -5.0,
+   "vs_year_before_pct": -43.7,
+   "rank_low_of_11": 1
+  },
+  "sex_abuse": {
+   "by_year": {
+    "2015": 338,
+    "2016": 335,
+    "2017": 297,
+    "2018": 206,
+    "2019": 178,
+    "2020": 176,
+    "2021": 170,
+    "2022": 202,
+    "2023": 193,
+    "2024": 90,
+    "2025": 108
+   },
+   "avg10": 218.5,
+   "min10": 90,
+   "max10": 338,
+   "min10_year": 2024,
+   "deploy_year": 108,
+   "vs_avg10_pct": -50.6,
+   "year_before": 90,
+   "year_before_vs_avg10_pct": -58.8,
+   "vs_year_before_pct": 20.0,
+   "rank_low_of_11": 2
+  },
+  "adw": {
+   "by_year": {
+    "2015": 2444,
+    "2016": 1935,
+    "2017": 1705,
+    "2018": 1633,
+    "2019": 1613,
+    "2020": 1575,
+    "2021": 1565,
+    "2022": 1409,
+    "2023": 1181,
+    "2024": 906,
+    "2025": 1165
+   },
+   "avg10": 1596.6,
+   "min10": 906,
+   "max10": 2444,
+   "min10_year": 2024,
+   "deploy_year": 1165,
+   "vs_avg10_pct": -27.0,
+   "year_before": 906,
+   "year_before_vs_avg10_pct": -43.3,
+   "vs_year_before_pct": 28.6,
+   "rank_low_of_11": 2
+  },
+  "robbery": {
+   "by_year": {
+    "2015": 3236,
+    "2016": 2405,
+    "2017": 2089,
+    "2018": 2093,
+    "2019": 2028,
+    "2020": 2046,
+    "2021": 2252,
+    "2022": 2868,
+    "2023": 2604,
+    "2024": 1771,
+    "2025": 1189
+   },
+   "avg10": 2339.2,
+   "min10": 1771,
+   "max10": 3236,
+   "min10_year": 2024,
+   "deploy_year": 1189,
+   "vs_avg10_pct": -49.2,
+   "year_before": 1771,
+   "year_before_vs_avg10_pct": -24.3,
+   "vs_year_before_pct": -32.9,
+   "rank_low_of_11": 1
+  },
+  "burglary": {
+   "by_year": {
+    "2015": 2398,
+    "2016": 1789,
+    "2017": 1458,
+    "2018": 1336,
+    "2019": 1482,
+    "2020": 1083,
+    "2021": 1203,
+    "2022": 1060,
+    "2023": 968,
+    "2024": 901,
+    "2025": 728
+   },
+   "avg10": 1367.8,
+   "min10": 901,
+   "max10": 2398,
+   "min10_year": 2024,
+   "deploy_year": 728,
+   "vs_avg10_pct": -46.8,
+   "year_before": 901,
+   "year_before_vs_avg10_pct": -34.1,
+   "vs_year_before_pct": -19.2,
+   "rank_low_of_11": 1
+  },
+  "mvt": {
+   "by_year": {
+    "2015": 2737,
+    "2016": 2565,
+    "2017": 2358,
+    "2018": 2217,
+    "2019": 2642,
+    "2020": 3576,
+    "2021": 3540,
+    "2022": 6104,
+    "2023": 5247,
+    "2024": 5140,
+    "2025": 2398
+   },
+   "avg10": 3612.6,
+   "min10": 2217,
+   "max10": 6104,
+   "min10_year": 2018,
+   "deploy_year": 2398,
+   "vs_avg10_pct": -33.6,
+   "year_before": 5140,
+   "year_before_vs_avg10_pct": 42.3,
+   "vs_year_before_pct": -53.3,
+   "rank_low_of_11": 3
+  },
+  "theft_auto": {
+   "by_year": {
+    "2015": 11556,
+    "2016": 11454,
+    "2017": 10183,
+    "2018": 11584,
+    "2019": 9412,
+    "2020": 8389,
+    "2021": 8392,
+    "2022": 7835,
+    "2023": 6834,
+    "2024": 6539,
+    "2025": 4023
+   },
+   "avg10": 9217.8,
+   "min10": 6539,
+   "max10": 11584,
+   "min10_year": 2024,
+   "deploy_year": 4023,
+   "vs_avg10_pct": -56.4,
+   "year_before": 6539,
+   "year_before_vs_avg10_pct": -29.1,
+   "vs_year_before_pct": -38.5,
+   "rank_low_of_11": 1
+  },
+  "theft_other": {
+   "by_year": {
+    "2015": 14513,
+    "2016": 14764,
+    "2017": 13877,
+    "2018": 15123,
+    "2019": 13119,
+    "2020": 10539,
+    "2021": 10880,
+    "2022": 12225,
+    "2023": 13056,
+    "2024": 12603,
+    "2025": 11321
+   },
+   "avg10": 13069.9,
+   "min10": 10539,
+   "max10": 15123,
+   "min10_year": 2020,
+   "deploy_year": 11321,
+   "vs_avg10_pct": -13.4,
+   "year_before": 12603,
+   "year_before_vs_avg10_pct": -3.6,
+   "vs_year_before_pct": -10.2,
+   "rank_low_of_11": 3
+  },
+  "arson": {
+   "by_year": {
+    "2015": 12,
+    "2016": 6,
+    "2017": 4,
+    "2018": 9,
+    "2019": 12,
+    "2020": 7,
+    "2021": 2,
+    "2022": 10,
+    "2023": 6,
+    "2024": 5,
+    "2025": 1
+   },
+   "avg10": 7.3,
+   "min10": 2,
+   "max10": 12,
+   "min10_year": 2021,
+   "deploy_year": 1,
+   "vs_avg10_pct": -86.3,
+   "year_before": 5,
+   "year_before_vs_avg10_pct": -31.5,
+   "vs_year_before_pct": -80.0,
+   "rank_low_of_11": 1
+  }
+ },
+ "windows": {
+  "since_deployment": {
+   "label": "Aug 11, 2025 to Sep 30, 2026",
+   "start": "2025-08-11",
+   "end": "2026-09-30",
+   "series": {
+    "total": {
+     "actual": 24716,
+     "avg10": 36444.5,
+     "vs_avg10_pct": -32.2
+    },
+    "violent": {
+     "actual": 2989,
+     "avg10": 5001.9,
+     "vs_avg10_pct": -40.2
+    },
+    "property": {
+     "actual": 21727,
+     "avg10": 31442.6,
+     "vs_avg10_pct": -30.9
+    },
+    "gun_violent": {
+     "actual": 1102,
+     "avg10": 2367.3,
+     "vs_avg10_pct": -53.4
+    },
+    "violent_ex_adw": {
+     "actual": 1633,
+     "avg10": 3158.0,
+     "vs_avg10_pct": -48.3
+    },
+    "homicide": {
+     "actual": 102,
+     "avg10": 203.0,
+     "vs_avg10_pct": -49.8
+    },
+    "sex_abuse": {
+     "actual": 118,
+     "avg10": 254.8,
+     "vs_avg10_pct": -53.7
+    },
+    "adw": {
+     "actual": 1356,
+     "avg10": 1843.9,
+     "vs_avg10_pct": -26.5
+    },
+    "robbery": {
+     "actual": 1413,
+     "avg10": 2700.2,
+     "vs_avg10_pct": -47.7
+    },
+    "burglary": {
+     "actual": 872,
+     "avg10": 1591.2,
+     "vs_avg10_pct": -45.2
+    },
+    "mvt": {
+     "actual": 2860,
+     "avg10": 4142.5,
+     "vs_avg10_pct": -31.0
+    },
+    "theft_auto": {
+     "actual": 4814,
+     "avg10": 10607.2,
+     "vs_avg10_pct": -54.6
+    },
+    "theft_other": {
+     "actual": 13179,
+     "avg10": 15093.6,
+     "vs_avg10_pct": -12.7
+    },
+    "arson": {
+     "actual": 2,
+     "avg10": 8.1,
+     "vs_avg10_pct": -75.3
+    }
+   }
+  },
+  "deploy_year_1": {
+   "label": "First year: Aug 11, 2025 to Aug 10, 2026",
+   "start": "2025-08-11",
+   "end": "2026-08-10",
+   "series": {
+    "total": {
+     "actual": 21027,
+     "avg10": 31580.5,
+     "vs_avg10_pct": -33.4
+    },
+    "violent": {
+     "actual": 2556,
+     "avg10": 4326.9,
+     "vs_avg10_pct": -40.9
+    },
+    "property": {
+     "actual": 18471,
+     "avg10": 27253.6,
+     "vs_avg10_pct": -32.2
+    },
+    "gun_violent": {
+     "actual": 941,
+     "avg10": 2055.8,
+     "vs_avg10_pct": -54.2
+    },
+    "violent_ex_adw": {
+     "actual": 1391,
+     "avg10": 2732.1,
+     "vs_avg10_pct": -49.1
+    },
+    "homicide": {
+     "actual": 94,
+     "avg10": 175.8,
+     "vs_avg10_pct": -46.5
+    },
+    "sex_abuse": {
+     "actual": 108,
+     "avg10": 218.3,
+     "vs_avg10_pct": -50.5
+    },
+    "adw": {
+     "actual": 1165,
+     "avg10": 1594.8,
+     "vs_avg10_pct": -27.0
+    },
+    "robbery": {
+     "actual": 1189,
+     "avg10": 2338.0,
+     "vs_avg10_pct": -49.1
+    },
+    "burglary": {
+     "actual": 728,
+     "avg10": 1366.7,
+     "vs_avg10_pct": -46.7
+    },
+    "mvt": {
+     "actual": 2398,
+     "avg10": 3610.2,
+     "vs_avg10_pct": -33.6
+    },
+    "theft_auto": {
+     "actual": 4023,
+     "avg10": 9211.2,
+     "vs_avg10_pct": -56.3
+    },
+    "theft_other": {
+     "actual": 11321,
+     "avg10": 13058.3,
+     "vs_avg10_pct": -13.3
+    },
+    "arson": {
+     "actual": 1,
+     "avg10": 7.2,
+     "vs_avg10_pct": -86.1
+    }
+   }
+  },
+  "first_months": {
+   "label": "Aug 11 to Dec 31, 2025",
+   "start": "2025-08-11",
+   "end": "2025-12-31",
+   "series": {
+    "total": {
+     "actual": 8470,
+     "avg10": 13329.9,
+     "vs_avg10_pct": -36.5
+    },
+    "violent": {
+     "actual": 883,
+     "avg10": 1818.3,
+     "vs_avg10_pct": -51.4
+    },
+    "property": {
+     "actual": 7587,
+     "avg10": 11511.6,
+     "vs_avg10_pct": -34.1
+    },
+    "gun_violent": {
+     "actual": 314,
+     "avg10": 864.2,
+     "vs_avg10_pct": -63.7
+    },
+    "violent_ex_adw": {
+     "actual": 496,
+     "avg10": 1174.6,
+     "vs_avg10_pct": -57.8
+    },
+    "homicide": {
+     "actual": 30,
+     "avg10": 72.9,
+     "vs_avg10_pct": -58.8
+    },
+    "sex_abuse": {
+     "actual": 48,
+     "avg10": 89.2,
+     "vs_avg10_pct": -46.2
+    },
+    "adw": {
+     "actual": 387,
+     "avg10": 643.7,
+     "vs_avg10_pct": -39.9
+    },
+    "robbery": {
+     "actual": 418,
+     "avg10": 1012.5,
+     "vs_avg10_pct": -58.7
+    },
+    "burglary": {
+     "actual": 283,
+     "avg10": 590.8,
+     "vs_avg10_pct": -52.1
+    },
+    "mvt": {
+     "actual": 1021,
+     "avg10": 1428.9,
+     "vs_avg10_pct": -28.5
+    },
+    "theft_auto": {
+     "actual": 1648,
+     "avg10": 3954.3,
+     "vs_avg10_pct": -58.3
+    },
+    "theft_other": {
+     "actual": 4635,
+     "avg10": 5535.3,
+     "vs_avg10_pct": -16.3
+    },
+    "arson": {
+     "actual": 0,
+     "avg10": 2.3,
+     "vs_avg10_pct": -100.0
+    }
+   }
+  },
+  "first_30_days": {
+   "label": "Federal control of MPD: Aug 11 to Sep 9, 2025",
+   "start": "2025-08-11",
+   "end": "2025-09-09",
+   "series": {
+    "total": {
+     "actual": 1977,
+     "avg10": 2807.9,
+     "vs_avg10_pct": -29.6
+    },
+    "violent": {
+     "actual": 171,
+     "avg10": 397.3,
+     "vs_avg10_pct": -57.0
+    },
+    "property": {
+     "actual": 1806,
+     "avg10": 2410.6,
+     "vs_avg10_pct": -25.1
+    },
+    "gun_violent": {
+     "actual": 60,
+     "avg10": 184.7,
+     "vs_avg10_pct": -67.5
+    },
+    "violent_ex_adw": {
+     "actual": 97,
+     "avg10": 247.4,
+     "vs_avg10_pct": -60.8
+    },
+    "homicide": {
+     "actual": 8,
+     "avg10": 15.3,
+     "vs_avg10_pct": -47.7
+    },
+    "sex_abuse": {
+     "actual": 9,
+     "avg10": 22.3,
+     "vs_avg10_pct": -59.6
+    },
+    "adw": {
+     "actual": 74,
+     "avg10": 149.9,
+     "vs_avg10_pct": -50.6
+    },
+    "robbery": {
+     "actual": 80,
+     "avg10": 209.8,
+     "vs_avg10_pct": -61.9
+    },
+    "burglary": {
+     "actual": 62,
+     "avg10": 126.6,
+     "vs_avg10_pct": -51.0
+    },
+    "mvt": {
+     "actual": 240,
+     "avg10": 303.7,
+     "vs_avg10_pct": -21.0
+    },
+    "theft_auto": {
+     "actual": 431,
+     "avg10": 800.7,
+     "vs_avg10_pct": -46.2
+    },
+    "theft_other": {
+     "actual": 1073,
+     "avg10": 1179.0,
+     "vs_avg10_pct": -9.0
+    },
+    "arson": {
+     "actual": 0,
+     "avg10": 0.6,
+     "vs_avg10_pct": -100.0
+    }
+   }
+  },
+  "y2026": {
+   "label": "Jan 1 to Sep 30, 2026",
+   "start": "2026-01-01",
+   "end": "2026-09-30",
+   "series": {
+    "total": {
+     "actual": 16246,
+     "avg10": 23114.6,
+     "vs_avg10_pct": -29.7
+    },
+    "violent": {
+     "actual": 2106,
+     "avg10": 3183.6,
+     "vs_avg10_pct": -33.8
+    },
+    "property": {
+     "actual": 14140,
+     "avg10": 19931.0,
+     "vs_avg10_pct": -29.1
+    },
+    "gun_violent": {
+     "actual": 788,
+     "avg10": 1503.1,
+     "vs_avg10_pct": -47.6
+    },
+    "violent_ex_adw": {
+     "actual": 1137,
+     "avg10": 1983.4,
+     "vs_avg10_pct": -42.7
+    },
+    "homicide": {
+     "actual": 72,
+     "avg10": 130.1,
+     "vs_avg10_pct": -44.7
+    },
+    "sex_abuse": {
+     "actual": 70,
+     "avg10": 165.6,
+     "vs_avg10_pct": -57.7
+    },
+    "adw": {
+     "actual": 969,
+     "avg10": 1200.2,
+     "vs_avg10_pct": -19.3
+    },
+    "robbery": {
+     "actual": 995,
+     "avg10": 1687.7,
+     "vs_avg10_pct": -41.0
+    },
+    "burglary": {
+     "actual": 589,
+     "avg10": 1000.4,
+     "vs_avg10_pct": -41.1
+    },
+    "mvt": {
+     "actual": 1839,
+     "avg10": 2713.6,
+     "vs_avg10_pct": -32.2
+    },
+    "theft_auto": {
+     "actual": 3166,
+     "avg10": 6652.9,
+     "vs_avg10_pct": -52.4
+    },
+    "theft_other": {
+     "actual": 8544,
+     "avg10": 9558.3,
+     "vs_avg10_pct": -10.6
+    },
+    "arson": {
+     "actual": 2,
+     "avg10": 5.8,
+     "vs_avg10_pct": -65.5
+    }
+   }
+  },
+  "deploy_year_2": {
+   "label": "Second year so far: Aug 11 to Sep 30, 2026",
+   "start": "2026-08-11",
+   "end": "2026-09-30",
+   "series": {
+    "total": {
+     "actual": 3689,
+     "avg10": 4864.0,
+     "vs_avg10_pct": -24.2
+    },
+    "violent": {
+     "actual": 433,
+     "avg10": 675.0,
+     "vs_avg10_pct": -35.9
+    },
+    "property": {
+     "actual": 3256,
+     "avg10": 4189.0,
+     "vs_avg10_pct": -22.3
+    },
+    "gun_violent": {
+     "actual": 161,
+     "avg10": 311.5,
+     "vs_avg10_pct": -48.3
+    },
+    "violent_ex_adw": {
+     "actual": 242,
+     "avg10": 425.9,
+     "vs_avg10_pct": -43.2
+    },
+    "homicide": {
+     "actual": 8,
+     "avg10": 27.2,
+     "vs_avg10_pct": -70.6
+    },
+    "sex_abuse": {
+     "actual": 10,
+     "avg10": 36.5,
+     "vs_avg10_pct": -72.6
+    },
+    "adw": {
+     "actual": 191,
+     "avg10": 249.1,
+     "vs_avg10_pct": -23.3
+    },
+    "robbery": {
+     "actual": 224,
+     "avg10": 362.2,
+     "vs_avg10_pct": -38.2
+    },
+    "burglary": {
+     "actual": 144,
+     "avg10": 224.5,
+     "vs_avg10_pct": -35.9
+    },
+    "mvt": {
+     "actual": 462,
+     "avg10": 532.3,
+     "vs_avg10_pct": -13.2
+    },
+    "theft_auto": {
+     "actual": 791,
+     "avg10": 1396.0,
+     "vs_avg10_pct": -43.3
+    },
+    "theft_other": {
+     "actual": 1858,
+     "avg10": 2035.3,
+     "vs_avg10_pct": -8.7
+    },
+    "arson": {
+     "actual": 1,
+     "avg10": 0.9,
+     "vs_avg10_pct": 11.1
+    }
+   }
+  },
+  "pre_12m": {
+   "label": "12 months before: Aug 11, 2024 to Aug 10, 2025",
+   "start": "2024-08-11",
+   "end": "2025-08-10",
+   "series": {
+    "total": {
+     "actual": 28122,
+     "avg10": 31580.5,
+     "vs_avg10_pct": -11.0
+    },
+    "violent": {
+     "actual": 2934,
+     "avg10": 4326.9,
+     "vs_avg10_pct": -32.2
+    },
+    "property": {
+     "actual": 25188,
+     "avg10": 27253.6,
+     "vs_avg10_pct": -7.6
+    },
+    "gun_violent": {
+     "actual": 1671,
+     "avg10": 2055.8,
+     "vs_avg10_pct": -18.7
+    },
+    "violent_ex_adw": {
+     "actual": 2028,
+     "avg10": 2732.1,
+     "vs_avg10_pct": -25.8
+    },
+    "homicide": {
+     "actual": 167,
+     "avg10": 175.8,
+     "vs_avg10_pct": -5.0
+    },
+    "sex_abuse": {
+     "actual": 90,
+     "avg10": 218.3,
+     "vs_avg10_pct": -58.8
+    },
+    "adw": {
+     "actual": 906,
+     "avg10": 1594.8,
+     "vs_avg10_pct": -43.2
+    },
+    "robbery": {
+     "actual": 1771,
+     "avg10": 2338.0,
+     "vs_avg10_pct": -24.3
+    },
+    "burglary": {
+     "actual": 901,
+     "avg10": 1366.7,
+     "vs_avg10_pct": -34.1
+    },
+    "mvt": {
+     "actual": 5140,
+     "avg10": 3610.2,
+     "vs_avg10_pct": 42.4
+    },
+    "theft_auto": {
+     "actual": 6539,
+     "avg10": 9211.2,
+     "vs_avg10_pct": -29.0
+    },
+    "theft_other": {
+     "actual": 12603,
+     "avg10": 13058.3,
+     "vs_avg10_pct": -3.5
+    },
+    "arson": {
+     "actual": 5,
+     "avg10": 7.2,
+     "vs_avg10_pct": -30.6
+    }
+   }
+  },
+  "pre_2025": {
+   "label": "2025 before deployment: Jan 1 to Aug 10, 2025",
+   "start": "2025-01-01",
+   "end": "2025-08-10",
+   "series": {
+    "total": {
+     "actual": 15681,
+     "avg10": 18250.6,
+     "vs_avg10_pct": -14.1
+    },
+    "violent": {
+     "actual": 1602,
+     "avg10": 2508.6,
+     "vs_avg10_pct": -36.1
+    },
+    "property": {
+     "actual": 14079,
+     "avg10": 15742.0,
+     "vs_avg10_pct": -10.6
+    },
+    "gun_violent": {
+     "actual": 870,
+     "avg10": 1191.6,
+     "vs_avg10_pct": -27.0
+    },
+    "violent_ex_adw": {
+     "actual": 1056,
+     "avg10": 1557.5,
+     "vs_avg10_pct": -32.2
+    },
+    "homicide": {
+     "actual": 94,
+     "avg10": 102.9,
+     "vs_avg10_pct": -8.6
+    },
+    "sex_abuse": {
+     "actual": 57,
+     "avg10": 129.1,
+     "vs_avg10_pct": -55.8
+    },
+    "adw": {
+     "actual": 546,
+     "avg10": 951.1,
+     "vs_avg10_pct": -42.6
+    },
+    "robbery": {
+     "actual": 905,
+     "avg10": 1325.5,
+     "vs_avg10_pct": -31.7
+    },
+    "burglary": {
+     "actual": 440,
+     "avg10": 775.9,
+     "vs_avg10_pct": -43.3
+    },
+    "mvt": {
+     "actual": 2914,
+     "avg10": 2181.3,
+     "vs_avg10_pct": 33.6
+    },
+    "theft_auto": {
+     "actual": 3714,
+     "avg10": 5256.9,
+     "vs_avg10_pct": -29.3
+    },
+    "theft_other": {
+     "actual": 7007,
+     "avg10": 7523.0,
+     "vs_avg10_pct": -6.9
+    },
+    "arson": {
+     "actual": 4,
+     "avg10": 4.9,
+     "vs_avg10_pct": -18.4
+    }
+   }
+  },
+  "pre_3m": {
+   "label": "3 months before: May 11 to Aug 10, 2025",
+   "start": "2025-05-11",
+   "end": "2025-08-10",
+   "series": {
+    "total": {
+     "actual": 6783,
+     "avg10": 8179.2,
+     "vs_avg10_pct": -17.1
+    },
+    "violent": {
+     "actual": 693,
+     "avg10": 1148.0,
+     "vs_avg10_pct": -39.6
+    },
+    "property": {
+     "actual": 6090,
+     "avg10": 7031.2,
+     "vs_avg10_pct": -13.4
+    },
+    "gun_violent": {
+     "actual": 369,
+     "avg10": 562.9,
+     "vs_avg10_pct": -34.4
+    },
+    "violent_ex_adw": {
+     "actual": 445,
+     "avg10": 713.8,
+     "vs_avg10_pct": -37.7
+    },
+    "homicide": {
+     "actual": 45,
+     "avg10": 49.1,
+     "vs_avg10_pct": -8.4
+    },
+    "sex_abuse": {
+     "actual": 18,
+     "avg10": 57.0,
+     "vs_avg10_pct": -68.4
+    },
+    "adw": {
+     "actual": 248,
+     "avg10": 434.2,
+     "vs_avg10_pct": -42.9
+    },
+    "robbery": {
+     "actual": 382,
+     "avg10": 607.7,
+     "vs_avg10_pct": -37.1
+    },
+    "burglary": {
+     "actual": 159,
+     "avg10": 357.2,
+     "vs_avg10_pct": -55.5
+    },
+    "mvt": {
+     "actual": 1089,
+     "avg10": 994.7,
+     "vs_avg10_pct": 9.5
+    },
+    "theft_auto": {
+     "actual": 1667,
+     "avg10": 2293.6,
+     "vs_avg10_pct": -27.3
+    },
+    "theft_other": {
+     "actual": 3173,
+     "avg10": 3383.9,
+     "vs_avg10_pct": -6.2
+    },
+    "arson": {
+     "actual": 2,
+     "avg10": 1.8,
+     "vs_avg10_pct": 11.1
+    }
+   }
+  },
+  "ytd_calendar": {
+   "label": "Jan 1 to Sep 30, 2026 vs Jan 1 to Sep 30 of 2016-2025",
+   "series": {
+    "total": {
+     "by_year": {
+      "2016": 27461,
+      "2017": 24917,
+      "2018": 24739,
+      "2019": 24875,
+      "2020": 20593,
+      "2021": 20714,
+      "2022": 20069,
+      "2023": 25590,
+      "2024": 21206,
+      "2025": 18996,
+      "2026": 16246
+     },
+     "avg_2016_2025": 22916.0,
+     "y2026": 16246,
+     "vs_avg_pct": -29.1,
+     "rank_low_of_11": 1
+    },
+    "violent": {
+     "by_year": {
+      "2016": 4448,
+      "2017": 3322,
+      "2018": 3080,
+      "2019": 3118,
+      "2020": 2852,
+      "2021": 2957,
+      "2022": 2915,
+      "2023": 4038,
+      "2024": 2650,
+      "2025": 1917,
+      "2026": 2106
+     },
+     "avg_2016_2025": 3129.7,
+     "y2026": 2106,
+     "vs_avg_pct": -32.7,
+     "rank_low_of_11": 2
+    },
+    "property": {
+     "by_year": {
+      "2016": 23013,
+      "2017": 21595,
+      "2018": 21659,
+      "2019": 21757,
+      "2020": 17741,
+      "2021": 17757,
+      "2022": 17154,
+      "2023": 21552,
+      "2024": 18556,
+      "2025": 17079,
+      "2026": 14140
+     },
+     "avg_2016_2025": 19786.3,
+     "y2026": 14140,
+     "vs_avg_pct": -28.5,
+     "rank_low_of_11": 1
+    },
+    "gun_violent": {
+     "by_year": {
+      "2016": 1656,
+      "2017": 1123,
+      "2018": 1158,
+      "2019": 1164,
+      "2020": 1343,
+      "2021": 1583,
+      "2022": 1658,
+      "2023": 2604,
+      "2024": 1581,
+      "2025": 968,
+      "2026": 788
+     },
+     "avg_2016_2025": 1483.8,
+     "y2026": 788,
+     "vs_avg_pct": -46.9,
+     "rank_low_of_11": 1
+    },
+    "violent_ex_adw": {
+     "by_year": {
+      "2016": 2657,
+      "2017": 1903,
+      "2018": 1823,
+      "2019": 1901,
+      "2020": 1623,
+      "2021": 1715,
+      "2022": 1837,
+      "2023": 2946,
+      "2024": 1848,
+      "2025": 1232,
+      "2026": 1137
+     },
+     "avg_2016_2025": 1948.5,
+     "y2026": 1137,
+     "vs_avg_pct": -41.6,
+     "rank_low_of_11": 1
+    },
+    "homicide": {
+     "by_year": {
+      "2016": 101,
+      "2017": 83,
+      "2018": 112,
+      "2019": 122,
+      "2020": 134,
+      "2021": 147,
+      "2022": 151,
+      "2023": 198,
+      "2024": 133,
+      "2025": 104,
+      "2026": 72
+     },
+     "avg_2016_2025": 128.5,
+     "y2026": 72,
+     "vs_avg_pct": -44.0,
+     "rank_low_of_11": 1
+    },
+    "sex_abuse": {
+     "by_year": {
+      "2016": 262,
+      "2017": 238,
+      "2018": 227,
+      "2019": 157,
+      "2020": 133,
+      "2021": 139,
+      "2022": 132,
+      "2023": 136,
+      "2024": 123,
+      "2025": 76,
+      "2026": 70
+     },
+     "avg_2016_2025": 162.3,
+     "y2026": 70,
+     "vs_avg_pct": -56.9,
+     "rank_low_of_11": 1
+    },
+    "adw": {
+     "by_year": {
+      "2016": 1791,
+      "2017": 1419,
+      "2018": 1257,
+      "2019": 1217,
+      "2020": 1229,
+      "2021": 1242,
+      "2022": 1078,
+      "2023": 1092,
+      "2024": 802,
+      "2025": 685,
+      "2026": 969
+     },
+     "avg_2016_2025": 1181.2,
+     "y2026": 969,
+     "vs_avg_pct": -18.0,
+     "rank_low_of_11": 3
+    },
+    "robbery": {
+     "by_year": {
+      "2016": 2294,
+      "2017": 1582,
+      "2018": 1484,
+      "2019": 1622,
+      "2020": 1356,
+      "2021": 1429,
+      "2022": 1554,
+      "2023": 2612,
+      "2024": 1592,
+      "2025": 1052,
+      "2026": 995
+     },
+     "avg_2016_2025": 1657.7,
+     "y2026": 995,
+     "vs_avg_pct": -40.0,
+     "rank_low_of_11": 1
+    },
+    "burglary": {
+     "by_year": {
+      "2016": 1618,
+      "2017": 1155,
+      "2018": 1090,
+      "2019": 970,
+      "2020": 1163,
+      "2021": 817,
+      "2022": 816,
+      "2023": 811,
+      "2024": 728,
+      "2025": 549,
+      "2026": 589
+     },
+     "avg_2016_2025": 971.7,
+     "y2026": 589,
+     "vs_avg_pct": -39.4,
+     "rank_low_of_11": 2
+    },
+    "mvt": {
+     "by_year": {
+      "2016": 2046,
+      "2017": 1824,
+      "2018": 1855,
+      "2019": 1595,
+      "2020": 2291,
+      "2021": 2535,
+      "2022": 2601,
+      "2023": 5353,
+      "2024": 3696,
+      "2025": 3290,
+      "2026": 1839
+     },
+     "avg_2016_2025": 2708.6,
+     "y2026": 1839,
+     "vs_avg_pct": -32.1,
+     "rank_low_of_11": 3
+    },
+    "theft_auto": {
+     "by_year": {
+      "2016": 8560,
+      "2017": 7706,
+      "2018": 8267,
+      "2019": 7752,
+      "2020": 6101,
+      "2021": 6417,
+      "2022": 5833,
+      "2023": 5781,
+      "2024": 4842,
+      "2025": 4409,
+      "2026": 3166
+     },
+     "avg_2016_2025": 6566.8,
+     "y2026": 3166,
+     "vs_avg_pct": -51.8,
+     "rank_low_of_11": 1
+    },
+    "theft_other": {
+     "by_year": {
+      "2016": 10785,
+      "2017": 10905,
+      "2018": 10444,
+      "2019": 11432,
+      "2020": 8174,
+      "2021": 7984,
+      "2022": 7900,
+      "2023": 9598,
+      "2024": 9286,
+      "2025": 8827,
+      "2026": 8544
+     },
+     "avg_2016_2025": 9533.5,
+     "y2026": 8544,
+     "vs_avg_pct": -10.4,
+     "rank_low_of_11": 4
+    },
+    "arson": {
+     "by_year": {
+      "2016": 4,
+      "2017": 5,
+      "2018": 3,
+      "2019": 8,
+      "2020": 12,
+      "2021": 4,
+      "2022": 4,
+      "2023": 9,
+      "2024": 4,
+      "2025": 4,
+      "2026": 2
+     },
+     "avg_2016_2025": 5.7,
+     "y2026": 2,
+     "vs_avg_pct": -64.9,
+     "rank_low_of_11": 1
+    }
+   }
+  }
+ },
+ "its": {
+  "total": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -23.9,
+    "ci95": [
+     -30.5,
+     -16.6
+    ],
+    "p": 0.0
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -24.8,
+    "ci95": [
+     -35.2,
+     -12.7
+    ],
+    "p": 0.0002,
+    "pre_trend_pct_per_year": -0.0
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -14.4,
+    "ci95": [
+     -24.6,
+     -2.9
+    ],
+    "p": 0.0159,
+    "pre_trend_pct_per_year": -10.1
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": -19.3,
+    "ci95": [
+     -29.1,
+     -8.1
+    ],
+    "p": 0.0012,
+    "pre_trend_pct_per_year": -6.0
+   }
+  ],
+  "violent": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -11.8,
+    "ci95": [
+     -25.9,
+     5.1
+    ],
+    "p": 0.1606
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -4.7,
+    "ci95": [
+     -29.8,
+     29.2
+    ],
+    "p": 0.7562,
+    "pre_trend_pct_per_year": -11.0
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": 18.2,
+    "ci95": [
+     -12.5,
+     59.6
+    ],
+    "p": 0.2747,
+    "pre_trend_pct_per_year": -26.6
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": 16.5,
+    "ci95": [
+     -14.3,
+     58.5
+    ],
+    "p": 0.33,
+    "pre_trend_pct_per_year": -25.1
+   }
+  ],
+  "property": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -25.3,
+    "ci95": [
+     -31.4,
+     -18.7
+    ],
+    "p": 0.0
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -27.1,
+    "ci95": [
+     -36.3,
+     -16.5
+    ],
+    "p": 0.0,
+    "pre_trend_pct_per_year": 1.5
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -18.3,
+    "ci95": [
+     -26.8,
+     -8.9
+    ],
+    "p": 0.0003,
+    "pre_trend_pct_per_year": -7.4
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": -23.3,
+    "ci95": [
+     -31.4,
+     -14.1
+    ],
+    "p": 0.0,
+    "pre_trend_pct_per_year": -2.9
+   }
+  ],
+  "gun_violent": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -42.6,
+    "ci95": [
+     -53.7,
+     -28.9
+    ],
+    "p": 0.0
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -27.8,
+    "ci95": [
+     -48.4,
+     0.9
+    ],
+    "p": 0.0567,
+    "pre_trend_pct_per_year": -20.9
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -14.3,
+    "ci95": [
+     -40.4,
+     23.1
+    ],
+    "p": 0.4024,
+    "pre_trend_pct_per_year": -32.7
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": -11.9,
+    "ci95": [
+     -36.5,
+     22.1
+    ],
+    "p": 0.4453,
+    "pre_trend_pct_per_year": -33.0
+   }
+  ],
+  "violent_ex_adw": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -30.4,
+    "ci95": [
+     -42.9,
+     -15.3
+    ],
+    "p": 0.0003
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -17.5,
+    "ci95": [
+     -39.7,
+     12.9
+    ],
+    "p": 0.2286,
+    "pre_trend_pct_per_year": -17.0
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -1.5,
+    "ci95": [
+     -29.6,
+     37.7
+    ],
+    "p": 0.929,
+    "pre_trend_pct_per_year": -29.9
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": 1.4,
+    "ci95": [
+     -25.6,
+     38.3
+    ],
+    "p": 0.9292,
+    "pre_trend_pct_per_year": -30.5
+   }
+  ],
+  "homicide": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -47.9,
+    "ci95": [
+     -60.2,
+     -31.9
+    ],
+    "p": 0.0
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -48.7,
+    "ci95": [
+     -61.3,
+     -32.1
+    ],
+    "p": 0.0,
+    "pre_trend_pct_per_year": -1.9
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -35.7,
+    "ci95": [
+     -53.5,
+     -11.2
+    ],
+    "p": 0.0074,
+    "pre_trend_pct_per_year": -19.5
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": -32.1,
+    "ci95": [
+     -53.5,
+     -0.9
+    ],
+    "p": 0.0446,
+    "pre_trend_pct_per_year": -22.5
+   }
+  ],
+  "adw": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": 30.2,
+    "ci95": [
+     12.2,
+     51.1
+    ],
+    "p": 0.0005
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": 18.8,
+    "ci95": [
+     -11.5,
+     59.4
+    ],
+    "p": 0.2507,
+    "pre_trend_pct_per_year": 0.9
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": 53.9,
+    "ci95": [
+     16.4,
+     103.5
+    ],
+    "p": 0.0025,
+    "pre_trend_pct_per_year": -18.5
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": 38.1,
+    "ci95": [
+     1.9,
+     87.1
+    ],
+    "p": 0.0373,
+    "pre_trend_pct_per_year": -11.5
+   }
+  ],
+  "robbery": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -30.8,
+    "ci95": [
+     -44.1,
+     -14.4
+    ],
+    "p": 0.0007
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -19.0,
+    "ci95": [
+     -42.5,
+     13.9
+    ],
+    "p": 0.2256,
+    "pre_trend_pct_per_year": -15.8
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -0.2,
+    "ci95": [
+     -30.6,
+     43.5
+    ],
+    "p": 0.9901,
+    "pre_trend_pct_per_year": -30.7
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": 1.2,
+    "ci95": [
+     -27.2,
+     40.7
+    ],
+    "p": 0.9438,
+    "pre_trend_pct_per_year": -30.3
+   }
+  ],
+  "burglary": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -19.4,
+    "ci95": [
+     -37.5,
+     3.9
+    ],
+    "p": 0.0961
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -10.3,
+    "ci95": [
+     -43.6,
+     42.8
+    ],
+    "p": 0.6468,
+    "pre_trend_pct_per_year": -7.0
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -4.8,
+    "ci95": [
+     -31.9,
+     33.0
+    ],
+    "p": 0.7724,
+    "pre_trend_pct_per_year": -11.4
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": -9.9,
+    "ci95": [
+     -39.6,
+     34.2
+    ],
+    "p": 0.6071,
+    "pre_trend_pct_per_year": -7.5
+   }
+  ],
+  "mvt": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -51.8,
+    "ci95": [
+     -57.7,
+     -45.1
+    ],
+    "p": 0.0
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -49.6,
+    "ci95": [
+     -61.0,
+     -34.8
+    ],
+    "p": 0.0,
+    "pre_trend_pct_per_year": -1.6
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -37.0,
+    "ci95": [
+     -48.1,
+     -23.5
+    ],
+    "p": 0.0,
+    "pre_trend_pct_per_year": -17.4
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": -44.3,
+    "ci95": [
+     -54.5,
+     -31.6
+    ],
+    "p": 0.0,
+    "pre_trend_pct_per_year": -9.5
+   }
+  ],
+  "theft_auto": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -35.9,
+    "ci95": [
+     -44.5,
+     -26.0
+    ],
+    "p": 0.0
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -41.7,
+    "ci95": [
+     -50.6,
+     -31.2
+    ],
+    "p": 0.0,
+    "pre_trend_pct_per_year": 6.0
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -29.9,
+    "ci95": [
+     -41.3,
+     -16.2
+    ],
+    "p": 0.0001,
+    "pre_trend_pct_per_year": -8.4
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": -37.5,
+    "ci95": [
+     -46.4,
+     -27.0
+    ],
+    "p": 0.0,
+    "pre_trend_pct_per_year": -0.2
+   }
+  ],
+  "theft_other": [
+   {
+    "start": "2024-08-01",
+    "trend": false,
+    "months": 26,
+    "step_pct": -9.5,
+    "ci95": [
+     -16.5,
+     -1.8
+    ],
+    "p": 0.0162
+   },
+   {
+    "start": "2024-01-01",
+    "trend": true,
+    "months": 33,
+    "step_pct": -10.6,
+    "ci95": [
+     -21.1,
+     1.2
+    ],
+    "p": 0.0771,
+    "pre_trend_pct_per_year": 0.5
+   },
+   {
+    "start": "2023-01-01",
+    "trend": true,
+    "months": 45,
+    "step_pct": -8.4,
+    "ci95": [
+     -17.0,
+     1.2
+    ],
+    "p": 0.0857,
+    "pre_trend_pct_per_year": -1.9
+   },
+   {
+    "start": "2023-08-01",
+    "trend": true,
+    "months": 38,
+    "step_pct": -8.0,
+    "ci95": [
+     -17.7,
+     2.8
+    ],
+    "p": 0.1413,
+    "pre_trend_pct_per_year": -2.1
+   }
+  ]
+ },
+ "national": {
+  "agencies": 590,
+  "last_month": "2026-06",
+  "series": {
+   "violent": {
+    "dc": {
+     "post": 1995.0,
+     "pre": 2365.0,
+     "prepre": 3297.0,
+     "post_vs_pre_pct": -15.6,
+     "pre_vs_prepre_pct": -28.3,
+     "post_vs_avg8_pct": -36.3,
+     "pre_vs_avg8_pct": -24.5
+    },
+    "national": {
+     "post": 395262.0,
+     "pre": 430767.0,
+     "prepre": 464766.0,
+     "post_vs_pre_pct": -8.2,
+     "pre_vs_prepre_pct": -7.3,
+     "post_vs_avg8_pct": -12.8,
+     "pre_vs_avg8_pct": -4.9
+    },
+    "dc_minus_national_post_pts": -8.1,
+    "dc_minus_national_pre_pts": -22.6,
+    "did_pct": 18.8
+   },
+   "murder_robbery": {
+    "dc": {
+     "post": 1051.0,
+     "pre": 1638.0,
+     "prepre": 2327.0,
+     "post_vs_pre_pct": -35.8,
+     "pre_vs_prepre_pct": -29.6,
+     "post_vs_avg8_pct": -46.1,
+     "pre_vs_avg8_pct": -16.0
+    },
+    "national": {
+     "post": 86597.0,
+     "pre": 104687.0,
+     "prepre": 122247.0,
+     "post_vs_pre_pct": -17.3,
+     "pre_vs_prepre_pct": -14.4,
+     "post_vs_avg8_pct": -32.4,
+     "pre_vs_avg8_pct": -18.3
+    },
+    "dc_minus_national_post_pts": -22.4,
+    "dc_minus_national_pre_pts": -17.8,
+    "did_pct": -5.6
+   },
+   "murder": {
+    "dc": {
+     "post": 68.0,
+     "pre": 139.0,
+     "prepre": 177.0,
+     "post_vs_pre_pct": -51.1,
+     "pre_vs_prepre_pct": -21.5,
+     "post_vs_avg8_pct": -54.7,
+     "pre_vs_avg8_pct": -7.4
+    },
+    "national": {
+     "post": 5378.0,
+     "pre": 6355.0,
+     "prepre": 7626.0,
+     "post_vs_pre_pct": -15.4,
+     "pre_vs_prepre_pct": -16.7,
+     "post_vs_avg8_pct": -33.0,
+     "pre_vs_avg8_pct": -20.8
+    },
+    "dc_minus_national_post_pts": -42.2,
+    "dc_minus_national_pre_pts": -5.8,
+    "did_pct": -38.7
+   },
+   "robbery": {
+    "dc": {
+     "post": 983.0,
+     "pre": 1499.0,
+     "prepre": 2150.0,
+     "post_vs_pre_pct": -34.4,
+     "pre_vs_prepre_pct": -30.3,
+     "post_vs_avg8_pct": -45.4,
+     "pre_vs_avg8_pct": -16.8
+    },
+    "national": {
+     "post": 81219.0,
+     "pre": 98332.0,
+     "prepre": 114621.0,
+     "post_vs_pre_pct": -17.4,
+     "pre_vs_prepre_pct": -14.2,
+     "post_vs_avg8_pct": -32.4,
+     "pre_vs_avg8_pct": -18.2
+    },
+    "dc_minus_national_post_pts": -20.6,
+    "dc_minus_national_pre_pts": -18.7,
+    "did_pct": -2.3
+   },
+   "assault": {
+    "dc": {
+     "post": 944.0,
+     "pre": 727.0,
+     "prepre": 970.0,
+     "post_vs_pre_pct": 29.8,
+     "pre_vs_prepre_pct": -25.1,
+     "post_vs_avg8_pct": -20.0,
+     "pre_vs_avg8_pct": -38.4
+    },
+    "national": {
+     "post": 308665.0,
+     "pre": 326080.0,
+     "prepre": 342519.0,
+     "post_vs_pre_pct": -5.3,
+     "pre_vs_prepre_pct": -4.8,
+     "post_vs_avg8_pct": -5.0,
+     "pre_vs_avg8_pct": 0.3
+    },
+    "dc_minus_national_post_pts": 37.2,
+    "dc_minus_national_pre_pts": -21.3,
+    "did_pct": 74.2
+   },
+   "property": {
+    "dc": {
+     "post": 14789.0,
+     "pre": 20839.0,
+     "prepre": 21371.0,
+     "post_vs_pre_pct": -29.0,
+     "pre_vs_prepre_pct": -2.5,
+     "post_vs_avg8_pct": -31.5,
+     "pre_vs_avg8_pct": -3.5
+    },
+    "national": {
+     "post": 1853307.0,
+     "pre": 2096141.0,
+     "prepre": 2333557.0,
+     "post_vs_pre_pct": -11.6,
+     "pre_vs_prepre_pct": -10.2,
+     "post_vs_avg8_pct": -20.4,
+     "pre_vs_avg8_pct": -9.9
+    },
+    "dc_minus_national_post_pts": -19.7,
+    "dc_minus_national_pre_pts": 8.6,
+    "did_pct": -26.1
+   },
+   "burglary": {
+    "dc": {
+     "post": 597.0,
+     "pre": 736.0,
+     "prepre": 766.0,
+     "post_vs_pre_pct": -18.9,
+     "pre_vs_prepre_pct": -3.9,
+     "post_vs_avg8_pct": -38.5,
+     "pre_vs_avg8_pct": -24.1
+    },
+    "national": {
+     "post": 224645.0,
+     "pre": 268028.0,
+     "prepre": 298613.0,
+     "post_vs_pre_pct": -16.2,
+     "pre_vs_prepre_pct": -10.2,
+     "post_vs_avg8_pct": -33.4,
+     "pre_vs_avg8_pct": -20.6
+    },
+    "dc_minus_national_post_pts": -3.2,
+    "dc_minus_national_pre_pts": 7.0,
+    "did_pct": -9.6
+   },
+   "theft": {
+    "dc": {
+     "post": 12251.0,
+     "pre": 15767.0,
+     "prepre": 16269.0,
+     "post_vs_pre_pct": -22.3,
+     "pre_vs_prepre_pct": -3.1,
+     "post_vs_avg8_pct": -29.9,
+     "pre_vs_avg8_pct": -9.7
+    },
+    "national": {
+     "post": 1353768.0,
+     "pre": 1480964.0,
+     "prepre": 1574760.0,
+     "post_vs_pre_pct": -8.6,
+     "pre_vs_prepre_pct": -6.0,
+     "post_vs_avg8_pct": -16.7,
+     "pre_vs_avg8_pct": -8.8
+    },
+    "dc_minus_national_post_pts": -15.0,
+    "dc_minus_national_pre_pts": 3.1,
+    "did_pct": -17.5
+   },
+   "motor": {
+    "dc": {
+     "post": 1941.0,
+     "pre": 4336.0,
+     "prepre": 4336.0,
+     "post_vs_pre_pct": -55.2,
+     "pre_vs_prepre_pct": 0.0,
+     "post_vs_avg8_pct": -38.4,
+     "pre_vs_avg8_pct": 37.6
+    },
+    "national": {
+     "post": 274894.0,
+     "pre": 347149.0,
+     "prepre": 460184.0,
+     "post_vs_pre_pct": -20.8,
+     "pre_vs_prepre_pct": -24.6,
+     "post_vs_avg8_pct": -24.8,
+     "pre_vs_avg8_pct": -5.0
+    },
+    "dc_minus_national_post_pts": -43.5,
+    "dc_minus_national_pre_pts": 32.6,
+    "did_pct": -57.4
+   }
+  },
+  "monthly_yoy": [
+   {
+    "month": "2023-09",
+    "dc_violent": 0.4291,
+    "dc_property": 0.0991,
+    "dc_murder": 1.0625,
+    "dc_robbery": 0.8105,
+    "dc_motor": 0.6006,
+    "national_violent": -0.0169,
+    "national_property": -0.0177,
+    "national_murder": -0.1307,
+    "national_robbery": 0.0163,
+    "national_motor": 0.17
+   },
+   {
+    "month": "2023-10",
+    "dc_violent": 0.6068,
+    "dc_property": 0.1596,
+    "dc_murder": -0.1579,
+    "dc_robbery": 0.9017,
+    "dc_motor": 0.5868,
+    "national_violent": -0.0048,
+    "national_property": -0.0041,
+    "national_murder": -0.1633,
+    "national_robbery": 0.0329,
+    "national_motor": 0.1535
+   },
+   {
+    "month": "2023-11",
+    "dc_violent": 0.3567,
+    "dc_property": 0.3096,
+    "dc_murder": 0.5,
+    "dc_robbery": 0.5944,
+    "dc_motor": 0.252,
+    "national_violent": 0.002,
+    "national_property": 0.0008,
+    "national_murder": -0.0518,
+    "national_robbery": 0.0276,
+    "national_motor": 0.1145
+   },
+   {
+    "month": "2023-12",
+    "dc_violent": 0.2649,
+    "dc_property": 0.1042,
+    "dc_murder": 0.5714,
+    "dc_robbery": 0.4506,
+    "dc_motor": 0.0114,
+    "national_violent": 0.0512,
+    "national_property": -0.0034,
+    "national_murder": -0.14,
+    "national_robbery": 0.1099,
+    "national_motor": 0.059
+   },
+   {
+    "month": "2024-01",
+    "dc_violent": -0.0762,
+    "dc_property": -0.1051,
+    "dc_murder": -0.4375,
+    "dc_robbery": 0.1071,
+    "dc_motor": -0.2054,
+    "national_violent": -0.079,
+    "national_property": -0.0737,
+    "national_murder": -0.2121,
+    "national_robbery": -0.041,
+    "national_motor": -0.0573
+   },
+   {
+    "month": "2024-02",
+    "dc_violent": -0.1523,
+    "dc_property": -0.1434,
+    "dc_murder": -0.2105,
+    "dc_robbery": -0.1053,
+    "dc_motor": -0.4045,
+    "national_violent": 0.0014,
+    "national_property": -0.0091,
+    "national_murder": -0.0753,
+    "national_robbery": 0.025,
+    "national_motor": -0.0459
+   },
+   {
+    "month": "2024-03",
+    "dc_violent": -0.369,
+    "dc_property": -0.1433,
+    "dc_murder": -0.375,
+    "dc_robbery": -0.3728,
+    "dc_motor": -0.3068,
+    "national_violent": -0.0187,
+    "national_property": -0.0667,
+    "national_murder": -0.1454,
+    "national_robbery": -0.0364,
+    "national_motor": -0.1063
+   },
+   {
+    "month": "2024-04",
+    "dc_violent": -0.3792,
+    "dc_property": -0.1524,
+    "dc_murder": 0.3077,
+    "dc_robbery": -0.4802,
+    "dc_motor": -0.2701,
+    "national_violent": -0.042,
+    "national_property": -0.0616,
+    "national_murder": -0.1049,
+    "national_robbery": -0.0354,
+    "national_motor": -0.1366
+   },
+   {
+    "month": "2024-05",
+    "dc_violent": -0.3195,
+    "dc_property": -0.1595,
+    "dc_murder": -0.32,
+    "dc_robbery": -0.4291,
+    "dc_motor": -0.3358,
+    "national_violent": -0.0204,
+    "national_property": -0.0687,
+    "national_murder": -0.119,
+    "national_robbery": -0.0583,
+    "national_motor": -0.1759
+   },
+   {
+    "month": "2024-06",
+    "dc_violent": -0.3755,
+    "dc_property": -0.1901,
+    "dc_murder": -0.2273,
+    "dc_robbery": -0.4723,
+    "dc_motor": -0.4338,
+    "national_violent": -0.0075,
+    "national_property": -0.0846,
+    "national_murder": -0.1406,
+    "national_robbery": -0.0463,
+    "national_motor": -0.192
+   },
+   {
+    "month": "2024-07",
+    "dc_violent": -0.5657,
+    "dc_property": -0.18,
+    "dc_murder": -0.2692,
+    "dc_robbery": -0.6316,
+    "dc_motor": -0.3952,
+    "national_violent": -0.0521,
+    "national_property": -0.0824,
+    "national_murder": -0.1357,
+    "national_robbery": -0.0784,
+    "national_motor": -0.2504
+   },
+   {
+    "month": "2024-08",
+    "dc_violent": -0.4233,
+    "dc_property": -0.17,
+    "dc_murder": -0.5,
+    "dc_robbery": -0.4535,
+    "dc_motor": -0.2742,
+    "national_violent": -0.0235,
+    "national_property": -0.0909,
+    "national_murder": -0.1348,
+    "national_robbery": -0.0877,
+    "national_motor": -0.2557
+   },
+   {
+    "month": "2024-09",
+    "dc_violent": -0.2671,
+    "dc_property": 0.0169,
+    "dc_murder": -0.5455,
+    "dc_robbery": -0.231,
+    "dc_motor": -0.0952,
+    "national_violent": -0.0174,
+    "national_property": -0.0607,
+    "national_murder": -0.1758,
+    "national_robbery": -0.0799,
+    "national_motor": -0.2375
+   },
+   {
+    "month": "2024-10",
+    "dc_violent": -0.3776,
+    "dc_property": 0.0856,
+    "dc_murder": 0.375,
+    "dc_robbery": -0.4043,
+    "dc_motor": -0.1038,
+    "national_violent": -0.0274,
+    "national_property": -0.0739,
+    "national_murder": -0.1341,
+    "national_robbery": -0.1016,
+    "national_motor": -0.2698
+   },
+   {
+    "month": "2024-11",
+    "dc_violent": -0.3907,
+    "dc_property": -0.0875,
+    "dc_murder": -0.381,
+    "dc_robbery": -0.4146,
+    "dc_motor": 0.132,
+    "national_violent": -0.0277,
+    "national_property": -0.0892,
+    "national_murder": -0.1025,
+    "national_robbery": -0.0826,
+    "national_motor": -0.261
+   },
+   {
+    "month": "2024-12",
+    "dc_violent": -0.2655,
+    "dc_property": -0.0222,
+    "dc_murder": -0.4545,
+    "dc_robbery": -0.3362,
+    "dc_motor": -0.0248,
+    "national_violent": -0.0996,
+    "national_property": -0.0853,
+    "national_murder": -0.1836,
+    "national_robbery": -0.1759,
+    "national_motor": -0.2598
+   },
+   {
+    "month": "2025-01",
+    "dc_violent": -0.2475,
+    "dc_property": -0.1273,
+    "dc_murder": 0.1111,
+    "dc_robbery": -0.2442,
+    "dc_motor": -0.0966,
+    "national_violent": -0.0845,
+    "national_property": -0.1209,
+    "national_murder": -0.0642,
+    "national_robbery": -0.1656,
+    "national_motor": -0.2662
+   },
+   {
+    "month": "2025-02",
+    "dc_violent": -0.2656,
+    "dc_property": -0.0933,
+    "dc_murder": 0.0667,
+    "dc_robbery": -0.3706,
+    "dc_motor": 0.1895,
+    "national_violent": -0.135,
+    "national_property": -0.1669,
+    "national_murder": -0.2202,
+    "national_robbery": -0.207,
+    "national_motor": -0.2841
+   },
+   {
+    "month": "2025-03",
+    "dc_violent": -0.2054,
+    "dc_property": 0.0195,
+    "dc_murder": -0.3,
+    "dc_robbery": -0.3357,
+    "dc_motor": 0.0738,
+    "national_violent": -0.0734,
+    "national_property": -0.094,
+    "national_murder": -0.2208,
+    "national_robbery": -0.1756,
+    "national_motor": -0.2079
+   },
+   {
+    "month": "2025-04",
+    "dc_violent": -0.1757,
+    "dc_property": 0.0486,
+    "dc_murder": -0.1765,
+    "dc_robbery": -0.1756,
+    "dc_motor": 0.1732,
+    "national_violent": -0.0697,
+    "national_property": -0.1059,
+    "national_murder": -0.1927,
+    "national_robbery": -0.145,
+    "national_motor": -0.2055
+   },
+   {
+    "month": "2025-05",
+    "dc_violent": -0.1318,
+    "dc_property": -0.0607,
+    "dc_murder": -0.0588,
+    "dc_robbery": 0.0,
+    "dc_motor": -0.0835,
+    "national_violent": -0.1092,
+    "national_property": -0.1148,
+    "national_murder": -0.2206,
+    "national_robbery": -0.1449,
+    "national_motor": -0.222
+   },
+   {
+    "month": "2025-06",
+    "dc_violent": -0.3601,
+    "dc_property": -0.0269,
+    "dc_murder": -0.1765,
+    "dc_robbery": -0.345,
+    "dc_motor": -0.0571,
+    "national_violent": -0.0955,
+    "national_property": -0.1166,
+    "national_murder": -0.1561,
+    "national_robbery": -0.1641,
+    "national_motor": -0.2294
+   },
+   {
+    "month": "2025-07",
+    "dc_violent": -0.2384,
+    "dc_property": -0.0807,
+    "dc_murder": -0.2105,
+    "dc_robbery": -0.4286,
+    "dc_motor": -0.1238,
+    "national_violent": -0.0955,
+    "national_property": -0.1225,
+    "national_murder": -0.2171,
+    "national_robbery": -0.1851,
+    "national_motor": -0.2254
+   },
+   {
+    "month": "2025-08",
+    "dc_violent": -0.3475,
+    "dc_property": -0.0924,
+    "dc_murder": -0.5,
+    "dc_robbery": -0.489,
+    "dc_motor": -0.2941,
+    "national_violent": -0.1002,
+    "national_property": -0.1291,
+    "national_murder": -0.1846,
+    "national_robbery": -0.1786,
+    "national_motor": -0.2282
+   },
+   {
+    "month": "2025-09",
+    "dc_violent": -0.4194,
+    "dc_property": -0.2581,
+    "dc_murder": -0.6667,
+    "dc_robbery": -0.5634,
+    "dc_motor": -0.5916,
+    "national_violent": -0.1266,
+    "national_property": -0.1262,
+    "national_murder": -0.0868,
+    "national_robbery": -0.2033,
+    "national_motor": -0.2353
+   },
+   {
+    "month": "2025-10",
+    "dc_violent": -0.3051,
+    "dc_property": -0.417,
+    "dc_murder": -0.6364,
+    "dc_robbery": -0.5,
+    "dc_motor": -0.5916,
+    "national_violent": -0.1385,
+    "national_property": -0.1374,
+    "national_murder": -0.1936,
+    "national_robbery": -0.2076,
+    "national_motor": -0.2309
+   },
+   {
+    "month": "2025-11",
+    "dc_violent": -0.25,
+    "dc_property": -0.3698,
+    "dc_murder": -0.5385,
+    "dc_robbery": -0.3929,
+    "dc_motor": -0.587,
+    "national_violent": -0.0992,
+    "national_property": -0.1473,
+    "national_murder": -0.1484,
+    "national_robbery": -0.2313,
+    "national_motor": -0.2526
+   },
+   {
+    "month": "2025-12",
+    "dc_violent": -0.4056,
+    "dc_property": -0.3126,
+    "dc_murder": -0.5,
+    "dc_robbery": -0.5449,
+    "dc_motor": -0.4573,
+    "national_violent": -0.0991,
+    "national_property": -0.137,
+    "national_murder": -0.1085,
+    "national_robbery": -0.2101,
+    "national_motor": -0.2437
+   },
+   {
+    "month": "2026-01",
+    "dc_violent": -0.3684,
+    "dc_property": -0.2793,
+    "dc_murder": -0.8,
+    "dc_robbery": -0.5671,
+    "dc_motor": -0.5945,
+    "national_violent": -0.0706,
+    "national_property": -0.1141,
+    "national_murder": -0.2548,
+    "national_robbery": -0.1999,
+    "national_motor": -0.2124
+   },
+   {
+    "month": "2026-02",
+    "dc_violent": -0.0638,
+    "dc_property": -0.3203,
+    "dc_murder": -0.5,
+    "dc_robbery": -0.1589,
+    "dc_motor": -0.5637,
+    "national_violent": -0.0465,
+    "national_property": -0.1028,
+    "national_murder": -0.1335,
+    "national_robbery": -0.1521,
+    "national_motor": -0.1963
+   },
+   {
+    "month": "2026-03",
+    "dc_violent": 0.2978,
+    "dc_property": -0.2443,
+    "dc_murder": -0.7143,
+    "dc_robbery": 0.1684,
+    "dc_motor": -0.514,
+    "national_violent": -0.0323,
+    "national_property": -0.1011,
+    "national_murder": -0.0542,
+    "national_robbery": -0.1019,
+    "national_motor": -0.1814
+   },
+   {
+    "month": "2026-04",
+    "dc_violent": 0.0406,
+    "dc_property": -0.2801,
+    "dc_murder": 0.0,
+    "dc_robbery": -0.1852,
+    "dc_motor": -0.6734,
+    "national_violent": -0.0437,
+    "national_property": -0.0846,
+    "national_murder": -0.217,
+    "national_robbery": -0.1264,
+    "national_motor": -0.1764
+   },
+   {
+    "month": "2026-05",
+    "dc_violent": 0.0739,
+    "dc_property": -0.1599,
+    "dc_murder": -0.5625,
+    "dc_robbery": -0.205,
+    "dc_motor": -0.506,
+    "national_violent": -0.0394,
+    "national_property": -0.0961,
+    "national_murder": -0.1113,
+    "national_robbery": -0.124,
+    "national_motor": -0.1558
+   },
+   {
+    "month": "2026-06",
+    "dc_violent": 0.1349,
+    "dc_property": -0.2039,
+    "dc_murder": -0.2857,
+    "dc_robbery": 0.0,
+    "dc_motor": -0.3994,
+    "national_violent": -0.1072,
+    "national_property": -0.1007,
+    "national_murder": -0.2056,
+    "national_robbery": -0.1491,
+    "national_motor": -0.1765
+   }
+  ]
+ },
+ "big_cities": {
+  "murder": {
+   "n_agencies": 36,
+   "dc_post_pct": -52.1,
+   "dc_pre_pct": -20.7,
+   "dc_accel_logpts": -50.4,
+   "median_post_pct": -15.6,
+   "median_accel_logpts": -2.4,
+   "dc_rank_post_drop": 2,
+   "dc_rank_accel": 2
+  },
+  "robbery": {
+   "n_agencies": 89,
+   "dc_post_pct": -34.6,
+   "dc_pre_pct": -30.5,
+   "dc_accel_logpts": -6.0,
+   "median_post_pct": -19.95,
+   "median_accel_logpts": -9.850000000000001,
+   "dc_rank_post_drop": 13,
+   "dc_rank_accel": 49
+  },
+  "motor": {
+   "n_agencies": 94,
+   "dc_post_pct": -55.2,
+   "dc_pre_pct": 0.1,
+   "dc_accel_logpts": -80.4,
+   "median_post_pct": -20.7,
+   "median_accel_logpts": 3.5,
+   "dc_rank_post_drop": 2,
+   "dc_rank_accel": 1
+  },
+  "burglary": {
+   "n_agencies": 95,
+   "dc_post_pct": -19.0,
+   "dc_pre_pct": -3.8,
+   "dc_accel_logpts": -17.3,
+   "median_post_pct": -18.65,
+   "median_accel_logpts": -10.45,
+   "dc_rank_post_drop": 46,
+   "dc_rank_accel": 33
+  },
+  "theft": {
+   "n_agencies": 95,
+   "dc_post_pct": -22.3,
+   "dc_pre_pct": -3.0,
+   "dc_accel_logpts": -22.2,
+   "median_post_pct": -9.55,
+   "median_accel_logpts": -4.4,
+   "dc_rank_post_drop": 7,
+   "dc_rank_accel": 8
+  }
+ },
+ "areas": {
+  "Ward 1": {
+   "violent": {
+    "deploy_year": 357,
+    "year_before": 457,
+    "avg10": 532.0,
+    "vs_avg10_pct": -32.9,
+    "year_before_vs_avg10_pct": -14.1,
+    "vs_year_before_pct": -21.9
+   },
+   "property": {
+    "deploy_year": 2638,
+    "year_before": 3493,
+    "avg10": 3939.7,
+    "vs_avg10_pct": -33.0,
+    "year_before_vs_avg10_pct": -11.3,
+    "vs_year_before_pct": -24.5
+   },
+   "gun_violent": {
+    "deploy_year": 85,
+    "year_before": 197,
+    "avg10": 200.4,
+    "vs_avg10_pct": -57.6,
+    "year_before_vs_avg10_pct": -1.7,
+    "vs_year_before_pct": -56.9
+   },
+   "violent_ex_adw": {
+    "deploy_year": 211,
+    "year_before": 368,
+    "avg10": 390.9,
+    "vs_avg10_pct": -46.0,
+    "year_before_vs_avg10_pct": -5.9,
+    "vs_year_before_pct": -42.7
+   },
+   "robbery": {
+    "deploy_year": 187,
+    "year_before": 349,
+    "avg10": 355.6,
+    "vs_avg10_pct": -47.4,
+    "year_before_vs_avg10_pct": -1.9,
+    "vs_year_before_pct": -46.4
+   },
+   "mvt": {
+    "deploy_year": 207,
+    "year_before": 416,
+    "avg10": 380.3,
+    "vs_avg10_pct": -45.6,
+    "year_before_vs_avg10_pct": 9.4,
+    "vs_year_before_pct": -50.2
+   },
+   "theft_auto": {
+    "deploy_year": 556,
+    "year_before": 846,
+    "avg10": 1531.0,
+    "vs_avg10_pct": -63.7,
+    "year_before_vs_avg10_pct": -44.7,
+    "vs_year_before_pct": -34.3
+   },
+   "theft_other": {
+    "deploy_year": 1799,
+    "year_before": 2106,
+    "avg10": 1873.0,
+    "vs_avg10_pct": -4.0,
+    "year_before_vs_avg10_pct": 12.4,
+    "vs_year_before_pct": -14.6
+   }
+  },
+  "Ward 2": {
+   "violent": {
+    "deploy_year": 223,
+    "year_before": 253,
+    "avg10": 412.0,
+    "vs_avg10_pct": -45.9,
+    "year_before_vs_avg10_pct": -38.6,
+    "vs_year_before_pct": -11.9
+   },
+   "property": {
+    "deploy_year": 3447,
+    "year_before": 4611,
+    "avg10": 5569.4,
+    "vs_avg10_pct": -38.1,
+    "year_before_vs_avg10_pct": -17.2,
+    "vs_year_before_pct": -25.2
+   },
+   "gun_violent": {
+    "deploy_year": 47,
+    "year_before": 122,
+    "avg10": 126.4,
+    "vs_avg10_pct": -62.8,
+    "year_before_vs_avg10_pct": -3.5,
+    "vs_year_before_pct": -61.5
+   },
+   "violent_ex_adw": {
+    "deploy_year": 142,
+    "year_before": 181,
+    "avg10": 287.7,
+    "vs_avg10_pct": -50.6,
+    "year_before_vs_avg10_pct": -37.1,
+    "vs_year_before_pct": -21.5
+   },
+   "robbery": {
+    "deploy_year": 129,
+    "year_before": 163,
+    "avg10": 249.3,
+    "vs_avg10_pct": -48.3,
+    "year_before_vs_avg10_pct": -34.6,
+    "vs_year_before_pct": -20.9
+   },
+   "mvt": {
+    "deploy_year": 151,
+    "year_before": 354,
+    "avg10": 343.5,
+    "vs_avg10_pct": -56.0,
+    "year_before_vs_avg10_pct": 3.1,
+    "vs_year_before_pct": -57.3
+   },
+   "theft_auto": {
+    "deploy_year": 664,
+    "year_before": 922,
+    "avg10": 1775.5,
+    "vs_avg10_pct": -62.6,
+    "year_before_vs_avg10_pct": -48.1,
+    "vs_year_before_pct": -28.0
+   },
+   "theft_other": {
+    "deploy_year": 2563,
+    "year_before": 3226,
+    "avg10": 3235.5,
+    "vs_avg10_pct": -20.8,
+    "year_before_vs_avg10_pct": -0.3,
+    "vs_year_before_pct": -20.6
+   }
+  },
+  "Ward 3": {
+   "violent": {
+    "deploy_year": 72,
+    "year_before": 46,
+    "avg10": 77.1,
+    "vs_avg10_pct": -6.6,
+    "year_before_vs_avg10_pct": -40.3,
+    "vs_year_before_pct": 56.5
+   },
+   "property": {
+    "deploy_year": 1453,
+    "year_before": 1771,
+    "avg10": 1664.2,
+    "vs_avg10_pct": -12.7,
+    "year_before_vs_avg10_pct": 6.4,
+    "vs_year_before_pct": -18.0
+   },
+   "gun_violent": {
+    "deploy_year": 25,
+    "year_before": 16,
+    "avg10": 23.1,
+    "vs_avg10_pct": 8.2,
+    "year_before_vs_avg10_pct": -30.7,
+    "vs_year_before_pct": 56.2
+   },
+   "violent_ex_adw": {
+    "deploy_year": 41,
+    "year_before": 31,
+    "avg10": 51.6,
+    "vs_avg10_pct": -20.5,
+    "year_before_vs_avg10_pct": -39.9,
+    "vs_year_before_pct": 32.3
+   },
+   "robbery": {
+    "deploy_year": 32,
+    "year_before": 23,
+    "avg10": 42.1,
+    "vs_avg10_pct": -24.0,
+    "year_before_vs_avg10_pct": -45.4,
+    "vs_year_before_pct": 39.1
+   },
+   "mvt": {
+    "deploy_year": 99,
+    "year_before": 101,
+    "avg10": 114.6,
+    "vs_avg10_pct": -13.6,
+    "year_before_vs_avg10_pct": -11.9,
+    "vs_year_before_pct": -2.0
+   },
+   "theft_auto": {
+    "deploy_year": 337,
+    "year_before": 519,
+    "avg10": 588.3,
+    "vs_avg10_pct": -42.7,
+    "year_before_vs_avg10_pct": -11.8,
+    "vs_year_before_pct": -35.1
+   },
+   "theft_other": {
+    "deploy_year": 981,
+    "year_before": 1109,
+    "avg10": 883.0,
+    "vs_avg10_pct": 11.1,
+    "year_before_vs_avg10_pct": 25.6,
+    "vs_year_before_pct": -11.5
+   }
+  },
+  "Ward 4": {
+   "violent": {
+    "deploy_year": 219,
+    "year_before": 207,
+    "avg10": 326.5,
+    "vs_avg10_pct": -32.9,
+    "year_before_vs_avg10_pct": -36.6,
+    "vs_year_before_pct": 5.8
+   },
+   "property": {
+    "deploy_year": 2102,
+    "year_before": 2572,
+    "avg10": 2526.6,
+    "vs_avg10_pct": -16.8,
+    "year_before_vs_avg10_pct": 1.8,
+    "vs_year_before_pct": -18.3
+   },
+   "gun_violent": {
+    "deploy_year": 85,
+    "year_before": 95,
+    "avg10": 153.0,
+    "vs_avg10_pct": -44.4,
+    "year_before_vs_avg10_pct": -37.9,
+    "vs_year_before_pct": -10.5
+   },
+   "violent_ex_adw": {
+    "deploy_year": 141,
+    "year_before": 133,
+    "avg10": 225.3,
+    "vs_avg10_pct": -37.4,
+    "year_before_vs_avg10_pct": -41.0,
+    "vs_year_before_pct": 6.0
+   },
+   "robbery": {
+    "deploy_year": 131,
+    "year_before": 121,
+    "avg10": 200.2,
+    "vs_avg10_pct": -34.6,
+    "year_before_vs_avg10_pct": -39.6,
+    "vs_year_before_pct": 8.3
+   },
+   "mvt": {
+    "deploy_year": 345,
+    "year_before": 493,
+    "avg10": 334.0,
+    "vs_avg10_pct": 3.3,
+    "year_before_vs_avg10_pct": 47.6,
+    "vs_year_before_pct": -30.0
+   },
+   "theft_auto": {
+    "deploy_year": 559,
+    "year_before": 855,
+    "avg10": 1066.5,
+    "vs_avg10_pct": -47.6,
+    "year_before_vs_avg10_pct": -19.8,
+    "vs_year_before_pct": -34.6
+   },
+   "theft_other": {
+    "deploy_year": 1118,
+    "year_before": 1152,
+    "avg10": 1003.7,
+    "vs_avg10_pct": 11.4,
+    "year_before_vs_avg10_pct": 14.8,
+    "vs_year_before_pct": -3.0
+   }
+  },
+  "Ward 5": {
+   "violent": {
+    "deploy_year": 341,
+    "year_before": 445,
+    "avg10": 676.9,
+    "vs_avg10_pct": -49.6,
+    "year_before_vs_avg10_pct": -34.3,
+    "vs_year_before_pct": -23.4
+   },
+   "property": {
+    "deploy_year": 2553,
+    "year_before": 4104,
+    "avg10": 4082.5,
+    "vs_avg10_pct": -37.5,
+    "year_before_vs_avg10_pct": 0.5,
+    "vs_year_before_pct": -37.8
+   },
+   "gun_violent": {
+    "deploy_year": 136,
+    "year_before": 252,
+    "avg10": 318.3,
+    "vs_avg10_pct": -57.3,
+    "year_before_vs_avg10_pct": -20.8,
+    "vs_year_before_pct": -46.0
+   },
+   "violent_ex_adw": {
+    "deploy_year": 192,
+    "year_before": 335,
+    "avg10": 420.0,
+    "vs_avg10_pct": -54.3,
+    "year_before_vs_avg10_pct": -20.2,
+    "vs_year_before_pct": -42.7
+   },
+   "robbery": {
+    "deploy_year": 158,
+    "year_before": 301,
+    "avg10": 364.3,
+    "vs_avg10_pct": -56.6,
+    "year_before_vs_avg10_pct": -17.4,
+    "vs_year_before_pct": -47.5
+   },
+   "mvt": {
+    "deploy_year": 452,
+    "year_before": 1102,
+    "avg10": 669.1,
+    "vs_avg10_pct": -32.4,
+    "year_before_vs_avg10_pct": 64.7,
+    "vs_year_before_pct": -59.0
+   },
+   "theft_auto": {
+    "deploy_year": 700,
+    "year_before": 1377,
+    "avg10": 1473.4,
+    "vs_avg10_pct": -52.5,
+    "year_before_vs_avg10_pct": -6.5,
+    "vs_year_before_pct": -49.2
+   },
+   "theft_other": {
+    "deploy_year": 1289,
+    "year_before": 1464,
+    "avg10": 1692.4,
+    "vs_avg10_pct": -23.8,
+    "year_before_vs_avg10_pct": -13.5,
+    "vs_year_before_pct": -12.0
+   }
+  },
+  "Ward 6": {
+   "violent": {
+    "deploy_year": 265,
+    "year_before": 290,
+    "avg10": 434.8,
+    "vs_avg10_pct": -39.1,
+    "year_before_vs_avg10_pct": -33.3,
+    "vs_year_before_pct": -8.6
+   },
+   "property": {
+    "deploy_year": 2722,
+    "year_before": 3494,
+    "avg10": 3860.3,
+    "vs_avg10_pct": -29.5,
+    "year_before_vs_avg10_pct": -9.5,
+    "vs_year_before_pct": -22.1
+   },
+   "gun_violent": {
+    "deploy_year": 86,
+    "year_before": 138,
+    "avg10": 179.0,
+    "vs_avg10_pct": -52.0,
+    "year_before_vs_avg10_pct": -22.9,
+    "vs_year_before_pct": -37.7
+   },
+   "violent_ex_adw": {
+    "deploy_year": 171,
+    "year_before": 234,
+    "avg10": 318.3,
+    "vs_avg10_pct": -46.3,
+    "year_before_vs_avg10_pct": -26.5,
+    "vs_year_before_pct": -26.9
+   },
+   "robbery": {
+    "deploy_year": 146,
+    "year_before": 206,
+    "avg10": 278.4,
+    "vs_avg10_pct": -47.6,
+    "year_before_vs_avg10_pct": -26.0,
+    "vs_year_before_pct": -29.1
+   },
+   "mvt": {
+    "deploy_year": 402,
+    "year_before": 909,
+    "avg10": 503.7,
+    "vs_avg10_pct": -20.2,
+    "year_before_vs_avg10_pct": 80.5,
+    "vs_year_before_pct": -55.8
+   },
+   "theft_auto": {
+    "deploy_year": 545,
+    "year_before": 893,
+    "avg10": 1235.5,
+    "vs_avg10_pct": -55.9,
+    "year_before_vs_avg10_pct": -27.7,
+    "vs_year_before_pct": -39.0
+   },
+   "theft_other": {
+    "deploy_year": 1699,
+    "year_before": 1584,
+    "avg10": 1986.1,
+    "vs_avg10_pct": -14.5,
+    "year_before_vs_avg10_pct": -20.2,
+    "vs_year_before_pct": 7.3
+   }
+  },
+  "Ward 7": {
+   "violent": {
+    "deploy_year": 506,
+    "year_before": 608,
+    "avg10": 950.9,
+    "vs_avg10_pct": -46.8,
+    "year_before_vs_avg10_pct": -36.1,
+    "vs_year_before_pct": -16.8
+   },
+   "property": {
+    "deploy_year": 1933,
+    "year_before": 2996,
+    "avg10": 3291.1,
+    "vs_avg10_pct": -41.3,
+    "year_before_vs_avg10_pct": -9.0,
+    "vs_year_before_pct": -35.5
+   },
+   "gun_violent": {
+    "deploy_year": 234,
+    "year_before": 438,
+    "avg10": 525.3,
+    "vs_avg10_pct": -55.5,
+    "year_before_vs_avg10_pct": -16.6,
+    "vs_year_before_pct": -46.6
+   },
+   "violent_ex_adw": {
+    "deploy_year": 250,
+    "year_before": 403,
+    "avg10": 561.4,
+    "vs_avg10_pct": -55.5,
+    "year_before_vs_avg10_pct": -28.2,
+    "vs_year_before_pct": -38.0
+   },
+   "robbery": {
+    "deploy_year": 210,
+    "year_before": 345,
+    "avg10": 475.8,
+    "vs_avg10_pct": -55.9,
+    "year_before_vs_avg10_pct": -27.5,
+    "vs_year_before_pct": -39.1
+   },
+   "mvt": {
+    "deploy_year": 377,
+    "year_before": 1002,
+    "avg10": 746.7,
+    "vs_avg10_pct": -49.5,
+    "year_before_vs_avg10_pct": 34.2,
+    "vs_year_before_pct": -62.4
+   },
+   "theft_auto": {
+    "deploy_year": 377,
+    "year_before": 689,
+    "avg10": 926.5,
+    "vs_avg10_pct": -59.3,
+    "year_before_vs_avg10_pct": -25.6,
+    "vs_year_before_pct": -45.3
+   },
+   "theft_other": {
+    "deploy_year": 1048,
+    "year_before": 1173,
+    "avg10": 1409.5,
+    "vs_avg10_pct": -25.6,
+    "year_before_vs_avg10_pct": -16.8,
+    "vs_year_before_pct": -10.7
+   }
+  },
+  "Ward 8": {
+   "violent": {
+    "deploy_year": 573,
+    "year_before": 628,
+    "avg10": 919.9,
+    "vs_avg10_pct": -37.7,
+    "year_before_vs_avg10_pct": -31.7,
+    "vs_year_before_pct": -8.8
+   },
+   "property": {
+    "deploy_year": 1623,
+    "year_before": 2147,
+    "avg10": 2341.6,
+    "vs_avg10_pct": -30.7,
+    "year_before_vs_avg10_pct": -8.3,
+    "vs_year_before_pct": -24.4
+   },
+   "gun_violent": {
+    "deploy_year": 243,
+    "year_before": 413,
+    "avg10": 532.0,
+    "vs_avg10_pct": -54.3,
+    "year_before_vs_avg10_pct": -22.4,
+    "vs_year_before_pct": -41.2
+   },
+   "violent_ex_adw": {
+    "deploy_year": 243,
+    "year_before": 343,
+    "avg10": 478.3,
+    "vs_avg10_pct": -49.2,
+    "year_before_vs_avg10_pct": -28.3,
+    "vs_year_before_pct": -29.2
+   },
+   "robbery": {
+    "deploy_year": 196,
+    "year_before": 263,
+    "avg10": 373.5,
+    "vs_avg10_pct": -47.5,
+    "year_before_vs_avg10_pct": -29.6,
+    "vs_year_before_pct": -25.5
+   },
+   "mvt": {
+    "deploy_year": 365,
+    "year_before": 763,
+    "avg10": 520.7,
+    "vs_avg10_pct": -29.9,
+    "year_before_vs_avg10_pct": 46.5,
+    "vs_year_before_pct": -52.2
+   },
+   "theft_auto": {
+    "deploy_year": 285,
+    "year_before": 438,
+    "avg10": 621.1,
+    "vs_avg10_pct": -54.1,
+    "year_before_vs_avg10_pct": -29.5,
+    "vs_year_before_pct": -34.9
+   },
+   "theft_other": {
+    "deploy_year": 824,
+    "year_before": 789,
+    "avg10": 986.7,
+    "vs_avg10_pct": -16.5,
+    "year_before_vs_avg10_pct": -20.0,
+    "vs_year_before_pct": 4.4
+   }
+  },
+  "Downtown (central business district)": {
+   "violent": {
+    "deploy_year": 124,
+    "year_before": 119,
+    "avg10": 215.6,
+    "vs_avg10_pct": -42.5,
+    "year_before_vs_avg10_pct": -44.8,
+    "vs_year_before_pct": 4.2
+   },
+   "property": {
+    "deploy_year": 1600,
+    "year_before": 2466,
+    "avg10": 2734.8,
+    "vs_avg10_pct": -41.5,
+    "year_before_vs_avg10_pct": -9.8,
+    "vs_year_before_pct": -35.1
+   },
+   "gun_violent": {
+    "deploy_year": 21,
+    "year_before": 47,
+    "avg10": 50.6,
+    "vs_avg10_pct": -58.5,
+    "year_before_vs_avg10_pct": -7.1,
+    "vs_year_before_pct": -55.3
+   },
+   "violent_ex_adw": {
+    "deploy_year": 82,
+    "year_before": 79,
+    "avg10": 142.9,
+    "vs_avg10_pct": -42.6,
+    "year_before_vs_avg10_pct": -44.7,
+    "vs_year_before_pct": 3.8
+   },
+   "robbery": {
+    "deploy_year": 77,
+    "year_before": 69,
+    "avg10": 119.3,
+    "vs_avg10_pct": -35.5,
+    "year_before_vs_avg10_pct": -42.2,
+    "vs_year_before_pct": 11.6
+   },
+   "mvt": {
+    "deploy_year": 67,
+    "year_before": 139,
+    "avg10": 149.9,
+    "vs_avg10_pct": -55.3,
+    "year_before_vs_avg10_pct": -7.3,
+    "vs_year_before_pct": -51.8
+   },
+   "theft_auto": {
+    "deploy_year": 203,
+    "year_before": 458,
+    "avg10": 718.0,
+    "vs_avg10_pct": -71.7,
+    "year_before_vs_avg10_pct": -36.2,
+    "vs_year_before_pct": -55.7
+   },
+   "theft_other": {
+    "deploy_year": 1312,
+    "year_before": 1839,
+    "avg10": 1789.0,
+    "vs_avg10_pct": -26.7,
+    "year_before_vs_avg10_pct": 2.8,
+    "vs_year_before_pct": -28.7
+   }
+  },
+  "Outside downtown": {
+   "violent": {
+    "deploy_year": 2432,
+    "year_before": 2815,
+    "avg10": 4114.5,
+    "vs_avg10_pct": -40.9,
+    "year_before_vs_avg10_pct": -31.6,
+    "vs_year_before_pct": -13.6
+   },
+   "property": {
+    "deploy_year": 16871,
+    "year_before": 22722,
+    "avg10": 24540.6,
+    "vs_avg10_pct": -31.3,
+    "year_before_vs_avg10_pct": -7.4,
+    "vs_year_before_pct": -25.8
+   },
+   "gun_violent": {
+    "deploy_year": 920,
+    "year_before": 1624,
+    "avg10": 2006.9,
+    "vs_avg10_pct": -54.2,
+    "year_before_vs_avg10_pct": -19.1,
+    "vs_year_before_pct": -43.3
+   },
+   "violent_ex_adw": {
+    "deploy_year": 1309,
+    "year_before": 1949,
+    "avg10": 2590.6,
+    "vs_avg10_pct": -49.5,
+    "year_before_vs_avg10_pct": -24.8,
+    "vs_year_before_pct": -32.8
+   },
+   "robbery": {
+    "deploy_year": 1112,
+    "year_before": 1702,
+    "avg10": 2219.9,
+    "vs_avg10_pct": -49.9,
+    "year_before_vs_avg10_pct": -23.3,
+    "vs_year_before_pct": -34.7
+   },
+   "mvt": {
+    "deploy_year": 2331,
+    "year_before": 5001,
+    "avg10": 3462.7,
+    "vs_avg10_pct": -32.7,
+    "year_before_vs_avg10_pct": 44.4,
+    "vs_year_before_pct": -53.4
+   },
+   "theft_auto": {
+    "deploy_year": 3820,
+    "year_before": 6081,
+    "avg10": 8499.8,
+    "vs_avg10_pct": -55.1,
+    "year_before_vs_avg10_pct": -28.5,
+    "vs_year_before_pct": -37.2
+   },
+   "theft_other": {
+    "deploy_year": 10009,
+    "year_before": 10764,
+    "avg10": 11280.9,
+    "vs_avg10_pct": -11.3,
+    "year_before_vs_avg10_pct": -4.6,
+    "vs_year_before_pct": -7.0
+   }
+  }
+ },
+ "nibrs_assault_check": {
+  "agencies": [
+   "Washington"
+  ],
+  "last_date": "2025-12-31",
+  "by_code": {
+   "13A": {
+    "aug11_dec31": {
+     "2022": 787,
+     "2023": 930,
+     "2024": 916,
+     "2025": 880
+    },
+    "jan1_aug10": {
+     "2022": 1307,
+     "2023": 1493,
+     "2024": 1702,
+     "2025": 1411
+    },
+    "post_vs_2024_pct": -3.9,
+    "pre_vs_2024_pct": -17.1,
+    "post_vs_avg3_pct": 0.3,
+    "pre_vs_avg3_pct": -6.0
+   },
+   "13B": {
+    "aug11_dec31": {
+     "2022": 4465,
+     "2023": 4559,
+     "2024": 4032,
+     "2025": 4172
+    },
+    "jan1_aug10": {
+     "2022": 6439,
+     "2023": 6919,
+     "2024": 6330,
+     "2025": 6471
+    },
+    "post_vs_2024_pct": 3.5,
+    "pre_vs_2024_pct": 2.2,
+    "post_vs_avg3_pct": -4.1,
+    "pre_vs_avg3_pct": -1.4
+   },
+   "13C": {
+    "aug11_dec31": {
+     "2022": 1604,
+     "2023": 1811,
+     "2024": 1676,
+     "2025": 1787
+    },
+    "jan1_aug10": {
+     "2022": 2279,
+     "2023": 2781,
+     "2024": 2613,
+     "2025": 2600
+    },
+    "post_vs_2024_pct": 6.6,
+    "pre_vs_2024_pct": -0.5,
+    "post_vs_avg3_pct": 5.3,
+    "pre_vs_avg3_pct": 1.7
+   }
+  },
+  "aggravated_share": {
+   "2022_jan1_aug10": 0.1687,
+   "2022_aug11_dec31": 0.1498,
+   "2023_jan1_aug10": 0.1775,
+   "2023_aug11_dec31": 0.1694,
+   "2024_jan1_aug10": 0.2119,
+   "2024_aug11_dec31": 0.1851,
+   "2025_jan1_aug10": 0.179,
+   "2025_aug11_dec31": 0.1742
+  }
+ }
+}

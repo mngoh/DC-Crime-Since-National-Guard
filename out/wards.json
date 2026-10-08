@@ -1,0 +1,1603 @@
+{
+ "sites_by_ward": {
+  "2": [
+   "Foggy Bottom-GWU",
+   "Gallery Pl-Chinatown",
+   "Metro Center",
+   "Smithsonian",
+   "McPherson Sq",
+   "Washington Monument",
+   "Lincoln Memorial"
+  ],
+  "6": [
+   "Union Station",
+   "Eastern Market",
+   "Waterfront",
+   "NoMa - Gallaudet U",
+   "L'Enfant Plaza"
+  ],
+  "7": [
+   "Stadium Armory"
+  ],
+  "8": [
+   "Navy Yard - Ballpark"
+  ]
+ },
+ "window": "Aug 11 to Jun 30",
+ "near_metres": 500,
+ "station_metres": 400,
+ "groups": {
+  "core": [
+   2,
+   6
+  ],
+  "any_site": [
+   2,
+   6,
+   7,
+   8
+  ]
+ },
+ "measures": {
+  "homicide": {
+   "by_ward": {
+    "1": {
+     "guard_period": 7,
+     "year_before": 13,
+     "two_before": 20,
+     "avg10": 10.9,
+     "vs_year_before_pct": -46.2,
+     "vs_avg10_pct": -35.8,
+     "year_before_vs_two_before_pct": -35.0
+    },
+    "2": {
+     "guard_period": 5,
+     "year_before": 5,
+     "two_before": 11,
+     "avg10": 5.6,
+     "vs_year_before_pct": 0.0,
+     "vs_avg10_pct": -10.7,
+     "year_before_vs_two_before_pct": -54.5
+    },
+    "3": {
+     "guard_period": 4,
+     "year_before": 2,
+     "two_before": 3,
+     "avg10": 1.6,
+     "vs_year_before_pct": 100.0,
+     "vs_avg10_pct": 150.0,
+     "year_before_vs_two_before_pct": -33.3
+    },
+    "4": {
+     "guard_period": 1,
+     "year_before": 7,
+     "two_before": 14,
+     "avg10": 9.1,
+     "vs_year_before_pct": -85.7,
+     "vs_avg10_pct": -89.0,
+     "year_before_vs_two_before_pct": -50.0
+    },
+    "5": {
+     "guard_period": 8,
+     "year_before": 15,
+     "two_before": 24,
+     "avg10": 20.2,
+     "vs_year_before_pct": -46.7,
+     "vs_avg10_pct": -60.4,
+     "year_before_vs_two_before_pct": -37.5
+    },
+    "6": {
+     "guard_period": 4,
+     "year_before": 12,
+     "two_before": 17,
+     "avg10": 10.8,
+     "vs_year_before_pct": -66.7,
+     "vs_avg10_pct": -63.0,
+     "year_before_vs_two_before_pct": -29.4
+    },
+    "7": {
+     "guard_period": 20,
+     "year_before": 38,
+     "two_before": 43,
+     "avg10": 38.2,
+     "vs_year_before_pct": -47.4,
+     "vs_avg10_pct": -47.6,
+     "year_before_vs_two_before_pct": -11.6
+    },
+    "8": {
+     "guard_period": 24,
+     "year_before": 58,
+     "two_before": 59,
+     "avg10": 55.6,
+     "vs_year_before_pct": -58.6,
+     "vs_avg10_pct": -56.8,
+     "year_before_vs_two_before_pct": -1.7
+    }
+   },
+   "core_troop_wards": {
+    "troops": {
+     "guard_period": 9,
+     "year_before": 17,
+     "two_before": 28,
+     "avg10": 16.4,
+     "vs_year_before_pct": -47.1,
+     "vs_avg10_pct": -45.1,
+     "year_before_vs_two_before_pct": -39.3
+    },
+    "no_troops": {
+     "guard_period": 64,
+     "year_before": 133,
+     "two_before": 163,
+     "avg10": 135.6,
+     "vs_year_before_pct": -51.9,
+     "vs_avg10_pct": -52.8,
+     "year_before_vs_two_before_pct": -18.4
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.1,
+      "ci95": [
+       0.465,
+       2.603
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 0.744,
+      "ci95": [
+       0.391,
+       1.418
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.163,
+      "ci95": [
+       0.568,
+       2.38
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.442,
+       2.309
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.388,
+       1.324
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "any_site_wards": {
+    "troops": {
+     "guard_period": 53,
+     "year_before": 113,
+     "two_before": 130,
+     "avg10": 110.2,
+     "vs_year_before_pct": -53.1,
+     "vs_avg10_pct": -51.9,
+     "year_before_vs_two_before_pct": -13.1
+    },
+    "no_troops": {
+     "guard_period": 20,
+     "year_before": 37,
+     "two_before": 61,
+     "avg10": 41.8,
+     "vs_year_before_pct": -45.9,
+     "vs_avg10_pct": -52.2,
+     "year_before_vs_two_before_pct": -39.3
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 0.868,
+      "ci95": [
+       0.46,
+       1.636
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.433,
+      "ci95": [
+       0.887,
+       2.316
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.005,
+      "ci95": [
+       0.594,
+       1.702
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.432,
+       1.804
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.996,
+       2.182
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "near_guard_post": {
+    "troops": {
+     "guard_period": 6,
+     "year_before": 7,
+     "two_before": 10,
+     "avg10": 5.3,
+     "vs_year_before_pct": -14.3,
+     "vs_avg10_pct": 13.2,
+     "year_before_vs_two_before_pct": -30.0
+    },
+    "no_troops": {
+     "guard_period": 67,
+     "year_before": 143,
+     "two_before": 181,
+     "avg10": 146.7,
+     "vs_year_before_pct": -53.1,
+     "vs_avg10_pct": -54.3,
+     "year_before_vs_two_before_pct": -21.0
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.829,
+      "ci95": [
+       0.592,
+       5.654
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 0.886,
+      "ci95": [
+       0.329,
+       2.386
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 2.479,
+      "ci95": [
+       1.029,
+       5.97
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.406,
+       9.741
+      ],
+      "reps_skipped_for_zero": 55
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.18,
+       3.073
+      ],
+      "reps_skipped_for_zero": 31
+     }
+    }
+   },
+   "guard_vs_other_stations": {
+    "troops": {
+     "guard_period": 6,
+     "year_before": 5,
+     "two_before": 7,
+     "avg10": 3.8,
+     "vs_year_before_pct": 20.0,
+     "vs_avg10_pct": 57.9,
+     "year_before_vs_two_before_pct": -28.6
+    },
+    "no_troops": {
+     "guard_period": 10,
+     "year_before": 26,
+     "two_before": 30,
+     "avg10": 17.5,
+     "vs_year_before_pct": -61.5,
+     "vs_avg10_pct": -42.9,
+     "year_before_vs_two_before_pct": -13.3
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 3.12,
+      "ci95": [
+       0.775,
+       12.564
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 0.824,
+      "ci95": [
+       0.233,
+       2.912
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 2.763,
+      "ci95": [
+       0.947,
+       8.065
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.591,
+       18.6
+      ],
+      "reps_skipped_for_zero": 158
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.197,
+       2.333
+      ],
+      "reps_skipped_for_zero": 133
+     }
+    }
+   }
+  },
+  "gunshots": {
+   "by_ward": {
+    "1": {
+     "guard_period": 77,
+     "year_before": 140,
+     "two_before": 155,
+     "avg10": 138.7,
+     "vs_year_before_pct": -45.0,
+     "vs_avg10_pct": -44.5,
+     "year_before_vs_two_before_pct": -9.7
+    },
+    "2": {
+     "guard_period": 17,
+     "year_before": 32,
+     "two_before": 48,
+     "avg10": 42.3,
+     "vs_year_before_pct": -46.9,
+     "vs_avg10_pct": -59.8,
+     "year_before_vs_two_before_pct": -33.3
+    },
+    "3": {
+     "guard_period": 0,
+     "year_before": 0,
+     "two_before": 0,
+     "avg10": 0.3,
+     "vs_year_before_pct": null,
+     "vs_avg10_pct": -100.0,
+     "year_before_vs_two_before_pct": null
+    },
+    "4": {
+     "guard_period": 105,
+     "year_before": 151,
+     "two_before": 207,
+     "avg10": 196.8,
+     "vs_year_before_pct": -30.5,
+     "vs_avg10_pct": -46.6,
+     "year_before_vs_two_before_pct": -27.1
+    },
+    "5": {
+     "guard_period": 205,
+     "year_before": 308,
+     "two_before": 364,
+     "avg10": 404.4,
+     "vs_year_before_pct": -33.4,
+     "vs_avg10_pct": -49.3,
+     "year_before_vs_two_before_pct": -15.4
+    },
+    "6": {
+     "guard_period": 89,
+     "year_before": 140,
+     "two_before": 175,
+     "avg10": 185.9,
+     "vs_year_before_pct": -36.4,
+     "vs_avg10_pct": -52.1,
+     "year_before_vs_two_before_pct": -20.0
+    },
+    "7": {
+     "guard_period": 906,
+     "year_before": 1731,
+     "two_before": 1972,
+     "avg10": 1888.7,
+     "vs_year_before_pct": -47.7,
+     "vs_avg10_pct": -52.0,
+     "year_before_vs_two_before_pct": -12.2
+    },
+    "8": {
+     "guard_period": 1029,
+     "year_before": 1880,
+     "two_before": 2667,
+     "avg10": 2565.0,
+     "vs_year_before_pct": -45.3,
+     "vs_avg10_pct": -59.9,
+     "year_before_vs_two_before_pct": -29.5
+    }
+   },
+   "core_troop_wards": {
+    "troops": {
+     "guard_period": 106,
+     "year_before": 172,
+     "two_before": 223,
+     "avg10": 228.2,
+     "vs_year_before_pct": -38.4,
+     "vs_avg10_pct": -53.5,
+     "year_before_vs_two_before_pct": -22.9
+    },
+    "no_troops": {
+     "guard_period": 2322,
+     "year_before": 4210,
+     "two_before": 5365,
+     "avg10": 5193.9,
+     "vs_year_before_pct": -44.8,
+     "vs_avg10_pct": -55.3,
+     "year_before_vs_two_before_pct": -21.5
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.117,
+      "ci95": [
+       0.873,
+       1.431
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 0.983,
+      "ci95": [
+       0.802,
+       1.204
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.039,
+      "ci95": [
+       0.851,
+       1.268
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.871,
+       1.433
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.762,
+       1.255
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "any_site_wards": {
+    "troops": {
+     "guard_period": 2041,
+     "year_before": 3783,
+     "two_before": 4862,
+     "avg10": 4681.9,
+     "vs_year_before_pct": -46.0,
+     "vs_avg10_pct": -56.4,
+     "year_before_vs_two_before_pct": -22.2
+    },
+    "no_troops": {
+     "guard_period": 387,
+     "year_before": 599,
+     "two_before": 726,
+     "avg10": 740.2,
+     "vs_year_before_pct": -35.4,
+     "vs_avg10_pct": -47.7,
+     "year_before_vs_two_before_pct": -17.5
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 0.835,
+      "ci95": [
+       0.727,
+       0.959
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 0.943,
+      "ci95": [
+       0.84,
+       1.059
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 0.834,
+      "ci95": [
+       0.746,
+       0.932
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.668,
+       1.068
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.795,
+       1.127
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "near_guard_post": {
+    "troops": {
+     "guard_period": 31,
+     "year_before": 56,
+     "two_before": 67,
+     "avg10": 56.2,
+     "vs_year_before_pct": -44.6,
+     "vs_avg10_pct": -44.8,
+     "year_before_vs_two_before_pct": -16.4
+    },
+    "no_troops": {
+     "guard_period": 2397,
+     "year_before": 4326,
+     "two_before": 5521,
+     "avg10": 5365.9,
+     "vs_year_before_pct": -44.6,
+     "vs_avg10_pct": -55.3,
+     "year_before_vs_two_before_pct": -21.6
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 0.999,
+      "ci95": [
+       0.642,
+       1.554
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.067,
+      "ci95": [
+       0.746,
+       1.525
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.235,
+      "ci95": [
+       0.858,
+       1.777
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.582,
+       1.606
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.64,
+       1.86
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "guard_vs_other_stations": {
+    "troops": {
+     "guard_period": 23,
+     "year_before": 32,
+     "two_before": 46,
+     "avg10": 33.5,
+     "vs_year_before_pct": -28.1,
+     "vs_avg10_pct": -31.3,
+     "year_before_vs_two_before_pct": -30.4
+    },
+    "no_troops": {
+     "guard_period": 181,
+     "year_before": 383,
+     "two_before": 415,
+     "avg10": 378.1,
+     "vs_year_before_pct": -52.7,
+     "vs_avg10_pct": -52.1,
+     "year_before_vs_two_before_pct": -7.7
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.521,
+      "ci95": [
+       0.865,
+       2.674
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 0.754,
+      "ci95": [
+       0.47,
+       1.209
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.434,
+      "ci95": [
+       0.916,
+       2.245
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.868,
+       2.475
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.447,
+       1.377
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   }
+  },
+  "gun_violent": {
+   "by_ward": {
+    "1": {
+     "guard_period": 72,
+     "year_before": 182,
+     "two_before": 302,
+     "avg10": 174.8,
+     "vs_year_before_pct": -60.4,
+     "vs_avg10_pct": -58.8,
+     "year_before_vs_two_before_pct": -39.7
+    },
+    "2": {
+     "guard_period": 37,
+     "year_before": 114,
+     "two_before": 170,
+     "avg10": 108.3,
+     "vs_year_before_pct": -67.5,
+     "vs_avg10_pct": -65.8,
+     "year_before_vs_two_before_pct": -32.9
+    },
+    "3": {
+     "guard_period": 22,
+     "year_before": 15,
+     "two_before": 30,
+     "avg10": 21.5,
+     "vs_year_before_pct": 46.7,
+     "vs_avg10_pct": 2.3,
+     "year_before_vs_two_before_pct": -50.0
+    },
+    "4": {
+     "guard_period": 73,
+     "year_before": 84,
+     "two_before": 232,
+     "avg10": 134.0,
+     "vs_year_before_pct": -13.1,
+     "vs_avg10_pct": -45.5,
+     "year_before_vs_two_before_pct": -63.8
+    },
+    "5": {
+     "guard_period": 114,
+     "year_before": 234,
+     "two_before": 336,
+     "avg10": 279.0,
+     "vs_year_before_pct": -51.3,
+     "vs_avg10_pct": -59.1,
+     "year_before_vs_two_before_pct": -30.4
+    },
+    "6": {
+     "guard_period": 73,
+     "year_before": 131,
+     "two_before": 215,
+     "avg10": 155.8,
+     "vs_year_before_pct": -44.3,
+     "vs_avg10_pct": -53.1,
+     "year_before_vs_two_before_pct": -39.1
+    },
+    "7": {
+     "guard_period": 198,
+     "year_before": 393,
+     "two_before": 501,
+     "avg10": 460.1,
+     "vs_year_before_pct": -49.6,
+     "vs_avg10_pct": -57.0,
+     "year_before_vs_two_before_pct": -21.6
+    },
+    "8": {
+     "guard_period": 207,
+     "year_before": 368,
+     "two_before": 535,
+     "avg10": 470.0,
+     "vs_year_before_pct": -43.8,
+     "vs_avg10_pct": -56.0,
+     "year_before_vs_two_before_pct": -31.2
+    }
+   },
+   "core_troop_wards": {
+    "troops": {
+     "guard_period": 110,
+     "year_before": 245,
+     "two_before": 385,
+     "avg10": 264.1,
+     "vs_year_before_pct": -55.1,
+     "vs_avg10_pct": -58.3,
+     "year_before_vs_two_before_pct": -36.4
+    },
+    "no_troops": {
+     "guard_period": 686,
+     "year_before": 1276,
+     "two_before": 1936,
+     "avg10": 1539.4,
+     "vs_year_before_pct": -46.2,
+     "vs_avg10_pct": -55.4,
+     "year_before_vs_two_before_pct": -34.1
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 0.835,
+      "ci95": [
+       0.655,
+       1.065
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 0.966,
+      "ci95": [
+       0.81,
+       1.15
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 0.935,
+      "ci95": [
+       0.761,
+       1.148
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.698,
+       1.004
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.806,
+       1.165
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "any_site_wards": {
+    "troops": {
+     "guard_period": 515,
+     "year_before": 1006,
+     "two_before": 1421,
+     "avg10": 1194.2,
+     "vs_year_before_pct": -48.8,
+     "vs_avg10_pct": -56.9,
+     "year_before_vs_two_before_pct": -29.2
+    },
+    "no_troops": {
+     "guard_period": 281,
+     "year_before": 515,
+     "two_before": 900,
+     "avg10": 609.3,
+     "vs_year_before_pct": -45.4,
+     "vs_avg10_pct": -53.9,
+     "year_before_vs_two_before_pct": -42.8
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 0.938,
+      "ci95": [
+       0.784,
+       1.123
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.237,
+      "ci95": [
+       1.081,
+       1.416
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 0.935,
+      "ci95": [
+       0.806,
+       1.085
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.78,
+       1.115
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       1.01,
+       1.505
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "near_guard_post": {
+    "troops": {
+     "guard_period": 46,
+     "year_before": 107,
+     "two_before": 165,
+     "avg10": 100.4,
+     "vs_year_before_pct": -57.0,
+     "vs_avg10_pct": -54.2,
+     "year_before_vs_two_before_pct": -35.2
+    },
+    "no_troops": {
+     "guard_period": 750,
+     "year_before": 1414,
+     "two_before": 2156,
+     "avg10": 1703.1,
+     "vs_year_before_pct": -47.0,
+     "vs_avg10_pct": -56.0,
+     "year_before_vs_two_before_pct": -34.4
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 0.811,
+      "ci95": [
+       0.567,
+       1.158
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 0.989,
+      "ci95": [
+       0.768,
+       1.273
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.04,
+      "ci95": [
+       0.767,
+       1.411
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.469,
+       1.301
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.703,
+       1.35
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "guard_vs_other_stations": {
+    "troops": {
+     "guard_period": 34,
+     "year_before": 74,
+     "two_before": 107,
+     "avg10": 69.7,
+     "vs_year_before_pct": -54.1,
+     "vs_avg10_pct": -51.2,
+     "year_before_vs_two_before_pct": -30.8
+    },
+    "no_troops": {
+     "guard_period": 122,
+     "year_before": 237,
+     "two_before": 387,
+     "avg10": 242.7,
+     "vs_year_before_pct": -48.5,
+     "vs_avg10_pct": -49.7,
+     "year_before_vs_two_before_pct": -38.8
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 0.893,
+      "ci95": [
+       0.563,
+       1.415
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.129,
+      "ci95": [
+       0.806,
+       1.583
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 0.97,
+      "ci95": [
+       0.657,
+       1.432
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.474,
+       1.511
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.713,
+       1.726
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   }
+  },
+  "violent": {
+   "by_ward": {
+    "1": {
+     "guard_period": 303,
+     "year_before": 414,
+     "two_before": 556,
+     "avg10": 467.2,
+     "vs_year_before_pct": -26.8,
+     "vs_avg10_pct": -35.1,
+     "year_before_vs_two_before_pct": -25.5
+    },
+    "2": {
+     "guard_period": 179,
+     "year_before": 233,
+     "two_before": 314,
+     "avg10": 357.4,
+     "vs_year_before_pct": -23.2,
+     "vs_avg10_pct": -49.9,
+     "year_before_vs_two_before_pct": -25.8
+    },
+    "3": {
+     "guard_period": 64,
+     "year_before": 42,
+     "two_before": 81,
+     "avg10": 70.0,
+     "vs_year_before_pct": 52.4,
+     "vs_avg10_pct": -8.6,
+     "year_before_vs_two_before_pct": -48.1
+    },
+    "4": {
+     "guard_period": 195,
+     "year_before": 181,
+     "two_before": 366,
+     "avg10": 289.4,
+     "vs_year_before_pct": 7.7,
+     "vs_avg10_pct": -32.6,
+     "year_before_vs_two_before_pct": -50.5
+    },
+    "5": {
+     "guard_period": 292,
+     "year_before": 410,
+     "two_before": 567,
+     "avg10": 594.6,
+     "vs_year_before_pct": -28.8,
+     "vs_avg10_pct": -50.9,
+     "year_before_vs_two_before_pct": -27.7
+    },
+    "6": {
+     "guard_period": 228,
+     "year_before": 263,
+     "two_before": 389,
+     "avg10": 380.9,
+     "vs_year_before_pct": -13.3,
+     "vs_avg10_pct": -40.1,
+     "year_before_vs_two_before_pct": -32.4
+    },
+    "7": {
+     "guard_period": 443,
+     "year_before": 545,
+     "two_before": 760,
+     "avg10": 837.1,
+     "vs_year_before_pct": -18.7,
+     "vs_avg10_pct": -47.1,
+     "year_before_vs_two_before_pct": -28.3
+    },
+    "8": {
+     "guard_period": 505,
+     "year_before": 559,
+     "two_before": 776,
+     "avg10": 811.1,
+     "vs_year_before_pct": -9.7,
+     "vs_avg10_pct": -37.7,
+     "year_before_vs_two_before_pct": -28.0
+    }
+   },
+   "core_troop_wards": {
+    "troops": {
+     "guard_period": 407,
+     "year_before": 496,
+     "two_before": 703,
+     "avg10": 738.3,
+     "vs_year_before_pct": -17.9,
+     "vs_avg10_pct": -44.9,
+     "year_before_vs_two_before_pct": -29.4
+    },
+    "no_troops": {
+     "guard_period": 1802,
+     "year_before": 2151,
+     "two_before": 3106,
+     "avg10": 3069.4,
+     "vs_year_before_pct": -16.2,
+     "vs_avg10_pct": -41.3,
+     "year_before_vs_two_before_pct": -30.7
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 0.979,
+      "ci95": [
+       0.847,
+       1.133
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.019,
+      "ci95": [
+       0.897,
+       1.157
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 0.939,
+      "ci95": [
+       0.841,
+       1.049
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.802,
+       1.197
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.854,
+       1.214
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "any_site_wards": {
+    "troops": {
+     "guard_period": 1355,
+     "year_before": 1600,
+     "two_before": 2239,
+     "avg10": 2386.5,
+     "vs_year_before_pct": -15.3,
+     "vs_avg10_pct": -43.2,
+     "year_before_vs_two_before_pct": -28.5
+    },
+    "no_troops": {
+     "guard_period": 854,
+     "year_before": 1047,
+     "two_before": 1570,
+     "avg10": 1421.2,
+     "vs_year_before_pct": -18.4,
+     "vs_avg10_pct": -39.9,
+     "year_before_vs_two_before_pct": -33.3
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.038,
+      "ci95": [
+       0.925,
+       1.166
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.072,
+      "ci95": [
+       0.968,
+       1.186
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 0.945,
+      "ci95": [
+       0.865,
+       1.032
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.928,
+       1.162
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.944,
+       1.209
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "near_guard_post": {
+    "troops": {
+     "guard_period": 224,
+     "year_before": 245,
+     "two_before": 313,
+     "avg10": 310.1,
+     "vs_year_before_pct": -8.6,
+     "vs_avg10_pct": -27.8,
+     "year_before_vs_two_before_pct": -21.7
+    },
+    "no_troops": {
+     "guard_period": 1985,
+     "year_before": 2402,
+     "two_before": 3496,
+     "avg10": 3497.6,
+     "vs_year_before_pct": -17.4,
+     "vs_avg10_pct": -43.2,
+     "year_before_vs_two_before_pct": -31.3
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.106,
+      "ci95": [
+       0.914,
+       1.339
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.139,
+      "ci95": [
+       0.956,
+       1.357
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.273,
+      "ci95": [
+       1.103,
+       1.468
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.838,
+       1.46
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.89,
+       1.427
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "guard_vs_other_stations": {
+    "troops": {
+     "guard_period": 174,
+     "year_before": 185,
+     "two_before": 213,
+     "avg10": 226.0,
+     "vs_year_before_pct": -5.9,
+     "vs_avg10_pct": -23.0,
+     "year_before_vs_two_before_pct": -13.1
+    },
+    "no_troops": {
+     "guard_period": 364,
+     "year_before": 479,
+     "two_before": 666,
+     "avg10": 611.4,
+     "vs_year_before_pct": -24.0,
+     "vs_avg10_pct": -40.5,
+     "year_before_vs_two_before_pct": -28.1
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.238,
+      "ci95": [
+       0.966,
+       1.586
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.208,
+      "ci95": [
+       0.96,
+       1.519
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.293,
+      "ci95": [
+       1.073,
+       1.559
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.872,
+       1.771
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.857,
+       1.679
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   }
+  },
+  "property": {
+   "by_ward": {
+    "1": {
+     "guard_period": 2306,
+     "year_before": 3127,
+     "two_before": 3437,
+     "avg10": 3468.0,
+     "vs_year_before_pct": -26.3,
+     "vs_avg10_pct": -33.5,
+     "year_before_vs_two_before_pct": -9.0
+    },
+    "2": {
+     "guard_period": 3016,
+     "year_before": 4085,
+     "two_before": 4169,
+     "avg10": 4933.0,
+     "vs_year_before_pct": -26.2,
+     "vs_avg10_pct": -38.9,
+     "year_before_vs_two_before_pct": -2.0
+    },
+    "3": {
+     "guard_period": 1278,
+     "year_before": 1556,
+     "two_before": 1556,
+     "avg10": 1471.4,
+     "vs_year_before_pct": -17.9,
+     "vs_avg10_pct": -13.1,
+     "year_before_vs_two_before_pct": 0.0
+    },
+    "4": {
+     "guard_period": 1832,
+     "year_before": 2256,
+     "two_before": 2212,
+     "avg10": 2253.3,
+     "vs_year_before_pct": -18.8,
+     "vs_avg10_pct": -18.7,
+     "year_before_vs_two_before_pct": 2.0
+    },
+    "5": {
+     "guard_period": 2197,
+     "year_before": 3657,
+     "two_before": 3873,
+     "avg10": 3608.1,
+     "vs_year_before_pct": -39.9,
+     "vs_avg10_pct": -39.1,
+     "year_before_vs_two_before_pct": -5.6
+    },
+    "6": {
+     "guard_period": 2374,
+     "year_before": 3110,
+     "two_before": 3106,
+     "avg10": 3386.0,
+     "vs_year_before_pct": -23.7,
+     "vs_avg10_pct": -29.9,
+     "year_before_vs_two_before_pct": 0.1
+    },
+    "7": {
+     "guard_period": 1670,
+     "year_before": 2640,
+     "two_before": 2771,
+     "avg10": 2902.8,
+     "vs_year_before_pct": -36.7,
+     "vs_avg10_pct": -42.5,
+     "year_before_vs_two_before_pct": -4.7
+    },
+    "8": {
+     "guard_period": 1417,
+     "year_before": 1953,
+     "two_before": 2035,
+     "avg10": 2076.7,
+     "vs_year_before_pct": -27.4,
+     "vs_avg10_pct": -31.8,
+     "year_before_vs_two_before_pct": -4.0
+    }
+   },
+   "core_troop_wards": {
+    "troops": {
+     "guard_period": 5390,
+     "year_before": 7195,
+     "two_before": 7275,
+     "avg10": 8319.0,
+     "vs_year_before_pct": -25.1,
+     "vs_avg10_pct": -35.2,
+     "year_before_vs_two_before_pct": -1.1
+    },
+    "no_troops": {
+     "guard_period": 10700,
+     "year_before": 15189,
+     "two_before": 15884,
+     "avg10": 15780.3,
+     "vs_year_before_pct": -29.6,
+     "vs_avg10_pct": -32.2,
+     "year_before_vs_two_before_pct": -4.4
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.063,
+      "ci95": [
+       1.019,
+       1.11
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.034,
+      "ci95": [
+       0.994,
+       1.076
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 0.956,
+      "ci95": [
+       0.924,
+       0.988
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.989,
+       1.145
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.96,
+       1.112
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "any_site_wards": {
+    "troops": {
+     "guard_period": 8477,
+     "year_before": 11788,
+     "two_before": 12081,
+     "avg10": 13298.5,
+     "vs_year_before_pct": -28.1,
+     "vs_avg10_pct": -36.3,
+     "year_before_vs_two_before_pct": -2.4
+    },
+    "no_troops": {
+     "guard_period": 7613,
+     "year_before": 10596,
+     "two_before": 11078,
+     "avg10": 10800.8,
+     "vs_year_before_pct": -28.2,
+     "vs_avg10_pct": -29.5,
+     "year_before_vs_two_before_pct": -4.4
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.001,
+      "ci95": [
+       0.961,
+       1.042
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.02,
+      "ci95": [
+       0.983,
+       1.058
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 0.904,
+      "ci95": [
+       0.876,
+       0.934
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.921,
+       1.086
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.937,
+       1.11
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "near_guard_post": {
+    "troops": {
+     "guard_period": 2251,
+     "year_before": 3401,
+     "two_before": 3219,
+     "avg10": 3358.1,
+     "vs_year_before_pct": -33.8,
+     "vs_avg10_pct": -33.0,
+     "year_before_vs_two_before_pct": 5.7
+    },
+    "no_troops": {
+     "guard_period": 13839,
+     "year_before": 18983,
+     "two_before": 19940,
+     "avg10": 20741.2,
+     "vs_year_before_pct": -27.1,
+     "vs_avg10_pct": -33.3,
+     "year_before_vs_two_before_pct": -4.8
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 0.908,
+      "ci95": [
+       0.857,
+       0.962
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.11,
+      "ci95": [
+       1.053,
+       1.169
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.005,
+      "ci95": [
+       0.959,
+       1.052
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.839,
+       0.982
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       1.02,
+       1.217
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   },
+   "guard_vs_other_stations": {
+    "troops": {
+     "guard_period": 1600,
+     "year_before": 2348,
+     "two_before": 2300,
+     "avg10": 2428.4,
+     "vs_year_before_pct": -31.9,
+     "vs_avg10_pct": -34.1,
+     "year_before_vs_two_before_pct": 2.1
+    },
+    "no_troops": {
+     "guard_period": 3215,
+     "year_before": 4752,
+     "two_before": 5051,
+     "avg10": 5068.9,
+     "vs_year_before_pct": -32.3,
+     "vs_avg10_pct": -36.6,
+     "year_before_vs_two_before_pct": -5.9
+    },
+    "contrast": {
+     "guard_vs_year_before": {
+      "ratio": 1.007,
+      "ci95": [
+       0.932,
+       1.089
+      ]
+     },
+     "placebo_year_before_vs_two_before": {
+      "ratio": 1.085,
+      "ci95": [
+       1.012,
+       1.164
+      ]
+     },
+     "guard_vs_avg10": {
+      "ratio": 1.039,
+      "ci95": [
+       0.976,
+       1.105
+      ]
+     }
+    },
+    "bootstrap": {
+     "guard_vs_year_before": {
+      "ci95": [
+       0.891,
+       1.13
+      ],
+      "reps_skipped_for_zero": 0
+     },
+     "placebo_year_before_vs_two_before": {
+      "ci95": [
+       0.977,
+       1.208
+      ],
+      "reps_skipped_for_zero": 0
+     }
+    }
+   }
+  }
+ }
+}
